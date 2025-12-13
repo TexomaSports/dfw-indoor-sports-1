@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeCTAGrid: React.FC = () => {
   return (
@@ -28,8 +30,8 @@ const HomeCTAGrid: React.FC = () => {
                 <h3 className="text-xl font-header font-bold uppercase mb-4 text-white group-hover:text-dfw-red transition-colors">New Here?</h3>
                 <p className="text-gray-400 text-sm mb-8 leading-relaxed h-16">Start with a free introduction. See the facility and meet the staff with no obligation.</p>
                 <div className="flex flex-col gap-4">
-                   <Link to="/contact" className="w-full flex items-center justify-center py-3 bg-white text-dfw-navy font-bold uppercase text-xs rounded-sm hover:bg-gray-200 transition-colors">Schedule Free Tour</Link>
-                   <Link to="/contact" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Book Free Trial</Link>
+                   <Link href="/contact" className="w-full flex items-center justify-center py-3 bg-white text-dfw-navy font-bold uppercase text-xs rounded-sm hover:bg-gray-200 transition-colors">Schedule Free Tour</Link>
+                   <Link href="/contact" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Book Free Trial</Link>
                 </div>
              </motion.div>
 
@@ -44,8 +46,8 @@ const HomeCTAGrid: React.FC = () => {
                 <h3 className="text-xl font-header font-bold uppercase mb-4 text-white group-hover:text-blue-500 transition-colors">Ready to Train?</h3>
                 <p className="text-gray-400 text-sm mb-8 leading-relaxed h-16">Join hundreds of active members. Consistent access for consistent progress.</p>
                 <div className="flex flex-col gap-4">
-                   <Link to="/memberships" className="w-full flex items-center justify-center py-3 bg-blue-600 text-white font-bold uppercase text-xs rounded-sm hover:bg-blue-700 transition-colors">Compare Memberships</Link>
-                   <Link to="/academy" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Explore Programs</Link>
+                   <Link href="/memberships" className="w-full flex items-center justify-center py-3 bg-blue-600 text-white font-bold uppercase text-xs rounded-sm hover:bg-blue-700 transition-colors">Compare Memberships</Link>
+                   <Link href="/academy" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Explore Programs</Link>
                 </div>
              </motion.div>
 
@@ -60,8 +62,8 @@ const HomeCTAGrid: React.FC = () => {
                 <h3 className="text-xl font-header font-bold uppercase mb-4 text-white group-hover:text-green-500 transition-colors">Book Today?</h3>
                 <p className="text-gray-400 text-sm mb-8 leading-relaxed h-16">Immediate access available for drop-in. Reserve your court online 24/7.</p>
                 <div className="flex flex-col gap-4">
-                   <Link to="/rentals" className="w-full flex items-center justify-center py-3 bg-green-600 text-white font-bold uppercase text-xs rounded-sm hover:bg-green-700 transition-colors">Book Court Now</Link>
-                   <Link to="/rentals" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Check Availability</Link>
+                   <Link href="/rentals" className="w-full flex items-center justify-center py-3 bg-green-600 text-white font-bold uppercase text-xs rounded-sm hover:bg-green-700 transition-colors">Book Court Now</Link>
+                   <Link href="/rentals" className="w-full flex items-center justify-center py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white/10 transition-colors">Check Availability</Link>
                 </div>
              </motion.div>
 

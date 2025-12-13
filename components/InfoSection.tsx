@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlayCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const InfoSection: React.FC = () => {
   return (
@@ -47,7 +47,7 @@ const InfoSection: React.FC = () => {
                        Whether you are training for the national team or organizing a corporate dodgeball league, our 50,000 sq ft climate-controlled arena provides the perfect stage for your performance.
                      </p>
                      
-                     <Link to="/about" className="group flex items-center gap-3 text-dfw-navy font-bold uppercase tracking-widest text-xs border-b-2 border-dfw-navy/20 pb-1 hover:border-dfw-red hover:text-dfw-red transition-all">
+                     <Link href="/about" className="group flex items-center gap-3 text-dfw-navy font-bold uppercase tracking-widest text-xs border-b-2 border-dfw-navy/20 pb-1 hover:border-dfw-red hover:text-dfw-red transition-all">
                        <PlayCircle size={18} className="group-hover:scale-110 transition-transform" /> Our Story
                      </Link>
                    </div>

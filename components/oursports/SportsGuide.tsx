@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Calendar, MousePointer2, UserPlus } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const SportsGuide: React.FC = () => {
   return (
@@ -125,7 +127,7 @@ const SportsGuide: React.FC = () => {
                       </div>
                       <h4 className="font-bold uppercase text-lg mb-2">1. Book a Slot</h4>
                       <p className="text-xs text-gray-400 leading-relaxed mb-4 px-4">Instant online booking for courts and lanes. Pay as you play.</p>
-                      <Link to="/rentals" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">View Schedule</Link>
+                      <Link href="/rentals" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">View Schedule</Link>
                    </div>
 
                    <div className="group">
@@ -134,7 +136,7 @@ const SportsGuide: React.FC = () => {
                       </div>
                       <h4 className="font-bold uppercase text-lg mb-2">2. Become a Member</h4>
                       <p className="text-xs text-gray-400 leading-relaxed mb-4 px-4">Play more, save more. Unlimited access plans for individuals and families.</p>
-                      <Link to="/memberships" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">Compare Plans</Link>
+                      <Link href="/memberships" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">Compare Plans</Link>
                    </div>
 
                    <div className="group">
@@ -143,7 +145,7 @@ const SportsGuide: React.FC = () => {
                       </div>
                       <h4 className="font-bold uppercase text-lg mb-2">3. Join a Program</h4>
                       <p className="text-xs text-gray-400 leading-relaxed mb-4 px-4">Academies, leagues, and clinics. Let us guide your development.</p>
-                      <Link to="/academy" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">Find Programs</Link>
+                      <Link href="/academy" className="text-dfw-red text-xs font-bold uppercase tracking-widest border-b border-dfw-red pb-1 group-hover:text-white group-hover:border-white transition-colors">Find Programs</Link>
                    </div>
                 </div>
              </div>

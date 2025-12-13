@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Clock, Users, Check, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const DodgeballPricing: React.FC = () => {
   return (
@@ -52,7 +54,7 @@ const DodgeballPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-violet-600 dark:text-violet-400" /> Spectator Seating</li>
                 </ul>
 
-                <Link to="/contact" className="w-full py-4 bg-[#4C1D95] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-violet-800 transition-colors block text-center">Book Court</Link>
+                <Link href="/contact" className="w-full py-4 bg-[#4C1D95] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-violet-800 transition-colors block text-center">Book Court</Link>
              </motion.div>
 
              {/* League */}
@@ -89,7 +91,7 @@ const DodgeballPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-orange-500" /> Team or Individual Sign-up</li>
                 </ul>
 
-                <Link to="/contact" className="w-full py-4 border-2 border-[#4C1D95] dark:border-violet-400 text-[#4C1D95] dark:text-violet-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#4C1D95] hover:text-white dark:hover:bg-violet-400 dark:hover:text-black transition-colors block text-center">Join League</Link>
+                <Link href="/contact" className="w-full py-4 border-2 border-[#4C1D95] dark:border-violet-400 text-[#4C1D95] dark:text-violet-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#4C1D95] hover:text-white dark:hover:bg-violet-400 dark:hover:text-black transition-colors block text-center">Join League</Link>
              </motion.div>
 
           </div>

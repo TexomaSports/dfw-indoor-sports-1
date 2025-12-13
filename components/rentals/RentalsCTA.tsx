@@ -1,7 +1,9 @@
+'use client'
+
 import React, { useState } from 'react';
 import { MousePointer2, Phone, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const RentalsCTA: React.FC = () => {
   const [code, setCode] = useState('');
@@ -63,7 +65,7 @@ const RentalsCTA: React.FC = () => {
                transition={{ delay: 0.3 }}
                className="flex flex-col sm:flex-row justify-center gap-4"
             >
-               <Link to="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)] flex items-center justify-center gap-2">
+               <Link href="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)] flex items-center justify-center gap-2">
                   <MousePointer2 size={16} /> Book Online Now
                </Link>
                <a href="tel:8179380808" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors flex items-center justify-center gap-2">

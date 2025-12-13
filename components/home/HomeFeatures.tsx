@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight, Target, Wind, Activity, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeFeatures: React.FC = () => {
   const containerVariants = {
@@ -58,7 +60,7 @@ const HomeFeatures: React.FC = () => {
              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 border-b border-gray-50 dark:border-white/10 pb-6">
                 From the crack of the bat to the cheer of the team. Train on international-standard lanes and find your rhythm.
              </p>
-             <Link to="/academy" className="text-xs font-bold text-dfw-red uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+             <Link href="/academy" className="text-xs font-bold text-dfw-red uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
                 Explore Academy <ArrowRight size={14} />
              </Link>
           </motion.div>
@@ -72,7 +74,7 @@ const HomeFeatures: React.FC = () => {
              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 border-b border-gray-50 dark:border-white/10 pb-6">
                 Speed, agility, and grace. Play on professional flooring designed to be kind to your body while you fly across the court.
              </p>
-             <Link to="/badminton-courts" className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+             <Link href="/badminton-courts" className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
                 View Programs <ArrowRight size={14} />
              </Link>
           </motion.div>
@@ -86,7 +88,7 @@ const HomeFeatures: React.FC = () => {
              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 border-b border-gray-50 dark:border-white/10 pb-6">
                 The beautiful game, played in perfect conditions. Join a league or bring your friends for fast-paced 5-a-side fun.
              </p>
-             <Link to="/soccer-fields" className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+             <Link href="/soccer-fields" className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
                 Soccer Info <ArrowRight size={14} />
              </Link>
           </motion.div>
@@ -100,7 +102,7 @@ const HomeFeatures: React.FC = () => {
              <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-6 border-b border-gray-50 dark:border-white/10 pb-6">
                 Pure energy and laughter. The ultimate social sport for parties, team building, or just blowing off steam.
              </p>
-             <Link to="/dodgeball-courts" className="text-xs font-bold text-orange-500 dark:text-orange-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
+             <Link href="/dodgeball-courts" className="text-xs font-bold text-orange-500 dark:text-orange-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">
                 Book Court <ArrowRight size={14} />
              </Link>
           </motion.div>

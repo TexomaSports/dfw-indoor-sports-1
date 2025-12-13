@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const MembershipsCTA: React.FC = () => {
   return (
@@ -39,10 +41,10 @@ const MembershipsCTA: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-             <Link to="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)]">
+             <Link href="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)]">
                 Join Now Online
              </Link>
-             <Link to="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
+             <Link href="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
                 Schedule Tour
              </Link>
           </motion.div>

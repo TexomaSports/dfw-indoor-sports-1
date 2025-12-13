@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const AboutCTA: React.FC = () => {
   return (
@@ -33,10 +35,10 @@ const AboutCTA: React.FC = () => {
                viewport={{ once: true }}
                className="flex flex-col sm:flex-row gap-4 w-full md:w-auto"
              >
-                <Link to="/contact" className="px-8 py-4 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.3)] flex items-center justify-center gap-2">
+                <Link href="/contact" className="px-8 py-4 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.3)] flex items-center justify-center gap-2">
                    <Calendar size={16} /> Book Free Tour
                 </Link>
-                <Link to="/memberships" className="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors text-center">
+                <Link href="/memberships" className="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors text-center">
                    View Memberships
                 </Link>
              </motion.div>

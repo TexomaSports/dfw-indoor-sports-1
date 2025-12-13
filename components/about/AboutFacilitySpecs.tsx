@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Building2, Thermometer, Lightbulb, Wifi } from 'lucide-react';
 import { motion } from 'framer-motion';

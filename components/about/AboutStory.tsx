@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ShieldCheck, Users, Quote, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight, CheckCircle2, User, Users, Star, TrendingUp, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';

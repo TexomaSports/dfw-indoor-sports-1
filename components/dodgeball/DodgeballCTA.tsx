@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Calendar, Phone, MapPin, PlayCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const DodgeballCTA: React.FC = () => {
   return (
@@ -31,13 +33,13 @@ const DodgeballCTA: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-             <Link to="/contact" className="px-10 py-5 bg-orange-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-orange-700 transition-colors shadow-lg">
+             <Link href="/contact" className="px-10 py-5 bg-orange-600 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-orange-700 transition-colors shadow-lg">
                 Book Court Now
              </Link>
-             <Link to="/events" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#4C1D95] transition-colors flex items-center justify-center gap-2">
+             <Link href="/events" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#4C1D95] transition-colors flex items-center justify-center gap-2">
                 <PlayCircle size={16} /> Plan A Party
              </Link>
-             <Link to="/contact" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
+             <Link href="/contact" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
                 Join League
              </Link>
           </motion.div>

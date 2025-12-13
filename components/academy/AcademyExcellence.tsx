@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Brain, Activity, TrendingUp, Zap, BookOpen, ShoppingBag } from 'lucide-react';
 import { motion } from 'framer-motion';

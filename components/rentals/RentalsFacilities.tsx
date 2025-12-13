@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { CheckCircle2, Activity, Trophy, Users, Star, Target } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const RentalsFacilities: React.FC = () => {
@@ -63,7 +65,7 @@ const RentalsFacilities: React.FC = () => {
                            </div>
                         </div>
 
-                        <Link to="/cricket-lanes" className="inline-block text-center px-8 py-3 bg-dfw-navy dark:bg-white text-white dark:text-dfw-navy font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-dfw-red dark:hover:bg-gray-200 transition-colors w-full sm:w-auto">
+                        <Link href="/cricket-lanes" className="inline-block text-center px-8 py-3 bg-dfw-navy dark:bg-white text-white dark:text-dfw-navy font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-dfw-red dark:hover:bg-gray-200 transition-colors w-full sm:w-auto">
                            Book Cricket Lane
                         </Link>
                      </div>
@@ -109,7 +111,7 @@ const RentalsFacilities: React.FC = () => {
                            </div>
                         </div>
 
-                        <Link to="/badminton-courts" className="inline-block text-center px-8 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-black transition-colors w-full sm:w-auto">
+                        <Link href="/badminton-courts" className="inline-block text-center px-8 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-black transition-colors w-full sm:w-auto">
                            Book Badminton Court
                         </Link>
                      </div>
@@ -140,7 +142,7 @@ const RentalsFacilities: React.FC = () => {
                         <li className="flex items-center gap-2"><CheckCircle2 size={12} className="text-green-500" /> FIFA Turf Surface</li>
                         <li className="flex items-center gap-2"><CheckCircle2 size={12} className="text-green-500" /> Regulation Goals</li>
                      </ul>
-                     <Link to="/soccer-fields" className="block w-full py-2 border border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-green-600 hover:text-white hover:border-green-600 transition-colors text-center">Check Availability</Link>
+                     <Link href="/soccer-fields" className="block w-full py-2 border border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-green-600 hover:text-white hover:border-green-600 transition-colors text-center">Check Availability</Link>
                   </motion.div>
 
                   {/* Dodgeball */}
@@ -161,7 +163,7 @@ const RentalsFacilities: React.FC = () => {
                         <li className="flex items-center gap-2"><CheckCircle2 size={12} className="text-purple-500" /> Balls Included</li>
                         <li className="flex items-center gap-2"><CheckCircle2 size={12} className="text-purple-500" /> Safety Gear Provided</li>
                      </ul>
-                     <Link to="/dodgeball-courts" className="block w-full py-2 border border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors text-center">Check Availability</Link>
+                     <Link href="/dodgeball-courts" className="block w-full py-2 border border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-[10px] tracking-widest rounded-sm hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-colors text-center">Check Availability</Link>
                   </motion.div>
                </div>
 

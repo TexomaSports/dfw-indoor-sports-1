@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { User, Users, Star, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomePrograms: React.FC = () => {
   const containerVariants = {
@@ -56,7 +58,7 @@ const HomePrograms: React.FC = () => {
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div> Technical Soccer</div>
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div> Multi-Sport Discovery</div>
                 </div>
-                <Link to="/academy" className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">Explore Youth <ArrowRight size={14} /></Link>
+                <Link href="/academy" className="text-xs font-bold text-green-600 dark:text-green-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">Explore Youth <ArrowRight size={14} /></Link>
              </motion.div>
 
              {/* Adult */}
@@ -74,7 +76,7 @@ const HomePrograms: React.FC = () => {
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Competitive Divisions</div>
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div> Social Drop-In</div>
                 </div>
-                <Link to="/sports" className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">View Adult Programs <ArrowRight size={14} /></Link>
+                <Link href="/sports" className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all">View Adult Programs <ArrowRight size={14} /></Link>
              </motion.div>
 
              {/* Elite */}
@@ -93,7 +95,7 @@ const HomePrograms: React.FC = () => {
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-dfw-red rounded-full"></div> Video Analysis</div>
                    <div className="flex items-center gap-2 text-xs font-bold text-gray-400 uppercase"><div className="w-1.5 h-1.5 bg-dfw-red rounded-full"></div> College Recruiting</div>
                 </div>
-                <Link to="/academy" className="text-xs font-bold text-white uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all relative z-10">Learn About Elite <ArrowRight size={14} /></Link>
+                <Link href="/academy" className="text-xs font-bold text-white uppercase tracking-widest flex items-center gap-2 group-hover:gap-3 transition-all relative z-10">Learn About Elite <ArrowRight size={14} /></Link>
              </motion.div>
 
           </motion.div>

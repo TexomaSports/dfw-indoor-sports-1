@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight, CheckCircle2, Calendar, PartyPopper } from 'lucide-react';
 import { motion } from 'framer-motion';

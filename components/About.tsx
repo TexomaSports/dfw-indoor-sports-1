@@ -1,6 +1,6 @@
 import React from 'react';
 import { Target, Users, Trophy, Flag, Heart, Globe, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const About: React.FC = () => {
   return (
@@ -108,10 +108,10 @@ const About: React.FC = () => {
                Ready to experience the best indoor sports facility in Fort Worth? Stop by for a tour or book your first session today.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-               <Link to="/contact" className="bg-dfw-red hover:bg-red-600 text-white py-4 px-8 rounded-sm font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(214,40,40,0.4)] hover:shadow-[0_0_40px_rgba(214,40,40,0.6)]">
+               <Link href="/contact" className="bg-dfw-red hover:bg-red-600 text-white py-4 px-8 rounded-sm font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all shadow-[0_0_20px_rgba(214,40,40,0.4)] hover:shadow-[0_0_40px_rgba(214,40,40,0.6)]">
                   Schedule Tour <ArrowRight size={16} />
                </Link>
-               <Link to="/rentals" className="bg-white/10 hover:bg-white hover:text-dfw-navy text-white border border-white/20 py-4 px-8 rounded-sm font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all">
+               <Link href="/rentals" className="bg-white/10 hover:bg-white hover:text-dfw-navy text-white border border-white/20 py-4 px-8 rounded-sm font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all">
                   View Rentals
                </Link>
             </div>

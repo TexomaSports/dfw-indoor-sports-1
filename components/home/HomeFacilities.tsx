@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const facilities = [
   { 
@@ -72,7 +74,7 @@ const HomeFacilities: React.FC = () => {
             viewport={{ once: true }}
             className="hidden md:block"
           >
-             <Link to="/contact" className="flex items-center gap-3 px-6 py-3 border border-white/20 text-white font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-dfw-navy transition-all rounded-sm">
+             <Link href="/contact" className="flex items-center gap-3 px-6 py-3 border border-white/20 text-white font-bold uppercase text-xs tracking-widest hover:bg-white hover:text-dfw-navy transition-all rounded-sm">
                 Schedule Free Facility Tour <ArrowRight size={14} />
              </Link>
           </motion.div>
@@ -112,7 +114,7 @@ const HomeFacilities: React.FC = () => {
         </motion.div>
 
         <div className="md:hidden mt-8">
-            <Link to="/contact" className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-dfw-red text-white font-bold uppercase text-xs tracking-widest rounded-sm">
+            <Link href="/contact" className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-dfw-red text-white font-bold uppercase text-xs tracking-widest rounded-sm">
                 Schedule Tour <ArrowRight size={14} />
             </Link>
         </div>

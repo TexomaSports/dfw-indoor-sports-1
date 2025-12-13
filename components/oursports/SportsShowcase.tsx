@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const sportsData = [
   {
@@ -110,10 +112,10 @@ const SportsShowcase: React.FC = () => {
                       </div>
 
                       <div className="flex flex-col sm:flex-row gap-4">
-                         <Link to={sport.link} className={`px-8 py-3 bg-${sport.color} text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:opacity-90 transition-opacity shadow-lg text-center`}>
+                         <Link href={sport.link} className={`px-8 py-3 bg-${sport.color} text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:opacity-90 transition-opacity shadow-lg text-center`}>
                             Book {sport.title}
                          </Link>
-                         <Link to={sport.link} className="px-8 py-3 border border-gray-300 dark:border-white/20 text-dfw-navy dark:text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-dfw-navy dark:hover:bg-white hover:text-white dark:hover:text-dfw-navy transition-colors flex items-center justify-center gap-2 group">
+                         <Link href={sport.link} className="px-8 py-3 border border-gray-300 dark:border-white/20 text-dfw-navy dark:text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-dfw-navy dark:hover:bg-white hover:text-white dark:hover:text-dfw-navy transition-colors flex items-center justify-center gap-2 group">
                             Learn More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                          </Link>
                       </div>

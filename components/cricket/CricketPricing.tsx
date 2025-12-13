@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Check, Star, ArrowRight, Users, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const CricketPricing: React.FC = () => {
   return (
@@ -43,7 +45,7 @@ const CricketPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-green-600 dark:text-green-400" /> Balls & Protective Gear</li>
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-green-600 dark:text-green-400" /> Up to 6 Players</li>
                 </ul>
-                <Link to="/contact" className="w-full py-4 border-2 border-[#006838] text-[#006838] dark:border-green-400 dark:text-green-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#006838] hover:text-white dark:hover:bg-green-400 dark:hover:text-black transition-colors block text-center">Book Lane</Link>
+                <Link href="/contact" className="w-full py-4 border-2 border-[#006838] text-[#006838] dark:border-green-400 dark:text-green-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#006838] hover:text-white dark:hover:bg-green-400 dark:hover:text-black transition-colors block text-center">Book Lane</Link>
              </motion.div>
 
              {/* Membership - Highlighted */}
@@ -79,7 +81,7 @@ const CricketPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-green-100"><Check size={16} className="text-white" /> 24/7 Facility Access</li>
                    <li className="flex gap-3 text-sm text-green-100"><Check size={16} className="text-white" /> 10% Pro Shop & Coaching Discount</li>
                 </ul>
-                <Link to="/memberships" className="w-full py-4 bg-[#CC0000] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-red-700 transition-colors shadow-lg relative z-10 block text-center">Start Membership</Link>
+                <Link href="/memberships" className="w-full py-4 bg-[#CC0000] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-red-700 transition-colors shadow-lg relative z-10 block text-center">Start Membership</Link>
              </motion.div>
 
              {/* Team Package */}
@@ -107,7 +109,7 @@ const CricketPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-green-600 dark:text-green-400" /> Equipment Storage Option</li>
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-green-600 dark:text-green-400" /> Access to Meeting Room</li>
                 </ul>
-                <Link to="/contact" className="w-full py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#006838] hover:text-[#006838] dark:hover:border-green-400 dark:hover:text-green-400 transition-colors flex items-center justify-center gap-2">
+                <Link href="/contact" className="w-full py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#006838] hover:text-[#006838] dark:hover:border-green-400 dark:hover:text-green-400 transition-colors flex items-center justify-center gap-2">
                    <Users size={16} /> Request Quote
                 </Link>
              </motion.div>

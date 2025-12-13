@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { MousePointer2, Phone, UserPlus, CreditCard, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const SoccerBooking: React.FC = () => {
   return (
@@ -32,7 +34,7 @@ const SoccerBooking: React.FC = () => {
                    <div className="flex gap-2"><Calendar size={14} className="text-emerald-500" /> 2. Choose Duration</div>
                    <div className="flex gap-2"><CreditCard size={14} className="text-emerald-500" /> 3. Complete Payment</div>
                 </div>
-                <Link to="/contact" className="w-full py-3 bg-[#064E3B] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-emerald-700 transition-colors block text-center">Book Field Online</Link>
+                <Link href="/contact" className="w-full py-3 bg-[#064E3B] text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-emerald-700 transition-colors block text-center">Book Field Online</Link>
              </motion.div>
 
              {/* Phone */}

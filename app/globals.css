@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dfw-red: #D62828;
+  --dfw-navy: #0A111F;
+  --dfw-surface: #111827;
+  --dfw-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: #FAFAFA;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body,
+.dark {
+  background-color: #020408;
+  color: #F3F4F6;
+}
+
+.glass-tech {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.text-stroke-sm {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(214, 40, 40, 0.5);
+}
+
+.digital-glow {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@layer utilities {
+  .font-header {
+    font-family: 'Oswald', sans-serif;
+  }
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}

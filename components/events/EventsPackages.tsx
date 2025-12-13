@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Clock, Trophy, Users, PartyPopper, Utensils, Star, Camera } from 'lucide-react';
 import { motion } from 'framer-motion';

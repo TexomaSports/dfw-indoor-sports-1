@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, Shield, Target, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const highlights = [
   {
@@ -84,7 +84,7 @@ const FeatureHighlights: React.FC = () => {
                   {item.description}
                 </p>
                 
-                <Link to={item.link} className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-dfw-navy bg-gray-50 px-5 py-3 rounded-sm border border-gray-200 group-hover:bg-dfw-red group-hover:text-white group-hover:border-dfw-red transition-all duration-300 shadow-sm hover:shadow-md">
+                <Link href={item.link} className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-dfw-navy bg-gray-50 px-5 py-3 rounded-sm border border-gray-200 group-hover:bg-dfw-red group-hover:text-white group-hover:border-dfw-red transition-all duration-300 shadow-sm hover:shadow-md">
                   Learn More <ArrowUpRight size={14} />
                 </Link>
               </div>

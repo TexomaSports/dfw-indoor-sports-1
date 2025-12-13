@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ArrowUp, Layers, Lightbulb, Thermometer, Grid, ShieldCheck, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';

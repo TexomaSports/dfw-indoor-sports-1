@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Users, Heart, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const SportsCommunity: React.FC = () => {
   return (
@@ -44,7 +46,7 @@ const SportsCommunity: React.FC = () => {
                       </div>
                    </div>
                 </div>
-                <Link to="/memberships" className="text-dfw-red font-bold text-sm uppercase tracking-widest hover:text-dfw-navy dark:hover:text-white transition-colors">See all membership benefits &rarr;</Link>
+                <Link href="/memberships" className="text-dfw-red font-bold text-sm uppercase tracking-widest hover:text-dfw-navy dark:hover:text-white transition-colors">See all membership benefits &rarr;</Link>
              </motion.div>
 
              <div className="lg:w-1/2">

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ChevronDown, ArrowRight, Calendar, Bell, Trophy } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeBottom: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const HomeBottom: React.FC = () => {
                ))}
             </div>
             <div className="text-center mt-8">
-               <Link to="/contact" className="text-xs font-bold text-dfw-red uppercase tracking-widest border-b border-dfw-red pb-1 hover:text-dfw-navy dark:hover:text-white hover:border-dfw-navy dark:hover:border-white transition-all">View All FAQs</Link>
+               <Link href="/contact" className="text-xs font-bold text-dfw-red uppercase tracking-widest border-b border-dfw-red pb-1 hover:text-dfw-navy dark:hover:text-white hover:border-dfw-navy dark:hover:border-white transition-all">View All FAQs</Link>
             </div>
          </div>
       </section>
@@ -37,7 +37,7 @@ const HomeBottom: React.FC = () => {
          <div className="container mx-auto px-4 md:px-6">
             <div className="flex justify-between items-end mb-12">
                <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase">Latest Updates</h2>
-               <Link to="/events" className="hidden md:flex items-center gap-2 text-xs font-bold text-dfw-navy dark:text-white uppercase tracking-widest hover:text-dfw-red transition-colors">Read More <ArrowRight size={14} /></Link>
+               <Link href="/events" className="hidden md:flex items-center gap-2 text-xs font-bold text-dfw-navy dark:text-white uppercase tracking-widest hover:text-dfw-red transition-colors">Read More <ArrowRight size={14} /></Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                <div className="bg-white dark:bg-white/5 p-6 rounded-lg shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-md transition-all">
@@ -82,10 +82,10 @@ const HomeBottom: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-               <Link to="/memberships" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)]">
+               <Link href="/memberships" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.4)]">
                   Claim Offer Online
                </Link>
-               <Link to="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
+               <Link href="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
                   Schedule Visit
                </Link>
             </div>

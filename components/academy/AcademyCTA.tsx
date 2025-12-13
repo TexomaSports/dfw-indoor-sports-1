@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const AcademyCTA: React.FC = () => {
   return (
@@ -35,10 +37,10 @@ const AcademyCTA: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-6"
           >
-             <Link to="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.3)] hover:shadow-[0_0_50px_rgba(214,40,40,0.5)] transform hover:-translate-y-1">
+             <Link href="/contact" className="px-10 py-5 bg-dfw-red text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-red-700 transition-colors shadow-[0_0_30px_rgba(214,40,40,0.3)] hover:shadow-[0_0_50px_rgba(214,40,40,0.5)] transform hover:-translate-y-1">
                 Book Free Trial Session
              </Link>
-             <Link to="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
+             <Link href="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-colors">
                 Contact Academy
              </Link>
           </motion.div>

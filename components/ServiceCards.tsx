@@ -1,6 +1,6 @@
 import React from 'react';
 import { Target, Trophy, Zap, ArrowRight, Video, BarChart3, Users, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const ServiceCards: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const ServiceCards: React.FC = () => {
                  Choose Your <br/> Path To Glory
                </h2>
             </div>
-            <Link to="/sports" className="hidden md:flex items-center gap-2 px-6 py-3 border border-gray-200 hover:border-dfw-red text-dfw-navy hover:text-dfw-red font-bold uppercase text-xs tracking-widest transition-all bg-white hover:shadow-lg rounded-sm">
+            <Link href="/sports" className="hidden md:flex items-center gap-2 px-6 py-3 border border-gray-200 hover:border-dfw-red text-dfw-navy hover:text-dfw-red font-bold uppercase text-xs tracking-widest transition-all bg-white hover:shadow-lg rounded-sm">
                 View All Programs <ArrowRight size={14} />
             </Link>
           </div>
@@ -60,7 +60,7 @@ const ServiceCards: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/academy" className="border-t border-gray-100 p-6 md:p-8 flex justify-between items-center bg-gray-50/50 group-hover:bg-white transition-colors">
+            <Link href="/academy" className="border-t border-gray-100 p-6 md:p-8 flex justify-between items-center bg-gray-50/50 group-hover:bg-white transition-colors">
               <span className="text-xs font-bold text-dfw-navy uppercase tracking-widest group-hover:translate-x-1 transition-transform">Book Session</span>
               <ArrowRight size={16} className="text-dfw-navy group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -101,7 +101,7 @@ const ServiceCards: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/contact" className="border-t border-white/10 p-6 md:p-8 flex justify-between items-center hover:bg-white/5 transition-colors bg-dfw-navy relative z-10 group">
+            <Link href="/contact" className="border-t border-white/10 p-6 md:p-8 flex justify-between items-center hover:bg-white/5 transition-colors bg-dfw-navy relative z-10 group">
               <span className="text-xs font-bold text-white uppercase tracking-widest group-hover:text-dfw-red transition-colors">Join A Team</span>
               <ArrowRight size={16} className="text-white group-hover:text-dfw-red group-hover:translate-x-2 transition-all" />
             </Link>
@@ -132,7 +132,7 @@ const ServiceCards: React.FC = () => {
               </div>
             </div>
 
-            <Link to="/events" className="border-t border-gray-100 p-6 md:p-8 flex justify-between items-center bg-gray-50/50 group-hover:bg-white transition-colors">
+            <Link href="/events" className="border-t border-gray-100 p-6 md:p-8 flex justify-between items-center bg-gray-50/50 group-hover:bg-white transition-colors">
               <span className="text-xs font-bold text-dfw-navy uppercase tracking-widest group-hover:translate-x-1 transition-transform">Plan Event</span>
               <ArrowRight size={16} className="text-dfw-navy group-hover:translate-x-1 transition-transform" />
             </Link>
@@ -140,7 +140,7 @@ const ServiceCards: React.FC = () => {
 
           {/* Mobile Only - View All Button */}
           <div className="md:hidden mt-4">
-            <Link to="/sports" className="w-full flex items-center justify-center gap-2 px-6 py-4 border border-gray-200 text-dfw-navy font-bold uppercase text-xs tracking-widest bg-white rounded-sm">
+            <Link href="/sports" className="w-full flex items-center justify-center gap-2 px-6 py-4 border border-gray-200 text-dfw-navy font-bold uppercase text-xs tracking-widest bg-white rounded-sm">
                 View All Programs <ArrowRight size={14} />
             </Link>
           </div>

@@ -1,6 +1,8 @@
+'use client'
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const CurrentPartners: React.FC = () => {
   return (
@@ -86,7 +88,7 @@ const CurrentPartners: React.FC = () => {
             transition={{ delay: 0.4 }}
             className="mt-16 pt-16 border-t border-gray-200 dark:border-white/10"
           >
-             <p className="text-xs text-gray-400 italic">Interested in joining our partner network? <Link to="/contact" className="text-dfw-navy dark:text-white font-bold hover:text-dfw-red dark:hover:text-dfw-red underline decoration-dotted underline-offset-4">Get in touch.</Link></p>
+             <p className="text-xs text-gray-400 italic">Interested in joining our partner network? <Link href="/contact" className="text-dfw-navy dark:text-white font-bold hover:text-dfw-red dark:hover:text-dfw-red underline decoration-dotted underline-offset-4">Get in touch.</Link></p>
           </motion.div>
        </div>
     </section>

@@ -1,6 +1,8 @@
+'use client'
+
 import React, { useState } from 'react';
 import { CheckSquare, Square, AlertCircle, Calendar, User, Upload, CheckCircle2, Loader2, FileCheck, Printer, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const WaiverDocument: React.FC = () => {
   const [agreed, setAgreed] = useState(false);
@@ -160,7 +162,7 @@ const WaiverDocument: React.FC = () => {
                          >
                             <Printer size={16} /> Print Copy
                          </button>
-                         <Link to="/" className="px-6 py-3 bg-dfw-navy text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-dfw-red transition-colors shadow-lg flex items-center justify-center gap-2">
+                         <Link href="/" className="px-6 py-3 bg-dfw-navy text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-dfw-red transition-colors shadow-lg flex items-center justify-center gap-2">
                             Return Home <ArrowRight size={16} />
                          </Link>
                       </div>

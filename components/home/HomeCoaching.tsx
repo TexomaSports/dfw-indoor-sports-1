@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeCoaching: React.FC = () => {
   return (
@@ -65,7 +67,7 @@ const HomeCoaching: React.FC = () => {
                    ))}
                 </div>
 
-                <Link to="/academy/coaches" className="inline-flex items-center gap-2 text-dfw-red font-bold uppercase text-xs tracking-widest border-b border-dfw-red/20 pb-1 hover:text-dfw-navy dark:hover:text-white hover:border-dfw-navy dark:hover:border-white transition-all">
+                <Link href="/academy/coaches" className="inline-flex items-center gap-2 text-dfw-red font-bold uppercase text-xs tracking-widest border-b border-dfw-red/20 pb-1 hover:text-dfw-navy dark:hover:text-white hover:border-dfw-navy dark:hover:border-white transition-all">
                    Meet Our Coaching Team <ArrowRight size={14} />
                 </Link>
              </motion.div>

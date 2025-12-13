@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Calendar, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const BadmintonCTA: React.FC = () => {
   return (
@@ -31,13 +33,13 @@ const BadmintonCTA: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-             <Link to="/contact" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-blue-600 transition-colors shadow-lg">
+             <Link href="/contact" className="px-10 py-5 bg-blue-500 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-blue-600 transition-colors shadow-lg">
                 Reserve Court
              </Link>
-             <Link to="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#1E3A8A] transition-colors">
+             <Link href="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#1E3A8A] transition-colors">
                 Schedule Tour
              </Link>
-             <Link to="/memberships" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
+             <Link href="/memberships" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
                 Join Membership
              </Link>
           </motion.div>

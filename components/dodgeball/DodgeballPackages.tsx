@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Cake, Briefcase, Check, Star, Users, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';

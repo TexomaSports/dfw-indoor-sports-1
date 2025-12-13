@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Pizza, Utensils, Wine, Coffee, Music, Heart, Globe, Film } from 'lucide-react';
 import { motion } from 'framer-motion';

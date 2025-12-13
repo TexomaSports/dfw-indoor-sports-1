@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Check, Star, ArrowRight, Users, Clock, Trophy, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const SoccerPricing: React.FC = () => {
   return (
@@ -43,7 +45,7 @@ const SoccerPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-emerald-600 dark:text-emerald-400" /> Goal Systems Included</li>
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-emerald-600 dark:text-emerald-400" /> Up to 16 Players</li>
                 </ul>
-                <Link to="/contact" className="w-full py-4 border-2 border-[#064E3B] dark:border-emerald-400 text-[#064E3B] dark:text-emerald-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#064E3B] hover:text-white dark:hover:bg-emerald-400 dark:hover:text-black transition-colors block text-center">Book Field Now</Link>
+                <Link href="/contact" className="w-full py-4 border-2 border-[#064E3B] dark:border-emerald-400 text-[#064E3B] dark:text-emerald-400 font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-[#064E3B] hover:text-white dark:hover:bg-emerald-400 dark:hover:text-black transition-colors block text-center">Book Field Now</Link>
              </motion.div>
 
              {/* Membership - Highlighted */}
@@ -79,7 +81,7 @@ const SoccerPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-emerald-50"><Check size={16} className="text-white" /> 24/7 Facility Access</li>
                    <li className="flex gap-3 text-sm text-emerald-50"><Check size={16} className="text-white" /> 10% Pro Shop & Coaching Discount</li>
                 </ul>
-                <Link to="/memberships" className="w-full py-4 bg-emerald-500 text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-emerald-400 transition-colors shadow-lg relative z-10 block text-center">Explore Gold Membership</Link>
+                <Link href="/memberships" className="w-full py-4 bg-emerald-500 text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:bg-emerald-400 transition-colors shadow-lg relative z-10 block text-center">Explore Gold Membership</Link>
              </motion.div>
 
              {/* Team Package */}
@@ -107,7 +109,7 @@ const SoccerPricing: React.FC = () => {
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-emerald-600 dark:text-emerald-400" /> Priority Rescheduling</li>
                    <li className="flex gap-3 text-sm text-gray-600 dark:text-gray-300"><Check size={16} className="text-emerald-600 dark:text-emerald-400" /> Equipment Storage Option</li>
                 </ul>
-                <Link to="/contact" className="w-full py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#064E3B] hover:text-[#064E3B] dark:hover:border-emerald-400 dark:hover:text-emerald-400 transition-colors flex items-center justify-center gap-2">
+                <Link href="/contact" className="w-full py-4 border-2 border-gray-200 dark:border-white/20 text-gray-600 dark:text-gray-300 font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#064E3B] hover:text-[#064E3B] dark:hover:border-emerald-400 dark:hover:text-emerald-400 transition-colors flex items-center justify-center gap-2">
                    <Users size={16} /> Request Team Quote
                 </Link>
              </motion.div>
@@ -123,7 +125,7 @@ const SoccerPricing: React.FC = () => {
                    <p><strong className="text-gray-900 dark:text-white">Tournaments:</strong> $350 Full Day (8 hrs) | $200 Half Day (4 hrs). Ideal for showcases.</p>
                 </div>
              </div>
-             <Link to="/events" className="px-8 py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 text-gray-700 dark:text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#064E3B] hover:text-[#064E3B] dark:hover:bg-white dark:hover:text-[#064E3B] transition-colors whitespace-nowrap flex items-center gap-2">
+             <Link href="/events" className="px-8 py-3 bg-white dark:bg-white/10 border border-gray-300 dark:border-white/20 text-gray-700 dark:text-white font-bold uppercase text-xs tracking-widest rounded-sm hover:border-[#064E3B] hover:text-[#064E3B] dark:hover:bg-white dark:hover:text-[#064E3B] transition-colors whitespace-nowrap flex items-center gap-2">
                 <Trophy size={14} /> View League Schedule
              </Link>
           </div>

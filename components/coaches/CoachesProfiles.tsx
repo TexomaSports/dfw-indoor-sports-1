@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Activity, Award, Brain, Globe, Users, Target, Quote } from 'lucide-react';
 import { motion } from 'framer-motion';

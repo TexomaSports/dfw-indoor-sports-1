@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Calculator, Target, Users, Check, Smile } from 'lucide-react';
 import { motion } from 'framer-motion';

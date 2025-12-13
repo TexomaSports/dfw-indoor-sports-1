@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { ChevronRight, Calendar, Info, Check, Trophy, PlayCircle } from 'lucide-react';
 

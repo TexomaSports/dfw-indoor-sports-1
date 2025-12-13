@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { ArrowRight, Check, Smile } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeMembership: React.FC = () => {
   return (
@@ -38,7 +40,7 @@ const HomeMembership: React.FC = () => {
                       </div>
                    ))}
                 </div>
-                <Link to="/memberships" className="inline-block px-8 py-4 bg-white text-dfw-navy font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-gray-200 transition-colors">
+                <Link href="/memberships" className="inline-block px-8 py-4 bg-white text-dfw-navy font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-gray-200 transition-colors">
                    Find Your Plan
                 </Link>
              </motion.div>
@@ -61,7 +63,7 @@ const HomeMembership: React.FC = () => {
                    <p className="text-xs text-white/70 mb-6 leading-relaxed">
                       Total freedom. Unlimited cricket, badminton, soccer, and dodgeball. Plus free bowling machine usage.
                    </p>
-                   <Link to="/memberships" className="block w-full py-3 bg-black/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-black/40 transition-colors border border-white/10 text-center">View Details</Link>
+                   <Link href="/memberships" className="block w-full py-3 bg-black/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-black/40 transition-colors border border-white/10 text-center">View Details</Link>
                 </motion.div>
 
                 {/* Family Card */}
@@ -78,7 +80,7 @@ const HomeMembership: React.FC = () => {
                    <p className="text-xs text-gray-400 mb-6 leading-relaxed">
                       The ultimate family activity. Everyone plays what they love. Active weekends sorted.
                    </p>
-                   <Link to="/memberships" className="block w-full py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-colors text-center">View Details</Link>
+                   <Link href="/memberships" className="block w-full py-3 border border-white/20 text-white font-bold uppercase text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-colors text-center">View Details</Link>
                 </motion.div>
 
              </div>

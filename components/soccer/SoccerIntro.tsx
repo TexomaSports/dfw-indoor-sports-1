@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { DollarSign, CheckCircle2, MapPin, Clock, Shield, ArrowRight, Sun, CloudRain, Wind } from 'lucide-react';
 import { motion } from 'framer-motion';

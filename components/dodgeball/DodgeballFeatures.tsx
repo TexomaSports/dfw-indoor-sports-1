@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Ruler, ShieldCheck, Thermometer, Box, Users, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';

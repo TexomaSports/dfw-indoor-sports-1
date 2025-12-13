@@ -1,46 +1,40 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronRight, ChevronDown, Menu, X, Moon, Sun } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { NAV_ITEMS } from '../constants';
-import { useTheme } from '../context/ThemeContext';
-import { motion, AnimatePresence } from 'framer-motion';
+'use client'
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { theme, toggleTheme } = useTheme();
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, ChevronRight, ChevronDown, Menu, X, Moon, Sun } from 'lucide-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { NAV_ITEMS } from '@/constants'
+import { useTheme } from '@/context/ThemeContext'
+import { motion, AnimatePresence } from 'framer-motion'
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = 'unset'
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   useEffect(() => {
-    if (location.hash) {
-      // Delay to ensure page render
-      setTimeout(() => {
-        const element = document.getElementById(location.hash.substring(1));
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else if (location.pathname !== '/') {
-      window.scrollTo(0, 0);
+    if (pathname !== '/') {
+      window.scrollTo(0, 0)
     }
-  }, [location.pathname, location.hash]);
+  }, [pathname])
 
   return (
     <>
@@ -56,9 +50,8 @@ const Navbar: React.FC = () => {
         <div className="container mx-auto px-4 md:px-6 relative z-[110]">
           <div className="flex justify-between items-center h-12 md:h-14">
             
-            {/* Logo Area */}
             <div className="flex items-center flex-shrink-0 group cursor-pointer relative z-50">
-              <Link to="/" className="flex flex-col items-start leading-none select-none">
+              <Link href="/" className="flex flex-col items-start leading-none select-none">
                 <div className="flex items-center gap-1">
                    <span className="text-xl md:text-2xl font-header font-bold text-dfw-navy dark:text-white tracking-tighter group-hover:text-black dark:group-hover:text-gray-200 transition-colors">
                      DFW
@@ -73,7 +66,6 @@ const Navbar: React.FC = () => {
               </Link>
             </div>
 
-            {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
               <div className="flex items-center gap-1">
                 {NAV_ITEMS.map((item) => (
@@ -82,13 +74,13 @@ const Navbar: React.FC = () => {
                       <>
                         <button
                           className={`relative px-3 py-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest transition-colors duration-300 group-hover/menu:text-dfw-red ${
-                            location.pathname.startsWith(item.href) ? 'text-dfw-navy dark:text-white' : 'text-gray-500 dark:text-gray-400'
+                            pathname.startsWith(item.href) ? 'text-dfw-navy dark:text-white' : 'text-gray-500 dark:text-gray-400'
                           }`}
                         >
                           {item.label}
                           <ChevronDown size={10} className="transition-transform duration-300 group-hover/menu:rotate-180" />
                           
-                          <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-dfw-red transition-all duration-300 group-hover/menu:w-1/2 ${location.pathname.startsWith(item.href) ? 'w-1/2' : ''}`}></span>
+                          <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-dfw-red transition-all duration-300 group-hover/menu:w-1/2 ${pathname.startsWith(item.href) ? 'w-1/2' : ''}`}></span>
                         </button>
                         
                         <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-56 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all duration-300 transform translate-y-2 group-hover/menu:translate-y-0">
@@ -96,7 +88,7 @@ const Navbar: React.FC = () => {
                             {item.children.map((child) => (
                               <Link
                                 key={child.label}
-                                to={child.href}
+                                href={child.href}
                                 className="block px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-gray-500 dark:text-gray-300 hover:text-dfw-red dark:hover:text-dfw-red hover:bg-gray-50 dark:hover:bg-white/5 transition-all rounded-sm flex items-center justify-between group/item"
                               >
                                 <span>{child.label}</span>
@@ -108,20 +100,19 @@ const Navbar: React.FC = () => {
                       </>
                     ) : (
                       <Link
-                        to={item.href}
+                        href={item.href}
                         className={`relative px-3 py-2 block text-[11px] font-bold uppercase tracking-widest transition-colors duration-300 hover:text-dfw-red ${
-                          location.pathname === item.href ? 'text-dfw-navy dark:text-white' : 'text-gray-500 dark:text-gray-400'
+                          pathname === item.href ? 'text-dfw-navy dark:text-white' : 'text-gray-500 dark:text-gray-400'
                         }`}
                       >
                         {item.label}
-                        <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-dfw-red transition-all duration-300 group-hover:w-1/2 ${location.pathname === item.href ? 'w-1/2' : ''}`}></span>
+                        <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-dfw-red transition-all duration-300 group-hover:w-1/2 ${pathname === item.href ? 'w-1/2' : ''}`}></span>
                       </Link>
                     )}
                   </div>
                 ))}
               </div>
 
-              {/* Action Button & Theme Toggle */}
               <div className="pl-6 border-l border-gray-200 dark:border-white/10 flex items-center gap-4">
                 <button 
                   onClick={toggleTheme}
@@ -132,7 +123,7 @@ const Navbar: React.FC = () => {
                 </button>
 
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group relative inline-flex items-center gap-2 px-5 py-2.5 bg-dfw-navy dark:bg-white dark:text-dfw-navy text-white text-[10px] font-bold uppercase tracking-widest rounded-sm overflow-hidden transition-all hover:bg-dfw-red dark:hover:bg-gray-200 shadow-md"
                 >
                   <span className="relative z-10">Contact Us</span>
@@ -141,7 +132,6 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* Mobile Menu Toggle */}
             <div className="lg:hidden flex items-center gap-4 z-50">
               <button 
                   onClick={toggleTheme}
@@ -160,7 +150,6 @@ const Navbar: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {isOpen && (
             <motion.div 
@@ -170,7 +159,6 @@ const Navbar: React.FC = () => {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               className="lg:hidden fixed inset-0 z-[90] bg-white dark:bg-dfw-navy"
             >
-              {/* Background FX */}
               <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
 
               <div className="flex flex-col h-full pt-28 px-6 pb-12 overflow-y-auto relative z-10">
@@ -187,7 +175,7 @@ const Navbar: React.FC = () => {
                               {item.children ? (
                                   <div className="py-4">
                                       <Link 
-                                          to={item.href}
+                                          href={item.href}
                                           onClick={() => setIsOpen(false)}
                                           className="block font-header font-bold text-2xl text-dfw-navy dark:text-white uppercase mb-4"
                                       >
@@ -197,7 +185,7 @@ const Navbar: React.FC = () => {
                                           {item.children.map(child => (
                                               <Link 
                                                   key={child.label}
-                                                  to={child.href}
+                                                  href={child.href}
                                                   onClick={() => setIsOpen(false)}
                                                   className="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest hover:text-dfw-red transition-colors"
                                               >
@@ -208,7 +196,7 @@ const Navbar: React.FC = () => {
                                   </div>
                               ) : (
                                   <Link
-                                      to={item.href}
+                                      href={item.href}
                                       className="block py-4 font-header font-bold text-2xl text-dfw-navy dark:text-white uppercase hover:text-dfw-red transition-colors"
                                       onClick={() => setIsOpen(false)}
                                   >
@@ -226,7 +214,7 @@ const Navbar: React.FC = () => {
                       className="mt-8 pt-8 border-t border-gray-100 dark:border-white/10" 
                   >
                       <Link
-                          to="/contact"
+                          href="/contact"
                           className="flex items-center justify-center w-full bg-dfw-red text-white py-4 rounded-sm font-bold uppercase tracking-widest text-xs gap-3 shadow-[0_0_20px_rgba(214,40,40,0.3)] active:scale-[0.98] transition-transform"
                           onClick={() => setIsOpen(false)}
                       >
@@ -245,7 +233,5 @@ const Navbar: React.FC = () => {
         </AnimatePresence>
       </nav>
     </>
-  );
-};
-
-export default Navbar;
+  )
+}

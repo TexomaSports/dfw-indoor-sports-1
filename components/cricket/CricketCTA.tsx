@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { Calendar, Phone, MapPin, PlayCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const CricketCTA: React.FC = () => {
   return (
@@ -31,13 +33,13 @@ const CricketCTA: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
           >
-             <Link to="/contact" className="px-10 py-5 bg-[#CC0000] text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-lg">
+             <Link href="/contact" className="px-10 py-5 bg-[#CC0000] text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-red-700 transition-colors shadow-lg">
                 Book Online Now
              </Link>
-             <Link to="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#006838] transition-colors flex items-center gap-2 justify-center">
+             <Link href="/contact" className="px-10 py-5 border border-white/20 text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white hover:text-[#006838] transition-colors flex items-center gap-2 justify-center">
                 <PlayCircle size={16} /> Schedule Tour
              </Link>
-             <Link to="/memberships" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
+             <Link href="/memberships" className="px-10 py-5 bg-white/10 backdrop-blur-md text-white font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-white/20 transition-colors">
                 Join Membership
              </Link>
           </motion.div>

@@ -1,7 +1,9 @@
+'use client'
+
 import React from 'react';
 import { PartyPopper, Briefcase, Medal } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const HomeEvents: React.FC = () => {
   const containerVariants = {
@@ -40,7 +42,7 @@ const HomeEvents: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
              {/* Birthday */}
-             <Link to="/events">
+             <Link href="/events">
                <motion.div variants={itemVariants} className="bg-white dark:bg-[#0A111F] p-8 rounded-sm shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-lg transition-all group cursor-pointer text-center">
                   <div className="w-16 h-16 mx-auto bg-purple-50 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                      <PartyPopper size={32} />
@@ -54,7 +56,7 @@ const HomeEvents: React.FC = () => {
              </Link>
 
              {/* Corporate */}
-             <Link to="/events">
+             <Link href="/events">
                <motion.div variants={itemVariants} className="bg-white dark:bg-[#0A111F] p-8 rounded-sm shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-lg transition-all group cursor-pointer text-center">
                   <div className="w-16 h-16 mx-auto bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                      <Briefcase size={32} />
@@ -68,7 +70,7 @@ const HomeEvents: React.FC = () => {
              </Link>
 
              {/* Tournaments */}
-             <Link to="/events">
+             <Link href="/events">
                <motion.div variants={itemVariants} className="bg-white dark:bg-[#0A111F] p-8 rounded-sm shadow-sm border border-gray-100 dark:border-white/10 hover:shadow-lg transition-all group cursor-pointer text-center">
                   <div className="w-16 h-16 mx-auto bg-orange-50 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                      <Medal size={32} />
