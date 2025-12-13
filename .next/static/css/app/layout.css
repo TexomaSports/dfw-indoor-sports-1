@@ -4115,46 +4115,6 @@ body {
   color: rgb(214 40 40 );
 }
 
-.selection\:bg-\[\#064E3B\] *::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 78 59 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#064E3B\] *::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 78 59 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#1E3A8A\] *::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#1E3A8A\] *::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#4C1D95\] *::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 29 149 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#4C1D95\] *::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 29 149 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#CC0000\] *::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#CC0000\] *::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 0 0 / var(--tw-bg-opacity, 1));
-}
-
 .selection\:bg-dfw-red *::-moz-selection{
   --tw-bg-opacity: 1;
   background-color: rgb(214 40 40 / var(--tw-bg-opacity, 1));
@@ -4173,46 +4133,6 @@ body {
 .selection\:text-white *::selection{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.selection\:bg-\[\#064E3B\]::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 78 59 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#064E3B\]::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(6 78 59 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#1E3A8A\]::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#1E3A8A\]::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#4C1D95\]::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 29 149 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#4C1D95\]::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 29 149 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#CC0000\]::-moz-selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.selection\:bg-\[\#CC0000\]::selection{
-  --tw-bg-opacity: 1;
-  background-color: rgb(204 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .selection\:bg-dfw-red::-moz-selection{
