@@ -55,7 +55,7 @@ const ContactLocation: React.FC = () => {
              {/* Right: Google Maps Embed */}
              <div className="lg:w-2/3 h-[500px] lg:h-auto rounded-xl relative overflow-hidden shadow-inner border border-gray-200">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.1234567890!2d-97.30889!3d32.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d0000000000%3A0x0!2s16230%20Three%20Wide%20Dr%20Suite%20200%2C%20Fort%20Worth%2C%20TX%2076177!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus"
+                  src="https://maps.google.com/maps?q=16230+Three+Wide+Drive,+Fort+Worth,+TX+76177&t=&z=15&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: '500px' }}
