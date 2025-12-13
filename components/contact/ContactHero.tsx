@@ -27,10 +27,10 @@ const ContactHero: React.FC = () => {
            
            <h1 className="text-3xl md:text-5xl lg:text-6xl font-header font-bold text-white uppercase tracking-tighter mb-4 leading-[0.9] animate-slide-up max-w-5xl drop-shadow-2xl">
              Let's Start A <br/>
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-white">Conversation</span>
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-red-400 to-orange-500">Conversation</span>
            </h1>
            
-           <p className="max-w-xl text-gray-400 text-base md:text-lg font-light leading-relaxed border-l-2 border-blue-500 pl-6 animate-slide-up mb-6">
+           <p className="max-w-xl text-gray-400 text-base md:text-lg font-light leading-relaxed border-l-2 border-dfw-red pl-6 animate-slide-up mb-6">
              We aren't a nameless call center. We're a team of local sports enthusiasts ready to help you plan your next game, party, or league.
            </p>
 

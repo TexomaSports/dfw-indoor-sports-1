@@ -27,7 +27,7 @@ const PartnersHero: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl text-white/90 font-mono text-[10px] uppercase tracking-[0.3em] mb-4 hover:bg-white/10 transition-colors cursor-default shadow-lg group"
          >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6] group-hover:animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-dfw-red shadow-[0_0_10px_#D62828] group-hover:animate-pulse"></span>
             Community Leadership
          </motion.div>
          
@@ -38,14 +38,14 @@ const PartnersHero: React.FC = () => {
             className="text-3xl md:text-5xl lg:text-6xl font-header font-bold text-white uppercase tracking-tighter mb-4 leading-[0.9] max-w-5xl drop-shadow-2xl"
          >
            Build Something <br/>
-           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-200 to-white">Lasting</span>
+           <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-red-400 to-orange-500">Lasting</span>
          </motion.h1>
          
          <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="max-w-2xl text-gray-400 text-base md:text-lg font-light leading-relaxed border-l-2 border-blue-500 pl-6 mb-6 backdrop-blur-sm"
+            className="max-w-2xl text-gray-400 text-base md:text-lg font-light leading-relaxed border-l-2 border-dfw-red pl-6 mb-6 backdrop-blur-sm"
          >
            Don't just advertise. Integrate your brand into the daily lives of 500+ active families. Become a pillar of the Fort Worth sports community.
          </motion.p>
