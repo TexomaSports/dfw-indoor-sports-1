@@ -19,13 +19,13 @@ const RentalsHero: React.FC = () => {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#FAFAFA] dark:from-[#020408] to-transparent z-20 transition-colors duration-300"></div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-20 pt-20">
+        <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">
            {/* Trust Badge */}
            <motion.div 
              initial={{ opacity: 0, y: 20 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 0.2 }}
-             className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl text-white/90 font-mono text-[10px] uppercase tracking-[0.3em] mb-8 hover:bg-white/10 transition-colors cursor-default shadow-lg"
+             className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-2xl text-white/90 font-mono text-[10px] uppercase tracking-[0.3em] mb-4 hover:bg-white/10 transition-colors cursor-default shadow-lg"
            >
               <span className="w-1.5 h-1.5 rounded-full bg-dfw-red shadow-[0_0_10px_#D62828] animate-pulse"></span>
               72°F Climate Controlled
@@ -35,7 +35,7 @@ const RentalsHero: React.FC = () => {
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 0.4, duration: 0.8 }}
-             className="text-5xl md:text-7xl lg:text-8xl font-header font-bold text-white uppercase tracking-tighter mb-8 leading-[0.9] max-w-5xl drop-shadow-2xl"
+             className="text-3xl md:text-5xl lg:text-6xl font-header font-bold text-white uppercase tracking-tighter mb-4 leading-[0.9] max-w-5xl drop-shadow-2xl"
            >
              Your Private <br/>
              <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-red-400 to-orange-500">Arena</span>
@@ -45,26 +45,26 @@ const RentalsHero: React.FC = () => {
              initial={{ opacity: 0, y: 30 }}
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 0.6 }}
-             className="max-w-xl text-gray-300 text-lg md:text-xl font-light leading-relaxed border-l-2 border-dfw-red pl-6 mb-12 backdrop-blur-sm"
+             className="max-w-xl text-gray-300 text-base md:text-lg font-light leading-relaxed border-l-2 border-dfw-red pl-6 mb-6 backdrop-blur-sm"
            >
-             World-class cricket lanes, professional badminton courts, and FIFA-standard soccer fields. For the hour, it's all yours. Train like a champion year-round.
+             World-class cricket lanes, professional badminton courts, and FIFA-standard soccer fields. For the hour, it's all yours.
            </motion.p>
 
            <motion.div 
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              transition={{ delay: 0.8 }}
-             className="flex flex-col sm:flex-row gap-4"
+             className="flex flex-col sm:flex-row gap-3"
            >
               <button 
                 onClick={() => document.getElementById('facilities')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 bg-white text-dfw-navy font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-gray-100 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center gap-3 group"
+                className="px-6 py-3 bg-white text-dfw-navy font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-gray-100 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] flex items-center gap-3 group"
               >
                  Book Your Court <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </button>
               <button 
                 onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-8 py-4 border border-white/20 bg-white/5 backdrop-blur-md text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-all flex items-center gap-3"
+                className="px-6 py-3 border border-white/20 bg-white/5 backdrop-blur-md text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-white hover:text-dfw-navy transition-all flex items-center gap-3"
               >
                  <Clock size={14} /> Pricing & Availability
               </button>
@@ -75,7 +75,7 @@ const RentalsHero: React.FC = () => {
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              transition={{ delay: 1 }}
-             className="mt-12 flex flex-wrap gap-6 text-xs font-mono text-gray-400"
+             className="mt-6 flex flex-wrap gap-4 text-xs font-mono text-gray-400"
            >
               <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> International Standards</span>
               <span className="flex items-center gap-2"><CheckCircle2 size={14} className="text-green-500" /> Pro Equipment Included</span>
