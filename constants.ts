@@ -34,5 +34,5 @@ export const MARQUEE_ITEMS = [
 export const CONTACT_INFO = {
   phone: '(817) 938-0808',
   email: 'info@dfwindoorsports.com',
-  address: '16230 Three Wide Drive Suite 200, Fort Worth, TX 76177'
+  address: 'DFW Indoor Sports, 16230 Three Wide Dr, Fort Worth, TX 76177'
 };
