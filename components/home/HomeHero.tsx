@@ -91,15 +91,15 @@ const HomeHero: React.FC = () => {
                 More than a facility, we're a community. Whether you're picking up a racket for the first time or chasing a championship, you have a home here in North Texas.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto">
-                <Link to="/rentals" className="group relative w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-lg hover:shadow-dfw-red/40 hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
+              <div className="flex flex-row gap-4 md:gap-5 w-full sm:w-auto">
+                <Link to="/rentals" className="group relative whitespace-nowrap px-6 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-lg hover:shadow-dfw-red/40 hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine"></div>
                   <span className="relative z-10 flex items-center gap-3">
                     Start Playing <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
                 
-                <Link to="/memberships" className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 border border-white/20 hover:bg-white hover:text-dfw-navy text-white text-sm font-bold uppercase tracking-widest transition-all rounded-sm backdrop-blur-md hover:shadow-lg hover:-translate-y-1 text-center flex items-center justify-center gap-3">
+                <Link to="/memberships" className="whitespace-nowrap px-6 md:px-10 py-4 md:py-5 border border-white/20 hover:bg-white hover:text-dfw-navy text-white text-sm font-bold uppercase tracking-widest transition-all rounded-sm backdrop-blur-md hover:shadow-lg hover:-translate-y-1 text-center flex items-center justify-center gap-3">
                   <Smile size={16} /> Join the Family
                 </Link>
               </div>
