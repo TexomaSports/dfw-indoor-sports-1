@@ -1,22 +1,38 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import ClientLayout from './client-layout'
+import { defaultMetadata, generateLocalBusinessSchema, generateOrganizationSchema } from '@/lib/metadata'
 
-export const metadata: Metadata = {
-  title: {
-    default: 'DFW Indoor Sports',
-    template: '%s | DFW Indoor Sports',
-  },
-  description: 'The premier multi-sport indoor facility in Fort Worth offering Cricket, Badminton, Soccer, and more.',
-}
+export const metadata: Metadata = defaultMetadata
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const localBusinessSchema = generateLocalBusinessSchema()
+  const organizationSchema = generateOrganizationSchema()
+
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#020408" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-[#FAFAFA] dark:bg-[#020408] text-gray-900 dark:text-gray-100 antialiased">
         <ClientLayout>{children}</ClientLayout>
       </body>

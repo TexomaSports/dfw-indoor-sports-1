@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+import { createPageMetadata, generateBreadcrumbSchema, generateSportsActivitySchema } from '@/lib/metadata'
 import BadmintonHero from '@/components/badminton/BadmintonHero'
 import BadmintonIntro from '@/components/badminton/BadmintonIntro'
 import BadmintonFeatures from '@/components/badminton/BadmintonFeatures'
@@ -11,14 +13,41 @@ import BadmintonEquip from '@/components/badminton/BadmintonEquip'
 import BadmintonFAQ from '@/components/badminton/BadmintonFAQ'
 import BadmintonCTA from '@/components/badminton/BadmintonCTA'
 
-export const metadata = {
-  title: 'Badminton Court Rentals',
-  description: 'Book professional badminton courts at DFW Indoor Sports. BWF-standard courts with premium facilities.',
-}
+export const metadata: Metadata = createPageMetadata({
+  title: 'Premium Badminton Courts Fort Worth | Professional Indoor Courts',
+  description: 'Book professional BWF-standard badminton courts at DFW Indoor Sports. International standard courts with proper lighting and flooring. Hourly rentals available 5AM-11PM daily.',
+  keywords: [
+    'badminton courts Fort Worth',
+    'indoor badminton Dallas',
+    'badminton court rental DFW',
+    'professional badminton Texas',
+    'BWF standard courts',
+  ],
+  path: '/badminton-courts',
+})
 
 export default function BadmintonCourtsPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Rentals', url: '/rentals' },
+    { name: 'Badminton Courts', url: '/badminton-courts' },
+  ])
+
+  const badmintonSchema = generateSportsActivitySchema(
+    'Badminton',
+    'BWF-standard professional badminton courts with premium facilities, proper lighting, and professional flooring.'
+  )
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(badmintonSchema) }}
+      />
       <BadmintonHero />
       <BadmintonIntro />
       <BadmintonFeatures />

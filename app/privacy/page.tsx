@@ -1,11 +1,28 @@
-export const metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy Policy for DFW Indoor Sports.',
-}
+import type { Metadata } from 'next'
+import { createPageMetadata, generateBreadcrumbSchema } from '@/lib/metadata'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Privacy Policy | DFW Indoor Sports',
+  description: 'Read our privacy policy to understand how DFW Indoor Sports collects, uses, and protects your personal information when using our website and facilities.',
+  keywords: [
+    'privacy policy sports facility',
+    'DFW Indoor Sports privacy',
+  ],
+  path: '/privacy',
+})
 
 export default function PrivacyPolicyPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Privacy Policy', url: '/privacy' },
+  ])
+
   return (
     <div className="bg-white dark:bg-[#020408] min-h-screen pt-24 pb-12 font-sans transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <h1 className="text-4xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-8">Privacy Policy</h1>
         <div className="prose prose-lg text-gray-600 dark:text-gray-400">

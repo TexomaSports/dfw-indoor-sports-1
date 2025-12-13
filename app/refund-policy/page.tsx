@@ -2,6 +2,7 @@
 
 import { ShieldAlert, CheckCircle2, AlertTriangle, XCircle, Info } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { generateBreadcrumbSchema } from '@/lib/metadata'
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id)

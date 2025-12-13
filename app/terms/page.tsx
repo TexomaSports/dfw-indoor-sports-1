@@ -1,11 +1,28 @@
-export const metadata = {
-  title: 'Terms of Service',
-  description: 'Terms of Service for DFW Indoor Sports.',
-}
+import type { Metadata } from 'next'
+import { createPageMetadata, generateBreadcrumbSchema } from '@/lib/metadata'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Terms of Service | DFW Indoor Sports',
+  description: 'Review the terms of service for using DFW Indoor Sports facilities, website, and services. Understand facility rules, booking policies, and conditions of use.',
+  keywords: [
+    'terms of service sports facility',
+    'DFW Indoor Sports terms',
+  ],
+  path: '/terms',
+})
 
 export default function TermsOfServicePage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: '/' },
+    { name: 'Terms of Service', url: '/terms' },
+  ])
+
   return (
     <div className="bg-white dark:bg-[#020408] min-h-screen pt-24 pb-12 font-sans transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <h1 className="text-4xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-8">Terms of Service</h1>
         <div className="prose prose-lg text-gray-600 dark:text-gray-400">
