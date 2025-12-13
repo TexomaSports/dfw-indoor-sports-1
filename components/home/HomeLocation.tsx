@@ -40,21 +40,19 @@ const HomeLocation: React.FC = () => {
                initial={{ opacity: 0, x: 30 }}
                whileInView={{ opacity: 1, x: 0 }}
                viewport={{ once: true }}
-               className="lg:w-1/2 h-[400px] w-full bg-gray-200 dark:bg-[#111] rounded-lg relative overflow-hidden shadow-inner group"
+               className="lg:w-1/2 h-[400px] w-full rounded-lg relative overflow-hidden shadow-inner group"
              >
-                <div className="absolute inset-0 bg-[#E5E7EB] dark:bg-[#1a1d24] flex items-center justify-center transition-colors">
-                   <div className="text-center opacity-50">
-                      <MapPin size={48} className="mx-auto text-gray-400 mb-2" />
-                      <span className="font-header font-bold uppercase text-gray-400 tracking-widest">16230 Three Wide Dr Suite 200</span>
-                   </div>
-                </div>
-                {/* Adding width/height attributes to hypothetical map image for CLS prevention logic, though here it is a placeholder div */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                   <span className="relative flex h-6 w-6">
-                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-dfw-red opacity-75"></span>
-                     <span className="relative inline-flex rounded-full h-6 w-6 bg-dfw-red border-4 border-white dark:border-[#0A111F] shadow-lg"></span>
-                   </span>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.1234567890!2d-97.30889!3d32.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d0000000000%3A0x0!2s16230%20Three%20Wide%20Dr%20Suite%20200%2C%20Fort%20Worth%2C%20TX%2076177!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="DFW Indoor Sports Location"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
              </motion.div>
           </div>
        </div>

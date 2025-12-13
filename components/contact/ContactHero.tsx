@@ -3,7 +3,7 @@ import { Phone, Mail, ChevronDown, MessageSquare } from 'lucide-react';
 
 const ContactHero: React.FC = () => {
   return (
-    <div className="relative h-[70vh] min-h-[600px] flex items-center bg-[#020408] overflow-hidden">
+    <div className="relative h-[50vh] min-h-[400px] flex items-center bg-[#020408] overflow-hidden">
         {/* Dynamic Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-50 scale-105 animate-zoom-slow"

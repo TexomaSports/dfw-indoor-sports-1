@@ -3,7 +3,7 @@ import { ChevronRight, Thermometer, Activity, Star, Trophy, Users, Zap, MousePoi
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative w-full h-[100dvh] md:h-[95vh] min-h-[600px] md:min-h-[750px] bg-gray-50 pb-12">
+    <div className="relative w-full h-[50vh] md:h-[50vh] min-h-[400px] md:min-h-[450px] bg-gray-50 pb-6">
       {/* Container for rounded effect with Deep Physical Shadow */}
       <div className="relative h-full w-full overflow-hidden rounded-b-2xl md:rounded-b-3xl shadow-[0_20px_40px_-10px_rgba(10,17,31,0.4)] z-20">
         

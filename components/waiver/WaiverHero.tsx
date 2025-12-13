@@ -3,7 +3,7 @@ import { ShieldCheck, FileText } from 'lucide-react';
 
 const WaiverHero: React.FC = () => {
   return (
-    <div className="relative h-[55vh] min-h-[500px] flex items-center bg-[#020408] overflow-hidden">
+    <div className="relative h-[50vh] min-h-[350px] flex items-center bg-[#020408] overflow-hidden">
       {/* Background with darker tone for legal feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-30"

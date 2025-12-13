@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const RentalsHero: React.FC = () => {
   return (
-    <div className="relative h-[85vh] min-h-[700px] flex items-center bg-[#050911] overflow-hidden">
+    <div className="relative h-[50vh] min-h-[400px] flex items-center bg-[#050911] overflow-hidden">
         {/* Dynamic Background */}
         <motion.div 
           initial={{ scale: 1.1, opacity: 0 }}

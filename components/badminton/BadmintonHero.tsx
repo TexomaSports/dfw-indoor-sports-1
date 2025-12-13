@@ -3,7 +3,7 @@ import { ChevronRight, Calendar, Check, PlayCircle } from 'lucide-react';
 
 const BadmintonHero: React.FC = () => {
   return (
-    <div className="relative h-[70vh] min-h-[600px] flex items-center bg-[#1E3A8A] overflow-hidden group">
+    <div className="relative h-[50vh] min-h-[400px] flex items-center bg-[#1E3A8A] overflow-hidden group">
       {/* Background Image with Cinematic Zoom and Parallax Feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-50 scale-105 animate-zoom-slow mix-blend-luminosity"

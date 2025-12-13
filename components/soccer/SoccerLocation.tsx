@@ -47,15 +47,18 @@ const SoccerLocation: React.FC = () => {
                    <span className="text-xs font-bold text-gray-500 uppercase">Free Parking: 100+ Spaces</span>
                 </div>
              </div>
-             <div className="md:w-1/2 h-[500px] bg-gray-200 rounded-lg relative overflow-hidden shadow-inner flex items-center justify-center group">
-                {/* Simulated Map */}
-                <div className="absolute inset-0 bg-[#E5E7EB] opacity-50"></div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
-                <div className="relative z-10 flex flex-col items-center">
-                   <MapPin size={48} className="text-[#064E3B] drop-shadow-xl mb-2 group-hover:-translate-y-2 transition-transform duration-300" />
-                   <span className="bg-white px-4 py-2 text-xs font-bold text-[#064E3B] rounded shadow-sm border border-emerald-100">16230 Three Wide Dr</span>
-                   <span className="mt-2 text-[10px] bg-emerald-100 text-emerald-800 px-2 py-1 rounded font-bold uppercase tracking-widest">Easy Highway Access (I-35W / I-30)</span>
-                </div>
+             <div className="md:w-1/2 h-[500px] rounded-lg relative overflow-hidden shadow-inner">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.1234567890!2d-97.30889!3d32.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d0000000000%3A0x0!2s16230%20Three%20Wide%20Dr%20Suite%20200%2C%20Fort%20Worth%2C%20TX%2076177!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="DFW Indoor Sports Location"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
              </div>
           </div>
        </div>

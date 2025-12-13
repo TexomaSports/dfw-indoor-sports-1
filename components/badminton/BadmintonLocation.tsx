@@ -30,11 +30,18 @@ const BadmintonLocation: React.FC = () => {
                    <Navigation size={14} /> Get Directions
                 </a>
              </div>
-             <div className="md:w-1/2 h-64 bg-gray-200 rounded-lg relative overflow-hidden shadow-inner flex items-center justify-center group">
-                {/* Simulated Map */}
-                <div className="absolute inset-0 bg-[#E5E7EB] opacity-50"></div>
-                <MapPin size={48} className="text-[#1E3A8A] relative z-10 drop-shadow-xl" />
-                <span className="absolute bottom-4 left-4 bg-white px-3 py-1 text-xs font-bold text-[#1E3A8A] rounded shadow-sm z-10">16230 Three Wide Dr</span>
+             <div className="md:w-1/2 h-64 rounded-lg relative overflow-hidden shadow-inner">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.1234567890!2d-97.30889!3d32.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d0000000000%3A0x0!2s16230%20Three%20Wide%20Dr%20Suite%20200%2C%20Fort%20Worth%2C%20TX%2076177!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="DFW Indoor Sports Location"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
              </div>
           </div>
        </div>

@@ -52,34 +52,19 @@ const ContactLocation: React.FC = () => {
                 </a>
              </div>
 
-             {/* Right: Interactive Map Placeholder */}
-             <div className="lg:w-2/3 h-[500px] lg:h-auto bg-[#F0F2F5] rounded-xl relative overflow-hidden group shadow-inner border border-gray-200">
-                {/* Simulated Map Background */}
-                <div 
-                   className="absolute inset-0 bg-cover bg-center grayscale opacity-60 group-hover:grayscale-0 transition-all duration-700"
-                   style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop")' }}
-                ></div>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#F0F2F5] to-transparent mix-blend-overlay"></div>
-                
-                {/* Center Marker */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-4 group-hover:scale-110 transition-transform duration-500">
-                   <div className="relative flex h-8 w-8">
-                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-dfw-red opacity-75"></span>
-                     <span className="relative inline-flex rounded-full h-8 w-8 bg-dfw-red border-[3px] border-white shadow-xl items-center justify-center text-white">
-                        <MapPin size={14} fill="currentColor" />
-                     </span>
-                   </div>
-                   <div className="bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-100 flex flex-col items-center">
-                      <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">You Are Here</span>
-                      <span className="font-header font-bold text-dfw-navy uppercase text-sm">DFW Indoor Sports</span>
-                   </div>
-                </div>
-                
-                {/* Overlay UI elements for realism */}
-                <div className="absolute bottom-6 right-6 flex gap-2">
-                   <div className="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-gray-600 font-bold text-xl cursor-pointer hover:bg-gray-50">+</div>
-                   <div className="w-8 h-8 bg-white rounded shadow flex items-center justify-center text-gray-600 font-bold text-xl cursor-pointer hover:bg-gray-50">-</div>
-                </div>
+             {/* Right: Google Maps Embed */}
+             <div className="lg:w-2/3 h-[500px] lg:h-auto rounded-xl relative overflow-hidden shadow-inner border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.1234567890!2d-97.30889!3d32.91111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7d0000000000%3A0x0!2s16230%20Three%20Wide%20Dr%20Suite%20200%2C%20Fort%20Worth%2C%20TX%2076177!5e0!3m2!1sen!2sus!4v1702500000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: '500px' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="DFW Indoor Sports Location"
+                  className="absolute inset-0 w-full h-full"
+                ></iframe>
              </div>
 
           </div>
