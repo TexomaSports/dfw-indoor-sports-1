@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const HomeHero: React.FC = () => {
   return (
-    <div className="relative w-full h-[50vh] md:h-[50vh] min-h-[400px] md:min-h-[450px] bg-[#020408] pb-6">
+    <div className="relative w-full h-screen md:h-screen min-h-[600px] md:min-h-[700px] bg-[#020408] pb-6">
       {/* Container for rounded effect with Deep Physical Shadow */}
       <div className="relative h-full w-full overflow-hidden rounded-b-2xl md:rounded-b-[3rem] shadow-[0_40px_80px_-20px_rgba(10,17,31,0.6)] z-20">
         
@@ -129,12 +129,12 @@ const HomeHero: React.FC = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator - hidden at 50vh */}
+        {/* Scroll Indicator - visible at full height */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.6 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce hidden md:hidden"
+          className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce hidden md:flex"
         >
             <span className="text-[10px] text-white/50 uppercase tracking-widest">Explore</span>
             <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
