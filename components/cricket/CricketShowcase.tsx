@@ -1,0 +1,53 @@
+import React from 'react';
+import { Camera, MapPin, Maximize2 } from 'lucide-react';
+
+const CricketShowcase: React.FC = () => {
+  return (
+    <section className="py-24 bg-[#050911] text-white relative overflow-hidden" id="showcase">
+       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       
+       <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="text-center mb-16">
+             <h2 className="text-3xl md:text-5xl font-header font-bold uppercase mb-4">Visual Tour</h2>
+             <p className="text-gray-400">See the professional standard for yourself.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 h-auto md:h-[600px]">
+             {/* Main Large Image */}
+             <div className="md:col-span-2 md:row-span-2 relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=2070&auto=format&fit=crop" alt="Main Lanes" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                   <Maximize2 className="text-white drop-shadow-lg" size={32} />
+                </div>
+                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent">
+                   <p className="font-bold uppercase tracking-widest text-sm flex items-center gap-2"><MapPin size={14} className="text-[#CC0000]" /> Main Arena (6 Lanes)</p>
+                </div>
+             </div>
+
+             {/* Side Images */}
+             <div className="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1593341646782-e0b495cffd32?q=80&w=800&auto=format&fit=crop" alt="Bowling Machine" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+                   <p className="font-bold uppercase tracking-widest text-xs text-[#CC0000]">Auto-Feed Machines</p>
+                </div>
+             </div>
+             
+             <div className="relative rounded-lg overflow-hidden group cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" alt="Batsman" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
+                   <p className="font-bold uppercase tracking-widest text-xs text-white">Australian Matting</p>
+                </div>
+             </div>
+          </div>
+
+          <div className="text-center mt-12">
+             <button className="px-8 py-4 border border-white/20 text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-white hover:text-[#006838] transition-all flex items-center gap-3 mx-auto group">
+                <Camera size={16} className="group-hover:text-[#006838] transition-colors" /> Schedule In-Person Tour
+             </button>
+          </div>
+       </div>
+    </section>
+  );
+};
+
+export default CricketShowcase;
