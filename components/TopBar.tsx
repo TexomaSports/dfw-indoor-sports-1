@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Phone, Mail, ChevronRight, MapPin, Clock } from 'lucide-react';
 import { CONTACT_INFO } from '../constants';
