@@ -54,7 +54,7 @@ const AboutHero: React.FC = () => {
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              transition={{ delay: 0.8 }}
-             className="flex flex-row gap-4"
+             className="flex flex-col sm:flex-row gap-4"
            >
               <button 
                 onClick={() => document.getElementById('story')?.scrollIntoView({ behavior: 'smooth' })}

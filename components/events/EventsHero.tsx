@@ -39,7 +39,7 @@ const EventsHero: React.FC = () => {
              className="text-3xl md:text-5xl lg:text-6xl font-header font-bold text-white uppercase tracking-tighter mb-4 leading-[1.1] max-w-5xl drop-shadow-2xl"
            >
              Celebrate in <br/>
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-300 via-zinc-400 to-zinc-600">Motion</span>
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-dfw-red to-white">Motion</span>
            </motion.h1>
            
            <motion.p 

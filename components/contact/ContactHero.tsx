@@ -36,7 +36,7 @@ const ContactHero: React.FC = () => {
              We aren't a nameless call center. We're a team of local sports enthusiasts ready to help you plan your next game, party, or league.
            </p>
 
-           <div className="flex flex-row gap-4 animate-slide-up">
+           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
               <a 
                 href="tel:8179380808"
                 className="group relative px-6 py-3 bg-white text-dfw-navy font-bold uppercase tracking-widest text-xs rounded-sm overflow-hidden shadow-[0_0_30px_rgba(255,255,255,0.1)] flex items-center justify-center gap-3 transition-transform hover:-translate-y-1"

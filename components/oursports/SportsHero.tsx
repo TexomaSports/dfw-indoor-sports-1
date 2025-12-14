@@ -69,7 +69,7 @@ const SportsHero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-row gap-4 mt-6"
+            className="flex flex-col sm:flex-row gap-4 mt-6"
          >
             <button 
                onClick={() => document.getElementById('sports-showcase')?.scrollIntoView({ behavior: 'smooth' })}
