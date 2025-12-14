@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const HomeHero: React.FC = () => {
   return (
-    <div className="relative w-full h-screen md:h-screen min-h-[600px] md:min-h-[700px] bg-[#020408] pb-6">
+    <div className="relative w-full h-[85vh] md:h-screen min-h-[500px] md:min-h-[700px] bg-[#020408] pb-6">
       {/* Container for rounded effect with Deep Physical Shadow */}
       <div className="relative h-full w-full overflow-hidden rounded-b-2xl md:rounded-b-[3rem] shadow-[0_40px_80px_-20px_rgba(10,17,31,0.6)] z-20">
         
