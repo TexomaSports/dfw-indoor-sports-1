@@ -48,11 +48,11 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 relative z-[110]">
-          <div className="flex justify-between items-center h-12 md:h-14">
+          <div className="flex justify-between items-center h-10 md:h-14">
             
             <div className="flex items-center flex-shrink-0 group cursor-pointer relative z-50">
               <Link href="/" className="flex items-center gap-2 select-none">
-                <img src="/images/dfwlogo.png" alt="DFW Indoor Sports" className="h-10 md:h-12 w-auto" />
+                <img src="/images/dfwlogo.png" alt="DFW Indoor Sports" className="h-8 md:h-12 w-auto" />
               </Link>
             </div>
 
