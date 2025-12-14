@@ -32,7 +32,7 @@ const WaiverHero: React.FC = () => {
            To ensure the safety and enjoyment of all participants, please read and sign this agreement before accessing the facility.
          </p>
 
-         <div className="flex flex-col sm:flex-row gap-3 animate-slide-up">
+         <div className="flex flex-row gap-3 animate-slide-up">
             <button 
               onClick={() => document.getElementById('waiver-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-6 py-3 bg-dfw-red text-white font-bold uppercase tracking-widest text-xs rounded-sm hover:bg-red-700 transition-all shadow-[0_0_30px_rgba(214,40,40,0.2)] flex items-center gap-3 group"

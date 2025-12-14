@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
                 50,000 sq ft of pure adrenaline. Engineered for professional cricket, badminton, and soccer. Welcome to the future of indoor sports.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 md:gap-5 w-full sm:w-auto">
+              <div className="flex flex-row gap-4 md:gap-5 w-full sm:w-auto">
                 <button className="group relative w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-[0_10px_40px_-10px_rgba(214,40,40,0.6)] hover:shadow-[0_20px_60px_-10px_rgba(214,40,40,0.8)] hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shine"></div>
                   <span className="relative z-10 flex items-center gap-3">

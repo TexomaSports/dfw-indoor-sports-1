@@ -40,7 +40,7 @@ const SoccerHero: React.FC = () => {
          </div>
          
          {/* 3 Prominent CTAs */}
-         <div className="flex flex-col sm:flex-row gap-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+         <div className="flex flex-row gap-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
             <button className="group relative px-6 py-3 bg-emerald-600 text-white font-bold uppercase tracking-widest text-xs rounded-sm overflow-hidden shadow-[0_0_40px_rgba(5,150,105,0.4)] transition-all hover:shadow-[0_0_60px_rgba(5,150,105,0.6)] hover:-translate-y-1">
                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine"></div>
                <span className="relative flex items-center gap-3">Book Field Now <ChevronRight size={14} /></span>

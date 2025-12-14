@@ -56,7 +56,7 @@ const PartnersHero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-3"
+            className="flex flex-row gap-3"
          >
             <button 
               onClick={() => document.getElementById('contact-partners')?.scrollIntoView({ behavior: 'smooth' })}
