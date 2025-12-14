@@ -37,7 +37,7 @@ const IdentitySection: React.FC = () => {
                  </span>
                  
                  {/* Text Layer */}
-                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-red-600 to-orange-700 group-hover:tracking-widest transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] drop-shadow-2xl">
+                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-dfw-red to-white group-hover:tracking-widest transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] drop-shadow-2xl">
                     SPORTS
                  </span>
               </h2>

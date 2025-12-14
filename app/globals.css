@@ -15,6 +15,10 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Manrope', sans-serif;
   background-color: #FAFAFA;

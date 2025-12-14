@@ -39,7 +39,7 @@ const RentalsHero: React.FC = () => {
              className="text-3xl md:text-5xl lg:text-6xl font-header font-bold text-white uppercase tracking-tighter mb-4 leading-[0.9] max-w-5xl drop-shadow-2xl"
            >
              Your Private <br/>
-             <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-red-400 to-orange-500">Arena</span>
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-dfw-red to-white">Arena</span>
            </motion.h1>
            
            <motion.p 
