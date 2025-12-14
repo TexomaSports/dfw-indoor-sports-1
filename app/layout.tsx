@@ -16,8 +16,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#020408" />
         <script
@@ -34,6 +32,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-[#FAFAFA] dark:bg-[#020408] text-gray-900 dark:text-gray-100 antialiased">
+        <div aria-live="polite" aria-atomic="true" className="sr-only" id="announcements"></div>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

@@ -72,9 +72,6 @@ export const defaultMetadata: Metadata = {
     title: 'DFW Indoor Sports | Premier Multi-Sport Facility in Fort Worth',
     description: BUSINESS_INFO.description,
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
 }
 
 // Generate Page-Specific Metadata
@@ -159,11 +156,6 @@ export function generateLocalBusinessSchema() {
     priceRange: '$$',
     sameAs: [BUSINESS_INFO.social.facebook, BUSINESS_INFO.social.instagram],
     hasMap: `https://www.google.com/maps/place/${BUSINESS_INFO.address.street.replace(/ /g, '+')}+${BUSINESS_INFO.address.city}+${BUSINESS_INFO.address.state}+${BUSINESS_INFO.address.zip}`,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '245',
-    },
     areaServed: [
       {
         '@type': 'City',
