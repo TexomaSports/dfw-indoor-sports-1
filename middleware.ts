@@ -28,6 +28,12 @@ const REDIRECTS: Record<string, string> = {
   '/release-and-waiver-of-liability/': '/waiver',
   '/refunds-cancellations': '/refund-policy',
   '/refunds-cancellations/': '/refund-policy',
+  '/registration': '/academy',
+  '/registration/': '/academy',
+  '/rentals/baseball-lane-rental': '/rentals',
+  '/rentals/baseball-lane-rental/': '/rentals',
+  '/hitman': '/events',
+  '/hitman/': '/events',
 };
 
 const rateLimitMap = new Map<string, { count: number; timestamp: number }>();

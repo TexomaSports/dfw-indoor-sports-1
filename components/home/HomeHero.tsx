@@ -1,169 +1,147 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import { ChevronRight, Smile } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { ChevronRight, Calendar, Users, Heart, Smile } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const HomeHero: React.FC = () => {
-  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const [showContent, setShowContent] = useState(false);
-
-  // Trigger content reveal after intro animation
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowContent(true);
-    }, 2500); // 2.5s intro
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <div className="relative w-full h-screen bg-[#020408] overflow-hidden">
-      
-      {/* 1. Background Video (Always playing, z-0) */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          onLoadedData={() => setIsVideoLoaded(true)}
-          className="object-cover w-full h-full"
-        >
-          <source src="https://videos.pexels.com/video-files/855074/855074-hd_1920_1080_30fps.mp4" type="video/mp4" />
-        </video>
-        {/* Dark overlay for readability when content appears */}
+    <div className="relative w-full h-[85vh] md:h-screen min-h-[500px] md:min-h-[700px] bg-[#020408] pb-6">
+      {/* Container for rounded effect with Deep Physical Shadow */}
+      <div className="relative h-full w-full overflow-hidden rounded-b-2xl md:rounded-b-[3rem] shadow-[0_40px_80px_-20px_rgba(10,17,31,0.6)] z-20">
+        
+        {/* Dynamic Background with Cinematic Zoom */}
+        <div className="absolute inset-0 overflow-hidden bg-dfw-navy">
+          <motion.div 
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.5 }}
+            transition={{ duration: 2, ease: "easeOut" }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: 'url("https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?q=80&w=2070&auto=format&fit=crop")',
+            }}
+          ></motion.div>
+          {/* Multi-layer gradients for depth - Warmer tones mixed in */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#020408] via-[#020408]/40 to-transparent mix-blend-multiply"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020408]/90 via-[#020408]/40 to-transparent"></div>
+          {/* Subtle warm overlay for human touch */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-dfw-red/10 via-transparent to-dfw-red/5 mix-blend-overlay"></div>
+        </div>
+
+        {/* Welcoming Glass Widget (AEO Optimized Data Points) */}
         <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: showContent ? 0.7 : 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0 bg-[#020408]"
-        />
-      </div>
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1, duration: 0.8 }}
+          className="absolute top-24 right-4 md:top-32 md:right-16 z-30 hidden lg:flex flex-col gap-2 perspective-1000"
+        >
+          <div className="p-5 rounded-lg flex items-center gap-6 bg-white/10 border border-white/20 shadow-lg backdrop-blur-md ring-1 ring-white/10 transform hover:rotate-y-2 transition-transform duration-500">
+             <div>
+                <span className="text-[10px] text-gray-300 font-sans font-bold uppercase tracking-widest mb-1 block">Facility Status</span>
+                <span className="flex items-center gap-2 text-white font-bold text-sm">
+                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> Open & Welcoming
+                </span>
+             </div>
+             <div className="h-8 w-[1px] bg-white/20"></div>
+             <div>
+                <span className="text-[10px] text-gray-300 font-sans font-bold uppercase tracking-widest mb-1 block">Atmosphere</span>
+                <span className="text-white font-bold text-sm">Comfortable 72°F</span>
+             </div>
+             <div className="h-8 w-[1px] bg-white/20"></div>
+             <div>
+                <span className="text-[10px] text-gray-300 font-sans font-bold uppercase tracking-widest mb-1 block">Community</span>
+                <span className="text-white font-bold text-sm">Active Now</span>
+             </div>
+          </div>
+        </motion.div>
 
-      {/* 2. Intro Mask Animation (z-50) */}
-      <AnimatePresence>
-        {!showContent && (
-          <motion.div
-            className="absolute inset-0 z-50 flex items-center justify-center bg-black mix-blend-multiply"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5, ease: "linear" }}
-          >
-             <motion.span
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 150, opacity: 1 }}
-                transition={{ 
-                    scale: { duration: 2.5, ease: [0.7, 0, 0.3, 1], delay: 0.2 },
-                    opacity: { duration: 0.4 } 
-                }}
-                className="text-[15vw] md:text-[12vw] font-header font-black text-white uppercase tracking-tighter select-none whitespace-nowrap cursor-default"
-                style={{ lineHeight: 0.8 }}
-             >
-                PLAY
-             </motion.span>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-
-      {/* 3. Hero Content (z-10) */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center pt-20">
-        <AnimatePresence>
-          {showContent && (
+        {/* Main Content */}
+        <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center pt-16 md:pt-16">
+          <div className="max-w-5xl">
+            {/* Tagline */}
             <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ duration: 1 }}
-                className="max-w-5xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="flex items-center gap-4 mb-6 md:mb-8"
             >
-              
-              {/* Tagline */}
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="flex items-center gap-4 mb-6 md:mb-8"
-              >
-                <div className="px-4 py-1.5 border border-white/20 bg-white/10 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full flex items-center gap-2 backdrop-blur-md">
-                  <span className="text-dfw-red animate-pulse">●</span> Live in Fort Worth
-                </div>
-              </motion.div>
-              
-              {/* Animated Split Headline */}
-              <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-header font-bold text-white leading-[1] md:leading-[0.9] uppercase tracking-tighter mb-8 drop-shadow-2xl overflow-hidden">
-                <div className="overflow-hidden">
-                    <motion.span 
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 0.1 }}
-                        className="block"
-                    >
-                        Your Place
-                    </motion.span>
-                </div>
-                <div className="overflow-hidden">
-                    <motion.span 
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1], delay: 0.2 }}
-                        className="block text-transparent bg-clip-text bg-gradient-to-r from-dfw-red via-white to-dfw-red bg-[length:200%_auto] animate-shine"
-                    >
-                        To Play.
-                    </motion.span>
-                </div>
-              </h1>
-              
-              {/* Description & Buttons */}
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="flex flex-col lg:flex-row items-start lg:items-center gap-8 md:gap-20"
-              >
-                <p className="text-base md:text-xl text-gray-200 font-light max-w-xl leading-relaxed border-l-2 border-dfw-red pl-6 md:pl-8 backdrop-blur-sm">
-                  Experience the ultimate indoor sports destination. From cricket to badminton, we're redefining the game in North Texas.
-                </p>
-                
-                <div className="flex flex-row gap-4 md:gap-5 w-full sm:w-auto">
-                  <Link href="/rentals" className="group relative whitespace-nowrap px-8 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-lg hover:shadow-dfw-red/40 transition-all duration-300 flex items-center justify-center">
-                    <div className="absolute inset-0 w-full h-full bg-black/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out"></div>
-                    <span className="relative z-10 flex items-center gap-3">
-                      Book Court <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </Link>
-                  
-                  <Link href="/memberships" className="whitespace-nowrap px-8 md:px-10 py-4 md:py-5 border border-white/20 hover:bg-white hover:text-dfw-navy text-white text-sm font-bold uppercase tracking-widest transition-all rounded-sm backdrop-blur-md hover:shadow-lg flex items-center justify-center gap-3 group">
-                    <span className="group-hover:scale-110 transition-transform"><Smile size={16} /></span> Join Us
-                  </Link>
-                </div>
-              </motion.div>
-
-              {/* Glass Stats Strip */}
-              <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 1 }}
-                className="mt-16 md:mt-24 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6"
-              >
-                {[
-                  { label: "Surface", value: "Pro Grade" },
-                  { label: "Courts", value: "12+ Indoor" },
-                  { label: "Open", value: "5AM - 11PM" },
-                  { label: "Rating", value: "4.9/5.0" }
-                ].map((stat, idx) => (
-                  <div key={idx} className="flex flex-col">
-                    <span className="text-xs text-gray-400 uppercase tracking-widest mb-1">{stat.label}</span>
-                    <span className="text-xl md:text-2xl font-bold text-white font-header">{stat.value}</span>
-                  </div>
-                ))}
-              </motion.div>
-
+              <div className="px-4 py-1.5 md:px-5 md:py-2 border border-white/20 bg-white/10 text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] rounded-full flex items-center gap-2 backdrop-blur-md">
+                <span className="text-dfw-red">♥</span> Made for Fort Worth
+              </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+            
+            {/* Headline - Human Centric & Semantic SEO */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-header font-bold text-white leading-[1.1] md:leading-[1.1] uppercase tracking-tighter mb-6 md:mb-10 drop-shadow-2xl"
+            >
+              Your Place <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">To Play.</span>
+            </motion.h1>
+            
+            {/* Description & Buttons */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="flex flex-col lg:flex-row items-start lg:items-center gap-8 md:gap-20"
+            >
+              <p className="text-base md:text-xl text-gray-200 font-light max-w-xl leading-relaxed border-l-2 border-dfw-red pl-6 md:pl-8 backdrop-blur-sm">
+                More than a facility, we're a community. Whether you're picking up a racket for the first time or chasing a championship, you have a home here in North Texas.
+              </p>
+              
+              <div className="flex flex-row gap-4 md:gap-5 w-full sm:w-auto">
+                <Link href="/rentals" className="group relative whitespace-nowrap px-6 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-lg hover:shadow-dfw-red/40 hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shine"></div>
+                  <span className="relative z-10 flex items-center gap-3">
+                    Start Playing <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+                
+                <Link href="/memberships" className="whitespace-nowrap px-6 md:px-10 py-4 md:py-5 border border-white/20 hover:bg-white hover:text-dfw-navy text-white text-sm font-bold uppercase tracking-widest transition-all rounded-sm backdrop-blur-md hover:shadow-lg hover:-translate-y-1 text-center flex items-center justify-center gap-3">
+                  <Smile size={16} /> Join the Family
+                </Link>
+              </div>
+            </motion.div>
 
+            {/* Feature Strip - Semantic List for SEO */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 1 }}
+              className="mt-12 md:mt-24 pt-8 md:pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+            >
+              {[
+                { icon: Heart, text: "Passion Driven" },
+                { icon: Users, text: "Friendly Staff" },
+                { icon: Smile, text: "Beginner Friendly" },
+                { icon: Calendar, text: "Open Daily" }
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3 md:gap-4 text-gray-300 group cursor-default hover:text-white transition-colors duration-500">
+                  <div className="p-2 md:p-3 bg-white/5 rounded-full border border-white/10 group-hover:border-dfw-red/50 group-hover:bg-dfw-red/20 group-hover:text-dfw-red transition-all duration-300">
+                    <item.icon className="shrink-0 transition-colors" size={16} />
+                  </div>
+                  <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest leading-tight">{item.text}</span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator - visible at full height */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.6 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce hidden md:flex"
+        >
+            <span className="text-[10px] text-white/50 uppercase tracking-widest">Explore</span>
+            <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+        </motion.div>
+      </div>
     </div>
   );
 };
