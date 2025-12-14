@@ -43,7 +43,7 @@ const CoachesProfiles: React.FC = () => {
                       <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 dark:border-white/10">
                          <div className="absolute inset-0 bg-dfw-navy/10 mix-blend-multiply z-10"></div>
                          <img 
-                            src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" 
+                            src="/images/Prashant Kamble.avif" 
                             alt="Prashant Kamble" 
                             className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out" 
                          />
@@ -151,7 +151,7 @@ const CoachesProfiles: React.FC = () => {
                    <div className="lg:col-span-5 relative order-1 lg:order-2">
                       <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 dark:border-white/10">
                          <div className="absolute inset-0 bg-blue-900/10 mix-blend-multiply z-10"></div>
-                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Prem Ahire" className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
+                         <img src="/images/Prem Ahire.avif" alt="Prem Ahire" className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
                          <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/95 via-black/70 to-transparent z-20 text-white">
                             <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
                                <div><h3 className="text-3xl font-header font-bold uppercase tracking-wide">Prem Ahire</h3><p className="text-blue-400 font-mono text-xs uppercase tracking-widest">Director of Operations</p></div>
@@ -179,7 +179,7 @@ const CoachesProfiles: React.FC = () => {
                    <div className="lg:col-span-5 relative">
                       <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 dark:border-white/10">
                          <div className="absolute inset-0 bg-green-900/10 mix-blend-multiply z-10"></div>
-                         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="Anjan Medicherla" className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
+                         <img src="/images/Anjan Medicherla.avif" alt="Anjan Medicherla" className="w-full h-full object-cover filter grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 ease-in-out" />
                          <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/95 via-black/70 to-transparent z-20 text-white">
                             <div className="flex justify-between items-end border-b border-white/20 pb-4 mb-4">
                                <div><h3 className="text-3xl font-header font-bold uppercase tracking-wide">Anjan Medicherla</h3><p className="text-green-400 font-mono text-xs uppercase tracking-widest">Community Lead</p></div>

@@ -51,18 +51,8 @@ export default function Navbar() {
           <div className="flex justify-between items-center h-12 md:h-14">
             
             <div className="flex items-center flex-shrink-0 group cursor-pointer relative z-50">
-              <Link href="/" className="flex flex-col items-start leading-none select-none">
-                <div className="flex items-center gap-1">
-                   <span className="text-xl md:text-2xl font-header font-bold text-dfw-navy dark:text-white tracking-tighter group-hover:text-black dark:group-hover:text-gray-200 transition-colors">
-                     DFW
-                   </span>
-                   <span className="text-xl md:text-2xl font-header font-bold text-dfw-red tracking-tighter group-hover:brightness-110 transition-colors">
-                     INDOOR
-                   </span>
-                </div>
-                <span className="text-[9px] font-mono font-bold text-gray-400 tracking-[0.38em] pl-[2px] group-hover:text-dfw-navy dark:group-hover:text-white transition-colors duration-500">
-                  SPORTS COMPLEX
-                </span>
+              <Link href="/" className="flex items-center gap-2 select-none">
+                <img src="/images/dfwlogo.png" alt="DFW Indoor Sports" className="h-10 md:h-12 w-auto" />
               </Link>
             </div>
 

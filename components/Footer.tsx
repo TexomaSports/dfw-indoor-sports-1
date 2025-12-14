@@ -63,10 +63,7 @@ export default function Footer() {
           <motion.div variants={itemVariants} className="lg:col-span-4 space-y-6">
             <div>
               <Link href="/" className="inline-block group mb-4">
-                <span className="text-2xl md:text-3xl font-header font-bold text-white tracking-tighter group-hover:opacity-90 transition-opacity">
-                  DFW <span className="text-dfw-red">INDOOR</span>
-                </span>
-                <span className="block text-[8px] font-mono font-bold text-gray-500 tracking-[0.4em] mt-1 pl-1">SPORTS COMPLEX</span>
+                <img src="/images/dfwlogo.png" alt="DFW Indoor Sports" className="h-12 w-auto" />
               </Link>
               <p className="text-sm leading-relaxed text-gray-500 font-medium max-w-sm">
                 The premier destination for indoor sports in Fort Worth. Engineered for champions, open for everyone.
