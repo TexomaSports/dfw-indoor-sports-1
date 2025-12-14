@@ -254,3 +254,59 @@ export function generateSportsActivitySchema(sportName: string, description: str
     },
   }
 }
+
+// Generate FAQ Schema
+export function generateFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+// Generate Service Schema
+export function generateServiceSchema(service: {
+  name: string
+  description: string
+  price?: string
+  image?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: service.name,
+    name: service.name,
+    description: service.description,
+    provider: {
+      '@type': 'SportsActivityLocation',
+      name: BUSINESS_INFO.name,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: BUSINESS_INFO.address.street,
+        addressLocality: BUSINESS_INFO.address.city,
+        addressRegion: BUSINESS_INFO.address.state,
+        postalCode: BUSINESS_INFO.address.zip,
+        addressCountry: BUSINESS_INFO.address.country,
+      },
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Dallas-Fort Worth',
+    },
+    ...(service.price && {
+      offers: {
+        '@type': 'Offer',
+        price: service.price,
+        priceCurrency: 'USD',
+      },
+    }),
+    ...(service.image && { image: service.image }),
+  }
+}

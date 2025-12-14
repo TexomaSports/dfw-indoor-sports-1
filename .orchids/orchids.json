@@ -3,5 +3,7 @@
   "createdAt": 1765658345062,
   "startupCommands": [
     "npm install; npm run dev"
-  ]
+  ],
+  "vercelProjectId": "prj_ui6PdoCJwrVcVOOnBOqTBGxxzi4E",
+  "deployedWithUserToken": false
 }

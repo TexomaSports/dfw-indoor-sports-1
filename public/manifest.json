@@ -1,0 +1,21 @@
+{
+  "name": "DFW Indoor Sports",
+  "short_name": "DFW Sports",
+  "description": "Premier multi-sport indoor facility in Dallas-Fort Worth offering cricket, badminton, soccer, and dodgeball.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020408",
+  "theme_color": "#020408",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
