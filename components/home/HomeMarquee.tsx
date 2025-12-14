@@ -2,12 +2,16 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTheme } from '../../context/ThemeContext';
 
 const SPORTS_ITEMS = [
   '🏏 CRICKET', '🏸 BADMINTON', '⚽ SOCCER', '🎯 DODGEBALL'
 ];
 
 const HomeMarquee: React.FC = () => {
+  const { isDarkMode } = useTheme();
+  const strokeColor = isDarkMode ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.5)';
+  
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -27,8 +31,8 @@ const HomeMarquee: React.FC = () => {
           {SPORTS_ITEMS.map((item, index) => (
              <div key={index} className="flex items-center group">
                <span 
-                 className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4" 
-                 style={{ WebkitTextStroke: '2px rgba(255, 255, 255, 0.5)' }}
+                 className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 dark:group-hover:text-black/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4" 
+                 style={{ WebkitTextStroke: `2px ${strokeColor}` }}
                >
                  {item}
                </span>
@@ -42,8 +46,8 @@ const HomeMarquee: React.FC = () => {
           {SPORTS_ITEMS.map((item, index) => (
              <div key={`dup-${index}`} className="flex items-center group">
                <span 
-                 className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4" 
-                 style={{ WebkitTextStroke: '2px rgba(255, 255, 255, 0.5)' }}
+                 className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 dark:group-hover:text-black/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4" 
+                 style={{ WebkitTextStroke: `2px ${strokeColor}` }}
                >
                  {item}
                </span>
