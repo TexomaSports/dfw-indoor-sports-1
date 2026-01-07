@@ -4,6 +4,7 @@ import React from 'react';
 import { User, Users, Star, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 const HomePrograms: React.FC = () => {
    const containerVariants = {
