@@ -13,12 +13,12 @@ const EventsHero: React.FC = () => {
           animate={{ scale: 1, opacity: 0.4 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2069&auto=format&fit=crop")' }}
+          style={{ backgroundImage: 'url("/images/events/events-hero.webp")' }}
         ></motion.div>
         
         {/* Cinematic Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#050911] via-[#050911]/80 to-transparent z-10"></div>
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
+        <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">
            {/* Trust Badge */}

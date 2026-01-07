@@ -48,7 +48,7 @@ const BadmintonEquip: React.FC = () => {
 
              {/* Right: Image */}
              <div className="md:w-1/2 relative h-[400px] rounded-lg overflow-hidden shadow-2xl group">
-                <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Pro Shop" />
+                <img src="/images/hero/badminton-hero.webp" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Pro Shop" />
                 <div className="absolute inset-0 bg-[#1E3A8A]/30 group-hover:bg-transparent transition-colors duration-500"></div>
                 <div className="absolute bottom-6 left-6">
                    <p className="text-white font-bold uppercase text-xl drop-shadow-md">10% Off For Members</p>

@@ -113,7 +113,7 @@ const SportsGuide: React.FC = () => {
             viewport={{ once: true }}
             className="bg-dfw-navy dark:bg-[#0A111F] border border-white/10 rounded-2xl p-12 text-white relative overflow-hidden"
           >
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+             <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
              <div className="relative z-10">
                 <div className="text-center mb-12">
                    <h2 className="text-3xl font-header font-bold uppercase mb-4">Start Your Journey</h2>

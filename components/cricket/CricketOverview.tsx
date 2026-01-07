@@ -42,7 +42,7 @@ const CricketOverview: React.FC = () => {
              <div className="lg:w-2/5 w-full">
                 <div className="bg-[#006838] p-8 rounded-lg shadow-2xl relative overflow-hidden text-white border border-white/10 group">
                    <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-[50px] pointer-events-none group-hover:bg-white/20 transition-colors duration-700"></div>
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                   <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                    
                    <h3 className="text-xl font-header font-bold uppercase tracking-wider mb-6 border-b border-white/20 pb-4 relative z-10">Quick Facts</h3>
                    

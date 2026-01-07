@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const CoachesCTA: React.FC = () => {
   return (
     <section className="py-32 bg-[#020408] relative overflow-hidden text-center border-t border-white/5">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-dfw-red/5 to-transparent pointer-events-none"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">

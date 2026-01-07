@@ -21,7 +21,7 @@ const AcademyNarrative: React.FC = () => {
                 <div className="relative rounded-lg overflow-hidden shadow-2xl group border border-gray-200 dark:border-white/10">
                    <div className="absolute inset-0 bg-dfw-navy/10 mix-blend-multiply z-10 transition-opacity group-hover:opacity-0"></div>
                    <img 
-                      src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?q=80&w=800&auto=format&fit=crop" 
+                      src="/images/facilities/bowling-machine.webp" 
                       alt="Coach mentoring young player" 
                       className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out"
                    />

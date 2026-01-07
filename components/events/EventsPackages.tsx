@@ -74,7 +74,7 @@ const EventsPackages: React.FC = () => {
                {/* Deluxe Package - Featured */}
                <motion.div variants={itemVariants} className="bg-dfw-navy dark:bg-black rounded-lg border border-dfw-navy dark:border-white/20 p-8 shadow-2xl relative group overflow-hidden transform md:-translate-y-4 z-10">
                   <div className="absolute top-0 right-0 bg-dfw-red text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg">Most Popular</div>
-                  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                  <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                   
                   <h3 className="text-xl font-header font-bold text-white uppercase mb-2 relative z-10">Deluxe Multi-Sport</h3>
                   <div className="flex items-baseline gap-1 mb-6 relative z-10">

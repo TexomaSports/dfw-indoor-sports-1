@@ -37,7 +37,7 @@ const modes = [
 const DodgeballGameModes: React.FC = () => {
   return (
     <section className="py-24 bg-[#4C1D95] text-white relative overflow-hidden">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">

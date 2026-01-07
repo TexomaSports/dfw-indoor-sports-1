@@ -8,7 +8,7 @@ const SoccerIntro: React.FC = () => {
   return (
     <section className="py-24 bg-white dark:bg-[#020408] relative transition-colors duration-300">
        {/* Background Noise */}
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/noise.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/noise.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -68,7 +68,7 @@ const SoccerIntro: React.FC = () => {
                 <div className="bg-[#064E3B] dark:bg-[#0A111F] p-8 md:p-10 rounded-xl shadow-2xl relative overflow-hidden text-white border border-white/10 group">
                    {/* Abstract Decor */}
                    <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/10 rounded-full blur-[60px] pointer-events-none"></div>
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                   <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                    
                    <h3 className="text-xl font-header font-bold uppercase tracking-wider mb-8 border-b border-white/20 pb-4 relative z-10 flex justify-between items-center">
                       Quick Facts

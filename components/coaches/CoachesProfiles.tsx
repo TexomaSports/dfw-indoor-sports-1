@@ -8,7 +8,7 @@ const CoachesProfiles: React.FC = () => {
   return (
     <section className="py-24 bg-[#FAFAFA] dark:bg-[#050911] relative overflow-hidden transition-colors duration-300" id="faculty">
        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-white/10 to-transparent"></div>
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div 

@@ -19,7 +19,7 @@ const HomeHero: React.FC = () => {
             transition={{ duration: 2, ease: "easeOut" }}
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
-              backgroundImage: 'url("https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?q=80&w=2070&auto=format&fit=crop")',
+              backgroundImage: 'url("/images/hero/sports-action.webp")',
             }}
           ></motion.div>
           {/* Multi-layer gradients for depth - Warmer tones mixed in */}

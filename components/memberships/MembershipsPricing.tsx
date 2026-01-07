@@ -82,7 +82,7 @@ const MembershipsPricing: React.FC = () => {
              >
                 <div className="absolute top-0 right-0 bg-dfw-red text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg z-20">Most Popular</div>
                 {/* Background FX */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                 <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-dfw-red/20 blur-[80px] rounded-full pointer-events-none"></div>
 
                 <div className="relative z-10">

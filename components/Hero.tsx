@@ -1,24 +1,29 @@
 import React from 'react';
 import { ChevronRight, Thermometer, Activity, Star, Trophy, Users, Zap, MousePointer2 } from 'lucide-react';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   return (
     <div className="relative w-full h-[60vh] md:h-[60vh] min-h-[400px] md:min-h-[450px] bg-gray-50 pb-6">
       {/* Container for rounded effect with Deep Physical Shadow */}
       <div className="relative h-full w-full overflow-hidden rounded-b-2xl md:rounded-b-3xl shadow-[0_20px_40px_-10px_rgba(10,17,31,0.4)] z-20">
-        
+
         {/* Dynamic Background with Cinematic Zoom */}
         <div className="absolute inset-0 overflow-hidden bg-dfw-navy">
-          <div 
-            className="absolute inset-0 bg-cover bg-center animate-zoom-slow opacity-60"
-            style={{ 
-              backgroundImage: 'url("https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?q=80&w=2070&auto=format&fit=crop")',
-            }}
-          ></div>
+          <div className="absolute inset-0 animate-zoom-slow opacity-60">
+            <Image
+              src="/images/hero/sports-action.webp"
+              alt="Action sports atmosphere"
+              fill
+              priority
+              className="object-cover object-center"
+              sizes="100vw"
+            />
+          </div>
           {/* Multi-layer gradients for depth */}
           <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy via-dfw-navy/50 to-transparent mix-blend-multiply"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-dfw-navy/90 via-dfw-navy/40 to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-20 mix-blend-overlay"></div>
         </div>
 
         {/* Hyper-Realistic Glass Widget */}
@@ -60,19 +65,19 @@ const Hero: React.FC = () => {
                 <span className="w-1.5 h-1.5 bg-dfw-red rounded-sm animate-pulse"></span> Ft. Worth, Texas
               </div>
             </div>
-            
+
             {/* Headline with 3D shadow */}
             <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-header font-bold text-white leading-[1.1] md:leading-[1.1] uppercase tracking-tighter mb-6 md:mb-10 opacity-0 animate-slide-up drop-shadow-2xl" style={{ animationDelay: '0.2s' }}>
-              Beyond <br/>
+              Beyond <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-300 to-gray-500" style={{ WebkitTextStroke: '0px' }}>Boundaries</span>
             </h1>
-            
+
             {/* Description & Buttons */}
             <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 md:gap-20 opacity-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <p className="text-base md:text-xl text-gray-300 font-light max-w-xl leading-relaxed border-l-2 border-dfw-red pl-6 md:pl-8 backdrop-blur-sm">
                 50,000 sq ft of pure adrenaline. Engineered for professional cricket, badminton, and soccer. Welcome to the future of indoor sports.
               </p>
-              
+
               <div className="flex flex-row flex-wrap gap-4 md:gap-5 w-full sm:w-auto">
                 <button className="group relative w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 bg-dfw-red text-white text-sm font-bold uppercase tracking-widest overflow-hidden rounded-sm shadow-[0_10px_40px_-10px_rgba(214,40,40,0.6)] hover:shadow-[0_20px_60px_-10px_rgba(214,40,40,0.8)] hover:-translate-y-1 transition-all duration-300 text-center flex justify-center items-center">
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:animate-shine"></div>
@@ -80,7 +85,7 @@ const Hero: React.FC = () => {
                     Book A Court <ChevronRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </button>
-                
+
                 <button className="w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 border border-white/20 hover:bg-white hover:text-dfw-navy text-white text-sm font-bold uppercase tracking-widest transition-all rounded-sm backdrop-blur-md hover:shadow-lg hover:-translate-y-1 text-center">
                   View Academy
                 </button>
@@ -108,8 +113,8 @@ const Hero: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 animate-bounce hidden md:flex">
-            <span className="text-[10px] text-white/50 uppercase tracking-widest">Scroll</span>
-            <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+          <span className="text-[10px] text-white/50 uppercase tracking-widest">Scroll</span>
+          <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
         </div>
       </div>
     </div>

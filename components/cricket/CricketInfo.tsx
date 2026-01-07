@@ -50,7 +50,7 @@ const CricketInfo: React.FC = () => {
 
              {/* Academy Cross-sell */}
              <div className="bg-[#006838] p-10 rounded-lg text-white relative overflow-hidden group">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                 <div className="relative z-10">
                    <h3 className="text-xl font-header font-bold uppercase mb-4">Want Professional Coaching?</h3>
                    <p className="text-green-100 text-sm mb-8 leading-relaxed">

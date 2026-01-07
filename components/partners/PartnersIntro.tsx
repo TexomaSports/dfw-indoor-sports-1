@@ -23,7 +23,7 @@ const PartnersIntro: React.FC = () => {
   return (
     <section className="py-24 bg-white dark:bg-[#020408] relative overflow-hidden transition-colors duration-300">
        {/* Background Texture */}
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">

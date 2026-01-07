@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const CoachesPhilosophy: React.FC = () => {
   return (
     <section className="bg-[#050911] text-white py-24 md:py-32 relative overflow-hidden">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03]"></div>
        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-gradient-to-r from-dfw-red/5 to-transparent pointer-events-none"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">

@@ -8,7 +8,7 @@ import Link from 'next/link';
 const AboutCTA: React.FC = () => {
   return (
     <section className="py-24 bg-dfw-navy relative overflow-hidden">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
        <div className="absolute inset-0 bg-gradient-to-r from-dfw-navy via-dfw-navy/90 to-transparent"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">

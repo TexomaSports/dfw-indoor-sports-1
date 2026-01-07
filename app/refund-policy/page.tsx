@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
   return (
     <div className="bg-white dark:bg-[#020408] min-h-screen font-sans selection:bg-dfw-red selection:text-white transition-colors duration-300 text-gray-900 dark:text-gray-100">
       <div className="relative bg-[#020408] py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#020408]/90"></div>
         <motion.div 
            initial={{ opacity: 0, y: 30 }}

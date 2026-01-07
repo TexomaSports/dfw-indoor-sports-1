@@ -136,7 +136,7 @@ const SponsorshipTiers: React.FC = () => {
                          </div>
                       </div>
                       <div className="bg-[#050911] dark:bg-[#050911] rounded-2xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl border border-white/10">
-                         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                         <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                          <div className="absolute top-0 right-0 w-96 h-96 bg-dfw-red/10 rounded-full blur-[100px] pointer-events-none"></div>
                          
                          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">

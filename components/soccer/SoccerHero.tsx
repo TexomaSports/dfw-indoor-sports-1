@@ -9,12 +9,12 @@ const SoccerHero: React.FC = () => {
       {/* Background Image with Cinematic Zoom and Parallax Feel */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-50 scale-105 animate-zoom-slow mix-blend-luminosity"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=2600&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/sports/soccer-turf.webp")' }}
       ></div>
       
       {/* Advanced Gradient Overlays for Depth */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#064E3B] via-[#064E3B]/90 to-transparent z-10"></div>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
+      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#064E3B] to-transparent z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">

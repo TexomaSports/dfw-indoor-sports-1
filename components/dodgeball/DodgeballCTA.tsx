@@ -8,7 +8,7 @@ import Link from 'next/link';
 const DodgeballCTA: React.FC = () => {
   return (
     <section className="py-24 bg-[#4C1D95] dark:bg-black relative overflow-hidden text-center text-white">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+       <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">

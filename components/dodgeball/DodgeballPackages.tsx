@@ -62,7 +62,7 @@ const DodgeballPackages: React.FC = () => {
              </div>
 
              <div className="bg-[#4C1D95] dark:bg-[#050911] rounded-xl overflow-hidden shadow-2xl relative text-white border border-white/10">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-orange-500/20 rounded-full blur-[100px] pointer-events-none"></div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10 relative z-10">

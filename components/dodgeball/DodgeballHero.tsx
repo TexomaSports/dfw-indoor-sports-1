@@ -9,12 +9,12 @@ const DodgeballHero: React.FC = () => {
       {/* Background Image with Cinematic Zoom */}
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-50 scale-105 animate-zoom-slow mix-blend-luminosity"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/facilities/dodgeball-courts.webp")' }}
       ></div>
       
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#4C1D95] via-[#4C1D95]/90 to-transparent z-10"></div>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
+      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-30 mix-blend-overlay z-10"></div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#4C1D95] to-transparent z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">

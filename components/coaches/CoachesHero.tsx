@@ -13,13 +13,13 @@ const CoachesHero: React.FC = () => {
         animate={{ scale: 1, opacity: 0.6 }}
         transition={{ duration: 1.5 }}
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2805&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/sports/cricket-training.webp")' }}
       ></motion.div>
       
       {/* Cinematic Grading Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#020408] via-[#020408]/80 to-transparent z-10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#020408] via-transparent to-transparent z-10"></div>
-      <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay z-10"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/textures/carbon-fibre.png')] mix-blend-overlay z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">
          {/* Micro-Interaction Label */}

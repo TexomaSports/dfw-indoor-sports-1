@@ -9,25 +9,25 @@ const facilities = [
   { 
     title: 'Cricket Facilities', 
     desc: 'Professional lanes with proper pitch dimensions, bowling machines, safety netting, and video analysis.',
-    img: 'https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=2070&auto=format&fit=crop',
+    img: '/images/facilities/cricket-lanes.webp',
     tag: 'International Standard'
   },
   { 
     title: 'Badminton Courts', 
     desc: 'Eight BWF-regulation courts with professional flooring, proper ceiling clearance, and shadow-free lighting.',
-    img: 'https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?q=80&w=800&auto=format&fit=crop',
+    img: '/images/hero/badminton-hero.webp',
     tag: 'BWF Approved'
   },
   { 
     title: 'Soccer Fields', 
     desc: 'Climate-controlled indoor turf maintaining consistent playing surface and professional goal systems.',
-    img: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=800&auto=format&fit=crop',
+    img: '/images/hero/soccer-hero.webp',
     tag: 'FIFA Turf'
   },
   { 
     title: 'Member Amenities', 
     desc: 'Modern locker rooms, comfortable spectator areas, pro shop, party rooms, and ample free parking.',
-    img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop',
+    img: '/images/facilities/lounge.webp',
     tag: 'Premium'
   }
 ];
@@ -52,7 +52,7 @@ const HomeFacilities: React.FC = () => {
     <section className="bg-dfw-navy dark:bg-black py-24 md:py-32 relative overflow-hidden transition-colors duration-300">
       
       {/* Background Micro-Detail */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

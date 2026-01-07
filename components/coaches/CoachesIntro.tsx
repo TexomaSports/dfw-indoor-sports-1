@@ -58,7 +58,7 @@ const CoachesIntro: React.FC = () => {
              >
                 <div className="bg-dfw-navy dark:bg-[#0A111F] p-8 rounded-lg shadow-2xl relative overflow-hidden text-white group border border-white/5">
                    <div className="absolute top-0 right-0 w-32 h-32 bg-dfw-red/20 rounded-full blur-[50px] pointer-events-none"></div>
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
+                   <div className="absolute inset-0 bg-[url('/textures/graphy.png')] opacity-10"></div>
                    
                    <h3 className="text-xl font-header font-bold uppercase tracking-wider mb-6 border-b border-white/10 pb-4 relative z-10">Staff Credentials</h3>
                    

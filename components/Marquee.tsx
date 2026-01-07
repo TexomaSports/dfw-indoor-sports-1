@@ -6,7 +6,7 @@ const Marquee: React.FC = () => {
     <div className="bg-dfw-navy overflow-hidden py-8 border-y border-white/5 relative z-20">
       
       {/* Background Texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-dfw-navy via-transparent to-dfw-navy z-20 pointer-events-none"></div>
 
       <div className="flex relative z-10 mask-linear-fade">

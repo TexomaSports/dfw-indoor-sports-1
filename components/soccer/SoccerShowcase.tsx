@@ -4,7 +4,7 @@ import { Camera, MapPin, Maximize2 } from 'lucide-react';
 const SoccerShowcase: React.FC = () => {
   return (
     <section className="py-24 bg-[#050911] text-white relative overflow-hidden" id="showcase">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-16">
@@ -15,7 +15,7 @@ const SoccerShowcase: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 h-auto md:h-[600px]">
              {/* Main Large Image */}
              <div className="md:col-span-2 md:row-span-2 relative rounded-lg overflow-hidden group cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2676&auto=format&fit=crop" alt="Main Field Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/hero/soccer-hero.webp" alt="Main Field Overview" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
                    <Maximize2 className="text-white drop-shadow-lg" size={32} />
                 </div>
@@ -26,14 +26,14 @@ const SoccerShowcase: React.FC = () => {
 
              {/* Side Images */}
              <div className="relative rounded-lg overflow-hidden group cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?q=80&w=800&auto=format&fit=crop" alt="Turf Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/sports/soccer-turf.webp" alt="Turf Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
                    <p className="font-bold uppercase tracking-widest text-xs text-emerald-400">Non-Infill Turf Tech</p>
                 </div>
              </div>
              
              <div className="relative rounded-lg overflow-hidden group cursor-pointer">
-                <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?q=80&w=800&auto=format&fit=crop" alt="Goal System" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src="/images/sports/equipment.webp" alt="Goal System" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/90 to-transparent">
                    <p className="font-bold uppercase tracking-widest text-xs text-white">Pro Goal Systems</p>
                 </div>

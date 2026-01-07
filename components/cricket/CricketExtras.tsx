@@ -17,7 +17,7 @@ const CricketExtras: React.FC = () => {
             viewport={{ once: true }}
             className="bg-[#006838] rounded-2xl overflow-hidden relative mb-24 text-white shadow-2xl"
           >
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+             <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
              <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/40 to-transparent"></div>
              
              <div className="relative z-10 flex flex-col md:flex-row items-center p-8 md:p-16 gap-12">
@@ -45,7 +45,7 @@ const CricketExtras: React.FC = () => {
                 <div className="md:w-1/2 flex justify-center">
                    {/* Placeholder for Coach/Action Image */}
                    <div className="relative w-full max-w-md aspect-[4/3] bg-black/20 rounded-lg border border-white/10 backdrop-blur-sm p-2">
-                      <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover rounded" alt="Coaching" />
+                      <img src="/images/hero/cricket-hero.webp" className="w-full h-full object-cover rounded" alt="Coaching" />
                    </div>
                 </div>
              </div>

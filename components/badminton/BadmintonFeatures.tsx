@@ -47,7 +47,7 @@ const BadmintonFeatures: React.FC = () => {
   return (
     <section className="bg-gray-50 dark:bg-[#050911] py-24 relative overflow-hidden transition-colors duration-300">
       {/* Background Texture */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.04] dark:opacity-[0.06]"></div>
+      <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.04] dark:opacity-[0.06]"></div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 

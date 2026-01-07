@@ -9,7 +9,7 @@ const TopBar: React.FC = () => {
     <div className="relative bg-[#020408] text-gray-400 font-mono border-b border-white/10 overflow-hidden z-[110]">
       
       {/* Background Texture & Gradient */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-dfw-red/5 via-transparent to-blue-900/5 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

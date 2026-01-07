@@ -8,7 +8,7 @@ const IdentitySection: React.FC = () => {
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
          <div className="absolute top-[-20%] left-1/4 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[120px] animate-pulse-slow"></div>
          <div className="absolute bottom-[-20%] right-1/4 w-[600px] h-[600px] bg-dfw-red/10 rounded-full blur-[150px]"></div>
-         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
+         <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10 mix-blend-overlay"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">

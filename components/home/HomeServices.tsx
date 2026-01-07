@@ -69,7 +69,7 @@ const HomeServices: React.FC = () => {
           {/* Card 2: Leagues (Dark Theme) */}
           <div className="group bg-dfw-navy flex flex-col justify-between relative shadow-2xl border border-dfw-navy overflow-hidden rounded-lg">
             {/* Texture & Gradients */}
-            <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
+            <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay pointer-events-none"></div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-dfw-red/10 blur-[80px] rounded-full pointer-events-none"></div>
             
             {/* Red Top Accent */}

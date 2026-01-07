@@ -77,7 +77,7 @@ const AboutAudiences: React.FC = () => {
 
              {/* Competitive */}
              <motion.div variants={itemVariants} className="bg-dfw-navy dark:bg-[#0A111F] p-8 rounded-sm shadow-xl border border-dfw-navy dark:border-white/20 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
                 <div className="relative z-10">
                    <div className="w-12 h-12 bg-white/10 text-dfw-red rounded-full flex items-center justify-center mb-6 border border-white/10">
                       <Trophy size={24} />

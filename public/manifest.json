@@ -5,7 +5,15 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#020408",
-  "theme_color": "#020408",
+  "theme_color": "#D62828",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": [
+    "sports",
+    "entertainment",
+    "fitness"
+  ],
   "icons": [
     {
       "src": "/favicon.ico",
@@ -16,6 +24,26 @@
       "src": "/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
+    },
+    {
+      "src": "/images/dfwlogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book a Court",
+      "url": "/rentals"
+    },
+    {
+      "name": "View Events",
+      "url": "/events"
+    },
+    {
+      "name": "Contact Us",
+      "url": "/contact"
     }
   ]
 }

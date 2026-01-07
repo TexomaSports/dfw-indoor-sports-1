@@ -23,7 +23,7 @@ const AcademyPrograms: React.FC = () => {
   return (
     <section className="bg-gray-50 dark:bg-[#050911] py-24 border-y border-gray-200 dark:border-white/5 relative overflow-hidden transition-colors duration-300">
        {/* Background Texture */}
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div 
@@ -57,7 +57,7 @@ const AcademyPrograms: React.FC = () => {
              <motion.div variants={itemVariants} className="group bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
                 <div className="h-48 overflow-hidden relative">
                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-green-600 rounded-sm z-10 shadow-sm flex items-center gap-2"><Star size={10} /> Ages 5-11</div>
-                   <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop" alt="Youth Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/images/sports/cricket-training.webp" alt="Youth Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                    <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy/80 dark:from-black/80 to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -80,7 +80,7 @@ const AcademyPrograms: React.FC = () => {
              <motion.div variants={itemVariants} className="group bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
                 <div className="h-48 overflow-hidden relative">
                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-blue-600 rounded-sm z-10 shadow-sm flex items-center gap-2"><TrendingUp size={10} /> Ages 12-16</div>
-                   <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?q=80&w=800&auto=format&fit=crop" alt="Junior Cricket Development" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/images/facilities/bowling-machine.webp" alt="Junior Cricket Development" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                    <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy/80 dark:from-black/80 to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
@@ -101,10 +101,10 @@ const AcademyPrograms: React.FC = () => {
 
              {/* Program 3: High Performance */}
              <motion.div variants={itemVariants} className="group bg-dfw-navy dark:bg-[#0A111F] rounded-lg border border-dfw-navy dark:border-dfw-red/30 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 relative flex flex-col h-full shadow-lg">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
                 <div className="h-48 overflow-hidden relative">
                    <div className="absolute top-4 left-4 bg-dfw-red px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-white rounded-sm z-10 shadow-md flex items-center gap-2"><Trophy size={10} /> Invitational</div>
-                   <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop" alt="Elite Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" />
+                   <img src="/images/sports/cricket-training.webp" alt="Elite Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 grayscale group-hover:grayscale-0" />
                    <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy via-dfw-navy/50 to-transparent"></div>
                 </div>
                 <div className="p-6 relative z-10 flex flex-col flex-grow">
@@ -127,7 +127,7 @@ const AcademyPrograms: React.FC = () => {
              <motion.div variants={itemVariants} className="group bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col h-full">
                 <div className="h-48 overflow-hidden relative">
                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-500 rounded-sm z-10 shadow-sm flex items-center gap-2"><Users size={10} /> Adults 18+</div>
-                   <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" alt="Adult Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                   <img src="/images/hero/cricket-hero.webp" alt="Adult Cricket Training" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                    <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy/80 dark:from-black/80 to-transparent opacity-60"></div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">

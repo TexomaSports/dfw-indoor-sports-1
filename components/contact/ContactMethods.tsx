@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 const ContactMethods: React.FC = () => {
   return (
     <section className="py-24 bg-gray-50 relative">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03]"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03]"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-20 max-w-3xl mx-auto">

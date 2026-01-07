@@ -8,7 +8,7 @@ const highlights = [
     title: 'Elite Courts',
     subtitle: 'Multisport Configuration',
     description: 'Versatile, high-performance courts designed for international standards. Optimized for Cricket, Badminton, and Soccer.',
-    img: 'https://images.unsplash.com/photo-1505666287802-931dc83948e9?q=80&w=800&auto=format&fit=crop',
+    img: '/images/events/feature-coaching.webp',
     icon: Shield,
     link: '/rentals'
   },
@@ -17,7 +17,7 @@ const highlights = [
     title: 'Pro Gear',
     subtitle: 'Advanced Training Equipment',
     description: 'Access state-of-the-art bowling machines, pitch vision technology, and analytics tools to refine your technique.',
-    img: 'https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?q=80&w=800&auto=format&fit=crop',
+    img: '/images/events/feature-community.webp',
     icon: Target,
     link: '/cricket-lanes'
   },
@@ -26,7 +26,7 @@ const highlights = [
     title: 'Expert Staff',
     subtitle: 'World-Class Coaching',
     description: 'Train under the guidance of certified professionals and former national players dedicated to your growth.',
-    img: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=800&auto=format&fit=crop',
+    img: '/images/facilities/dodgeball-courts.webp',
     icon: Award,
     link: '/academy/coaches'
   }
@@ -36,7 +36,7 @@ const FeatureHighlights: React.FC = () => {
   return (
     <section className="bg-gray-50 py-20 md:py-32 relative overflow-hidden">
       {/* Subtle Grain Texture */}
-      <div className="absolute inset-0 opacity-[0.4] bg-[url('https://www.transparenttextures.com/patterns/snow.png')] pointer-events-none mix-blend-multiply"></div>
+      <div className="absolute inset-0 opacity-[0.4] bg-[url('/textures/snow.png')] pointer-events-none mix-blend-multiply"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         

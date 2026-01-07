@@ -8,7 +8,7 @@ const EventsIntro: React.FC = () => {
   return (
     <section className="py-24 bg-white dark:bg-[#020408] relative transition-colors duration-300">
          {/* Texture */}
-         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
+         <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03] dark:opacity-[0.05]"></div>
 
          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -71,7 +71,7 @@ const EventsIntro: React.FC = () => {
                   <div className="bg-dfw-navy dark:bg-[#0A111F] p-8 rounded-lg shadow-2xl relative overflow-hidden text-white border border-white/10 group">
                      {/* Decorative Elements */}
                      <div className="absolute top-0 right-0 w-32 h-32 bg-dfw-red/20 rounded-full blur-[50px] pointer-events-none"></div>
-                     <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')] opacity-10"></div>
+                     <div className="absolute inset-0 bg-[url('/textures/graphy.png')] opacity-10"></div>
                      
                      <h3 className="font-header font-bold uppercase text-xl mb-6 text-white flex items-center gap-3 relative z-10">
                         <HelpCircle size={20} className="text-dfw-red" /> Quick Facts

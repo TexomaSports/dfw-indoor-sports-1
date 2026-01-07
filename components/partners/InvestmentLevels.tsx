@@ -59,7 +59,7 @@ const InvestmentLevels: React.FC = () => {
              {/* Gold - Highlight */}
              <motion.div variants={itemVariants} className="bg-dfw-navy dark:bg-[#0A111F] p-8 rounded-lg border border-dfw-navy dark:border-dfw-red/30 shadow-2xl relative transform lg:-translate-y-4 overflow-hidden">
                 <div className="absolute top-0 right-0 bg-gradient-to-r from-dfw-red to-red-600 text-white text-[9px] font-bold uppercase px-3 py-1 rounded-bl-sm shadow-md">Best Value</div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
                 
                 <h3 className="font-header font-bold text-2xl text-white uppercase mb-2 relative z-10">Gold</h3>
                 <div className="text-4xl font-bold text-white mb-6 relative z-10">$2,500<span className="text-xs font-normal text-gray-400 ml-1">/mo</span></div>

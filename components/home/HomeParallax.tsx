@@ -9,13 +9,13 @@ const HomeParallax: React.FC = () => {
       <div className="max-w-[1400px] mx-auto bg-dfw-navy rounded-xl md:rounded-3xl overflow-hidden relative shadow-[0_40px_100px_-20px_rgba(10,17,31,0.6)] border border-white/5 ring-1 ring-white/10">
         
         {/* Background Texture & Gradients */}
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-dfw-navy via-dfw-navy/95 to-dfw-navy/60 z-10"></div>
         
         {/* Background Image Parallax */}
         <div 
            className="absolute inset-0 bg-cover bg-center z-0 opacity-50 mix-blend-luminosity"
-           style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?q=80&w=2000&auto=format&fit=crop")' }}
+           style={{ backgroundImage: 'url("/images/events/parallax-cta.webp")' }}
         ></div>
 
         <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-0 min-h-auto md:min-h-[600px] items-stretch">

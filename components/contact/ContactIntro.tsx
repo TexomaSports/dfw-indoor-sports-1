@@ -5,7 +5,7 @@ const ContactIntro: React.FC = () => {
   return (
     <section className="py-24 bg-white relative border-b border-gray-100 overflow-hidden">
        {/* Subtle background pattern */}
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none"></div>
+       <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.03] pointer-events-none"></div>
 
        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
@@ -44,7 +44,7 @@ const ContactIntro: React.FC = () => {
                    {/* Decorative background */}
                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-600/20 transition-colors duration-700"></div>
                    <div className="absolute bottom-0 left-0 w-40 h-40 bg-dfw-red/10 rounded-full blur-[60px] pointer-events-none"></div>
-                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
+                   <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
 
                    <h3 className="font-header font-bold text-white uppercase text-xl mb-8 flex items-center gap-3 relative z-10">
                       <MessageSquare size={24} className="text-dfw-red" /> 

@@ -57,7 +57,7 @@ const CricketPricing: React.FC = () => {
                className="bg-[#006838] dark:bg-[#0A111F] rounded-xl border border-[#006838] dark:border-green-500/30 p-8 shadow-2xl relative transform md:-translate-y-6 flex flex-col z-10 dark:shadow-[0_0_40px_rgba(22,163,74,0.15)]"
              >
                 <div className="absolute top-0 right-0 bg-[#CC0000] text-white text-[10px] font-bold uppercase px-4 py-1.5 rounded-bl-lg shadow-sm">Best Value</div>
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
                 
                 <div className="mb-4 relative z-10">
                    <h3 className="text-2xl font-header font-bold text-white uppercase">Unlimited</h3>

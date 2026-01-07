@@ -13,13 +13,13 @@ const PartnersHero: React.FC = () => {
         animate={{ scale: 1, opacity: 0.4 }}
         transition={{ duration: 1.5, ease: "easeOut" }}
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/events/partners-hero.webp")' }}
       ></motion.div>
       
       {/* Cinematic Grading Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#020408] via-[#020408]/90 to-transparent z-10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#020408] via-transparent to-transparent z-10"></div>
-      <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] mix-blend-overlay z-10"></div>
+      <div className="absolute inset-0 opacity-20 bg-[url('/textures/carbon-fibre.png')] mix-blend-overlay z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">
          {/* Badge */}

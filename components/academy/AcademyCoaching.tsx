@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const AcademyCoaching: React.FC = () => {
   return (
     <section className="bg-dfw-navy dark:bg-black py-24 relative overflow-hidden transition-colors duration-300">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
+       <div className="absolute inset-0 bg-[url('/textures/stardust.png')] opacity-10"></div>
        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white/5 to-transparent pointer-events-none"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -75,7 +75,7 @@ const AcademyCoaching: React.FC = () => {
                 <div className="relative z-10 grid grid-cols-2 gap-4">
                    <div className="bg-gray-800 rounded-lg h-64 w-full overflow-hidden relative group shadow-2xl transform translate-y-8 border border-white/5">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
-                      <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Technical Training" />
+                      <img src="/images/hero/cricket-hero.webp" className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Technical Training" />
                       <div className="absolute bottom-4 left-4 z-20">
                          <p className="text-dfw-red font-mono text-[10px] uppercase tracking-widest mb-1">Focus Area</p>
                          <p className="text-white font-bold uppercase text-lg">Technical</p>
@@ -83,7 +83,7 @@ const AcademyCoaching: React.FC = () => {
                    </div>
                    <div className="bg-gray-800 rounded-lg h-64 w-full overflow-hidden relative group shadow-2xl transform -translate-y-8 border border-white/5">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent z-10"></div>
-                       <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Mental Training" />
+                       <img src="/images/sports/athlete.webp" className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700" alt="Mental Training" />
                       <div className="absolute bottom-4 left-4 z-20">
                          <p className="text-blue-500 font-mono text-[10px] uppercase tracking-widest mb-1">Focus Area</p>
                          <p className="text-white font-bold uppercase text-lg">Mental</p>

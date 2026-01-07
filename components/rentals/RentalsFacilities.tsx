@@ -32,7 +32,7 @@ const RentalsFacilities: React.FC = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2">
                      <div className="relative min-h-[300px] lg:min-h-full overflow-hidden">
                         <div className="absolute top-0 left-0 bg-dfw-red text-white text-[10px] font-bold uppercase tracking-widest px-4 py-2 z-20">Most Popular</div>
-                        <img src="https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=2070&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Cricket" />
+                        <img src="/images/facilities/cricket-lanes.webp" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Cricket" />
                         <div className="absolute inset-0 bg-dfw-navy/20 group-hover:bg-transparent transition-colors"></div>
                      </div>
                      <div className="p-8 lg:p-12">
@@ -116,7 +116,7 @@ const RentalsFacilities: React.FC = () => {
                         </Link>
                      </div>
                      <div className="relative min-h-[300px] lg:min-h-full overflow-hidden order-1 lg:order-2">
-                        <img src="https://images.unsplash.com/photo-1521537634581-0dced2fee2ef?q=80&w=800&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Badminton" />
+                        <img src="/images/hero/badminton-hero.webp" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Badminton" />
                         <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-transparent transition-colors"></div>
                      </div>
                   </div>

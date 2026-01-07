@@ -29,7 +29,7 @@ const PartnersCTA: React.FC = () => {
 
   return (
     <section className="py-24 bg-dfw-navy dark:bg-[#050911] relative overflow-hidden" id="contact-partners">
-       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+       <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20"></div>
        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
        
        <div className="container mx-auto px-4 md:px-6 relative z-10">

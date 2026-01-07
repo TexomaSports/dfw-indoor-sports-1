@@ -13,13 +13,13 @@ const AcademyHero: React.FC = () => {
         animate={{ scale: 1, opacity: 0.5 }}
         transition={{ duration: 1.5 }}
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop")' }}
+        style={{ backgroundImage: 'url("/images/hero/cricket-hero.webp")' }}
       ></motion.div>
       
       {/* Advanced Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#050911] via-[#050911]/80 to-transparent z-10"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#050911] via-transparent to-transparent z-10"></div>
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 mix-blend-overlay z-10"></div>
+      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay z-10"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-20 pt-10">
          <motion.div 
