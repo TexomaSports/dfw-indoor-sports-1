@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { createPageMetadata, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/metadata'
 import Link from 'next/link'
 import { Calendar, Clock, User, ArrowRight, CheckCircle, MapPin, Phone, Star, AlertCircle, Lightbulb, Target } from 'lucide-react'
+import BlogHero from '@/components/blog/BlogHero'
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Complete Guide to Indoor Cricket in Dallas-Fort Worth (2026)',
@@ -39,27 +40,14 @@ export default function IndoorCricketGuidePage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
-            {/* Hero Section */}
-            <header className="py-20 bg-gradient-to-b from-dfw-navy to-[#0a1628]">
-                <div className="container mx-auto px-4 max-w-4xl">
-                    <div className="flex items-center gap-3 mb-6">
-                        <Link href="/blog" className="text-gray-400 hover:text-white transition-colors text-sm">← Back to Blog</Link>
-                        <span className="text-gray-600">|</span>
-                        <span className="bg-dfw-red/20 text-dfw-red px-3 py-1 rounded-full text-xs font-bold uppercase">Cricket</span>
-                    </div>
-                    <h1 className="text-4xl md:text-5xl font-header font-bold text-white leading-tight mb-6">
-                        Complete Guide to Indoor Cricket in Dallas-Fort Worth
-                    </h1>
-                    <p className="text-xl text-gray-300 mb-8">
-                        Everything you need to know about playing, practicing, and improving your cricket game indoors in the DFW metroplex.
-                    </p>
-                    <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
-                        <span className="flex items-center gap-2"><User size={16} /> DFW Indoor Sports Team</span>
-                        <span className="flex items-center gap-2"><Calendar size={16} /> January 15, 2026</span>
-                        <span className="flex items-center gap-2"><Clock size={16} /> 12 min read</span>
-                    </div>
-                </div>
-            </header>
+            <BlogHero
+                title="Complete Guide to Indoor Cricket in Dallas-Fort Worth"
+                description="Everything you need to know about playing, practicing, and improving your cricket game indoors in the DFW metroplex."
+                category="Cricket"
+                date="Jan 15, 2026"
+                readTime="12 min read"
+                author="DFW Indoor Sports Team"
+            />
 
             {/* Table of Contents */}
             <nav className="py-8 bg-gray-50 dark:bg-[#0a111f] border-b border-gray-100 dark:border-white/10">
@@ -82,19 +70,16 @@ export default function IndoorCricketGuidePage() {
             <div className="py-16">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="prose prose-lg dark:prose-invert max-w-none">
-
                         {/* Section 1 */}
                         <section id="why-indoor" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">1</span>
                                 Why Play Indoor Cricket in Texas?
                             </h2>
-
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
                                 Texas weather is unpredictable. One day it's 105°F with 90% humidity, the next it's a sudden thunderstorm.
                                 For cricket players, this means canceled matches, uncomfortable practice sessions, and inconsistent training schedules.
                             </p>
-
                             <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg mb-6">
                                 <div className="flex items-start gap-3">
                                     <Lightbulb className="text-blue-500 flex-shrink-0 mt-1" size={20} />
@@ -107,9 +92,7 @@ export default function IndoorCricketGuidePage() {
                                     </div>
                                 </div>
                             </div>
-
                             <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">Benefits of Indoor Cricket Training</h3>
-
                             <div className="grid md:grid-cols-2 gap-4 mb-6">
                                 {[
                                     { title: 'Year-Round Access', desc: 'Train in any weather, any season. No cancellations.' },
@@ -128,26 +111,6 @@ export default function IndoorCricketGuidePage() {
                                     </div>
                                 ))}
                             </div>
-
-                            <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">Who Benefits Most?</h3>
-                            <ul className="space-y-3 text-gray-600 dark:text-gray-400">
-                                <li className="flex items-start gap-3">
-                                    <Target className="text-dfw-red flex-shrink-0 mt-1" size={18} />
-                                    <span><strong>Serious batsmen:</strong> Face hundreds of deliveries per session to groove technique</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <Target className="text-dfw-red flex-shrink-0 mt-1" size={18} />
-                                    <span><strong>Bowlers working on action:</strong> Controlled environment to make technical changes</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <Target className="text-dfw-red flex-shrink-0 mt-1" size={18} />
-                                    <span><strong>Teams preparing for tournaments:</strong> Get everyone practice regardless of weather</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <Target className="text-dfw-red flex-shrink-0 mt-1" size={18} />
-                                    <span><strong>Beginners:</strong> Learn in a safer, less intimidating environment</span>
-                                </li>
-                            </ul>
                         </section>
 
                         {/* Section 2 */}
@@ -156,12 +119,10 @@ export default function IndoorCricketGuidePage() {
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">2</span>
                                 How Indoor Cricket Works
                             </h2>
-
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
                                 Indoor cricket facilities typically offer <strong>individual lanes</strong> (also called "nets")
                                 that are 30-40 feet long and 10-12 feet wide, enclosed by mesh netting on all sides.
                             </p>
-
                             <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">Lane Setup at Most Facilities</h3>
                             <div className="overflow-x-auto mb-6">
                                 <table className="w-full border-collapse">
@@ -188,26 +149,8 @@ export default function IndoorCricketGuidePage() {
                                             <td className="p-3">Synthetic mat</td>
                                             <td className="p-3">Professional turf with bounce consistency</td>
                                         </tr>
-                                        <tr className="border-b border-gray-200 dark:border-white/10">
-                                            <td className="p-3 font-medium">Video Recording</td>
-                                            <td className="p-3">Bring your own</td>
-                                            <td className="p-3">Mounted camera stations</td>
-                                        </tr>
                                     </tbody>
                                 </table>
-                            </div>
-
-                            <div className="bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 p-6 rounded-r-lg mb-6">
-                                <div className="flex items-start gap-3">
-                                    <AlertCircle className="text-amber-500 flex-shrink-0 mt-1" size={20} />
-                                    <div>
-                                        <p className="font-bold text-dfw-navy dark:text-white mb-2">Pro Tip</p>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            When choosing a facility, ask if the bowling machine is <strong>included</strong> in the lane rental.
-                                            Some places charge an extra $15-20/hour. At DFW Indoor Sports, it's always included free.
-                                        </p>
-                                    </div>
-                                </div>
                             </div>
                         </section>
 
@@ -217,12 +160,6 @@ export default function IndoorCricketGuidePage() {
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">3</span>
                                 Equipment You Need (and Don't)
                             </h2>
-
-                            <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                One of the biggest barriers for newcomers is thinking they need to buy expensive equipment.
-                                Here's the truth about what you actually need:
-                            </p>
-
                             <div className="grid md:grid-cols-2 gap-6 mb-6">
                                 <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl">
                                     <h4 className="font-bold text-green-700 dark:text-green-400 uppercase text-sm mb-4">✅ Bring Yourself</h4>
@@ -243,130 +180,51 @@ export default function IndoorCricketGuidePage() {
                                     </ul>
                                 </div>
                             </div>
-
-                            <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">Equipment Investment Guide (If You Want Your Own)</h3>
-                            <div className="overflow-x-auto mb-6">
-                                <table className="w-full border-collapse">
-                                    <thead>
-                                        <tr className="bg-dfw-navy text-white">
-                                            <th className="p-3 text-left text-sm font-bold uppercase">Item</th>
-                                            <th className="p-3 text-left text-sm font-bold uppercase">Budget</th>
-                                            <th className="p-3 text-left text-sm font-bold uppercase">Mid-Range</th>
-                                            <th className="p-3 text-left text-sm font-bold uppercase">Premium</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-gray-600 dark:text-gray-400">
-                                        <tr className="border-b border-gray-200 dark:border-white/10">
-                                            <td className="p-3 font-medium">Cricket Bat</td>
-                                            <td className="p-3">$40-80</td>
-                                            <td className="p-3">$100-200</td>
-                                            <td className="p-3">$250-500+</td>
-                                        </tr>
-                                        <tr className="border-b border-gray-200 dark:border-white/10">
-                                            <td className="p-3 font-medium">Batting Gloves</td>
-                                            <td className="p-3">$20-40</td>
-                                            <td className="p-3">$50-80</td>
-                                            <td className="p-3">$100+</td>
-                                        </tr>
-                                        <tr className="border-b border-gray-200 dark:border-white/10">
-                                            <td className="p-3 font-medium">Helmet</td>
-                                            <td className="p-3">$30-50</td>
-                                            <td className="p-3">$60-100</td>
-                                            <td className="p-3">$150+</td>
-                                        </tr>
-                                        <tr className="border-b border-gray-200 dark:border-white/10">
-                                            <td className="p-3 font-medium">Leg Pads</td>
-                                            <td className="p-3">$30-50</td>
-                                            <td className="p-3">$60-100</td>
-                                            <td className="p-3">$150+</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
                         </section>
 
                         {/* Section 4 */}
                         <section id="costs" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">4</span>
-                                Cost Breakdown: What to Expect in DFW
+                                Cost Breakdown
                             </h2>
-
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                Pricing varies across the Dallas-Fort Worth area. Here's what typical facilities charge:
+                                Pricing varies across DFW. Here's a quick guide:
                             </p>
-
-                            <div className="bg-gradient-to-br from-dfw-navy to-[#0a1628] text-white p-8 rounded-xl mb-6">
-                                <h3 className="font-bold uppercase text-lg mb-6">DFW Indoor Cricket Pricing Comparison</h3>
-                                <div className="grid md:grid-cols-3 gap-6">
-                                    <div className="text-center">
-                                        <p className="text-gray-400 text-sm uppercase mb-2">Drop-In (Hourly)</p>
-                                        <p className="text-4xl font-bold">$25-40</p>
-                                        <p className="text-gray-400 text-xs mt-2">per hour, per lane</p>
-                                    </div>
-                                    <div className="text-center border-l border-r border-white/10 px-6">
-                                        <p className="text-gray-400 text-sm uppercase mb-2">Monthly Membership</p>
-                                        <p className="text-4xl font-bold">$70-150</p>
-                                        <p className="text-gray-400 text-xs mt-2">unlimited access</p>
-                                    </div>
-                                    <div className="text-center">
-                                        <p className="text-gray-400 text-sm uppercase mb-2">Coaching Session</p>
-                                        <p className="text-4xl font-bold">$50-100</p>
-                                        <p className="text-gray-400 text-xs mt-2">per hour, 1-on-1</p>
-                                    </div>
+                            <div className="grid md:grid-cols-3 gap-6 mb-6">
+                                <div className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl text-center">
+                                    <p className="font-bold text-xl text-dfw-navy dark:text-white mb-2">Drop-In</p>
+                                    <p className="text-3xl font-bold text-dfw-red mb-2">$25-40</p>
+                                    <p className="text-sm text-gray-500">per hour / per lane</p>
+                                </div>
+                                <div className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl text-center border-2 border-dfw-red/20">
+                                    <p className="font-bold text-xl text-dfw-navy dark:text-white mb-2">Membership</p>
+                                    <p className="text-3xl font-bold text-dfw-red mb-2">$70-150</p>
+                                    <p className="text-sm text-gray-500">monthly / unlimited</p>
+                                </div>
+                                <div className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl text-center">
+                                    <p className="font-bold text-xl text-dfw-navy dark:text-white mb-2">Coaching</p>
+                                    <p className="text-3xl font-bold text-dfw-red mb-2">$50-100</p>
+                                    <p className="text-sm text-gray-500">per hour / 1-on-1</p>
                                 </div>
                             </div>
-
-                            <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">When Membership Makes Sense</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-4">
-                                If you practice <strong>2+ times per month</strong>, membership typically pays for itself. Here's the math:
-                            </p>
-                            <ul className="space-y-2 text-gray-600 dark:text-gray-400 mb-6">
-                                <li>• 4 drop-in sessions × $30/hr = <strong>$120/month</strong></li>
-                                <li>• Membership = <strong>$70-85/month</strong></li>
-                                <li>• <span className="text-green-600 font-bold">Savings: $35-50/month</span> (plus priority booking)</li>
-                            </ul>
                         </section>
 
                         {/* Section 5 */}
                         <section id="beginner-tips" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">5</span>
-                                Beginner Tips from Local Coaches
+                                Beginner Tips
                             </h2>
-
-                            <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                We asked coaches at DFW-area cricket facilities what advice they give to beginners. Here's what they said:
-                            </p>
-
-                            <div className="space-y-6 mb-6">
-                                {[
-                                    {
-                                        tip: "Start with the bowling machine at 40-50 mph",
-                                        why: "Most beginners overestimate their ability to handle pace. Build timing before building speed.",
-                                    },
-                                    {
-                                        tip: "Focus on 3 shots in your first month: front foot defense, back foot defense, and straight drive",
-                                        why: "These foundational shots teach proper weight transfer and timing. Don't try to hit sixes on day one.",
-                                    },
-                                    {
-                                        tip: "Book at least 2-hour sessions",
-                                        why: "The first 30-45 minutes is just warming up and finding rhythm. Real improvement happens in hours 2+.",
-                                    },
-                                    {
-                                        tip: "Record yourself from the side angle",
-                                        why: "You can't feel what you're doing wrong. Video reveals problems with backlift, head position, and feet movement.",
-                                    },
-                                    {
-                                        tip: "Practice with both leather and synthetic balls",
-                                        why: "Leather teaches you to play with soft hands; synthetic builds confidence against pace.",
-                                    },
-                                ].map((item, idx) => (
-                                    <div key={idx} className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl">
-                                        <p className="font-bold text-dfw-navy dark:text-white mb-2">"{item.tip}"</p>
-                                        <p className="text-gray-500 dark:text-gray-400 text-sm"><em>Why:</em> {item.why}</p>
-                                    </div>
-                                ))}
+                            <div className="space-y-4">
+                                <div className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl">
+                                    <p className="font-bold text-dfw-navy dark:text-white mb-2">Start Slow</p>
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm">Don't crank the machine to 90mph. Start at 40-50mph to build confidence and timing.</p>
+                                </div>
+                                <div className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl">
+                                    <p className="font-bold text-dfw-navy dark:text-white mb-2">Focus on Technique</p>
+                                    <p className="text-gray-600 dark:text-gray-400 text-sm">Indoor nets are perfect for drilling basics like the forward defense and straight drive. Use video to check your form.</p>
+                                </div>
                             </div>
                         </section>
 
@@ -374,69 +232,19 @@ export default function IndoorCricketGuidePage() {
                         <section id="advanced" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">6</span>
-                                Advanced Training Techniques
+                                Advanced Training
                             </h2>
-
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                Once you've mastered the basics, here's how serious players use indoor nets to take their game to the next level:
+                                For serious players, try <strong>Scenario Practice</strong>. Set the machine to random lengths and visualize specific match situations (e.g., last 5 overs) to train decision making under pressure.
                             </p>
-
-                            <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">For Batsmen</h3>
-                            <div className="space-y-4 mb-6">
-                                <div className="border-l-4 border-dfw-red pl-4">
-                                    <p className="font-bold text-dfw-navy dark:text-white">Scenario Practice</p>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Set the bowling machine to random line/length. Practice playing 6 balls as if it's the last over
-                                        needing 10 runs. This builds match-pressure decision making.
-                                    </p>
-                                </div>
-                                <div className="border-l-4 border-dfw-red pl-4">
-                                    <p className="font-bold text-dfw-navy dark:text-white">Targeted Weakness Work</p>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Struggle with short balls? Set the machine to bowl only short, 50+ balls in a row.
-                                        Repetition builds muscle memory faster than random variation.
-                                    </p>
-                                </div>
-                                <div className="border-l-4 border-dfw-red pl-4">
-                                    <p className="font-bold text-dfw-navy dark:text-white">Tired Training</p>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Do a cardio session, then immediately face 30 balls. This simulates batting in the 40th over
-                                        when you're physically tired but need to maintain technique.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <h3 className="text-xl font-bold text-dfw-navy dark:text-white mb-4">For Bowlers</h3>
-                            <div className="space-y-4 mb-6">
-                                <div className="border-l-4 border-blue-500 pl-4">
-                                    <p className="font-bold text-dfw-navy dark:text-white">Target Practice</p>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Place cones or markers on a specific line (e.g., off stump). Aim for 20 consecutive balls
-                                        hitting the target zone before moving to a new target.
-                                    </p>
-                                </div>
-                                <div className="border-l-4 border-blue-500 pl-4">
-                                    <p className="font-bold text-dfw-navy dark:text-white">Variation Sequencing</p>
-                                    <p className="text-gray-500 dark:text-gray-400 text-sm">
-                                        Plan a 6-ball sequence before bowling it: e.g., outswingers for 4 balls, yorker, slower ball.
-                                        Execute the exact plan. This trains match execution.
-                                    </p>
-                                </div>
-                            </div>
                         </section>
 
                         {/* Section 7 */}
                         <section id="where-to-play" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">7</span>
-                                Where to Play Indoor Cricket in DFW
+                                Where to Play in DFW
                             </h2>
-
-                            <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                Here are the main options for indoor cricket in the Dallas-Fort Worth area:
-                            </p>
-
-                            {/* Featured Facility */}
                             <div className="bg-gradient-to-br from-dfw-red/10 to-dfw-navy/10 border-2 border-dfw-red rounded-xl p-8 mb-8">
                                 <div className="flex items-start gap-4">
                                     <div className="bg-dfw-red text-white px-3 py-1 rounded text-xs font-bold uppercase">Featured</div>
@@ -459,8 +267,6 @@ export default function IndoorCricketGuidePage() {
                                         <ul className="space-y-1 text-gray-600 dark:text-gray-400">
                                             <li className="flex items-center gap-2"><CheckCircle size={14} className="text-green-500" /> 3 professional cricket lanes</li>
                                             <li className="flex items-center gap-2"><CheckCircle size={14} className="text-green-500" /> Bowling machines included FREE</li>
-                                            <li className="flex items-center gap-2"><CheckCircle size={14} className="text-green-500" /> Equipment rental available</li>
-                                            <li className="flex items-center gap-2"><CheckCircle size={14} className="text-green-500" /> Professional coaching programs</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -468,27 +274,21 @@ export default function IndoorCricketGuidePage() {
                                     <Link href="/cricket-lanes" className="bg-dfw-red text-white px-6 py-2 rounded font-bold uppercase text-sm hover:bg-red-700 transition-colors">
                                         View Cricket Lanes
                                     </Link>
-                                    <Link href="/contact" className="bg-dfw-navy text-white px-6 py-2 rounded font-bold uppercase text-sm hover:bg-gray-800 transition-colors">
-                                        Schedule a Tour
-                                    </Link>
                                 </div>
                             </div>
                         </section>
 
-                        {/* Section 8 */}
+                        {/* Section 8: FAQ */}
                         <section id="faq" className="mb-16">
                             <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 flex items-center gap-3">
                                 <span className="w-10 h-10 bg-dfw-red rounded-full flex items-center justify-center text-white text-lg font-bold">8</span>
-                                Frequently Asked Questions
+                                FAQ
                             </h2>
-
                             <div className="space-y-6">
                                 {[
-                                    { q: "Can complete beginners use indoor cricket facilities?", a: "Absolutely. About 40% of new visitors have never played cricket before. Staff provide basic instruction and the bowling machine can be set to very slow speeds for learning." },
-                                    { q: "How far in advance should I book?", a: "Weekday mornings usually have same-day availability. Weekend evenings (the most popular times) should be booked 1-2 weeks ahead. Members get priority booking up to 30 days in advance." },
-                                    { q: "Can I bring a group of friends who've never played?", a: "Yes! This is actually a popular activity for groups. Staff can help get everyone set up with equipment and basic instruction. Consider booking 2+ lanes for larger groups." },
-                                    { q: "Is indoor cricket the same as playing outdoors?", a: "The fundamentals are identical, but indoor nets focus on batting and bowling technique. You won't practice fielding or running between wickets indoors. Think of it as intensive skill development." },
-                                    { q: "What's the minimum age for children?", a: "Most facilities accept children 6+, though 8+ is ideal for focused practice. Youth coaching programs often start at age 6 with modified equipment and instruction." },
+                                    { q: "Can complete beginners use indoor cricket facilities?", a: "Absolutely. About 40% of new visitors have never played cricket before. Staff provide basic instruction." },
+                                    { q: "How far in advance should I book?", a: "Weekday mornings usually have same-day availability. Weekend evenings should be booked 1-2 weeks ahead." },
+                                    { q: "Is indoor cricket the same as playing outdoors?", a: "The fundamentals are identical, but indoor nets focus on batting and bowling technique." },
                                 ].map((item, idx) => (
                                     <div key={idx} className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl">
                                         <p className="font-bold text-dfw-navy dark:text-white mb-2">{item.q}</p>
@@ -514,7 +314,6 @@ export default function IndoorCricketGuidePage() {
                                 </Link>
                             </div>
                         </section>
-
                     </div>
                 </div>
             </div>

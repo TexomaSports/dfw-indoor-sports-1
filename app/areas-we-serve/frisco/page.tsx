@@ -1,7 +1,12 @@
 import type { Metadata } from 'next'
 import { createPageMetadata, generateBreadcrumbSchema, generateFAQSchema, BUSINESS_INFO } from '@/lib/metadata'
-import Link from 'next/link'
-import { MapPin, Clock, Car, ArrowRight, Phone, CheckCircle, Star, DollarSign, Users, Trophy, Target, Heart } from 'lucide-react'
+import { Car, Clock, Phone, DollarSign, Trophy, Users, Award, Shield, Target, Heart, CheckCircle } from 'lucide-react'
+import CityHero from '@/components/city/CityHero'
+import CityStats from '@/components/city/CityStats'
+import CityFeatures from '@/components/city/CityFeatures'
+import CityDirections from '@/components/city/CityDirections'
+import CitySportsGrid from '@/components/city/CitySportsGrid'
+import CityTestimonial from '@/components/city/CityTestimonial'
 
 export const metadata: Metadata = createPageMetadata({
     title: 'Indoor Sports Near Frisco TX | Cricket, Badminton, Soccer | 40 Min Drive',
@@ -74,283 +79,148 @@ export default function FriscoPage() {
     }
 
     return (
-        <div className="bg-white dark:bg-[#020408] min-h-screen transition-colors duration-300">
+        <div className="bg-[#020408] min-h-screen">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(citySchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-            {/* Hero */}
-            <section className="py-24 bg-gradient-to-b from-dfw-navy to-[#0a1628] relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-5"></div>
-                <div className="container mx-auto px-4 text-center relative z-10">
-                    <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-widest mb-6">
-                        <MapPin size={14} className="text-dfw-red" /> Serving Frisco, TX
-                    </span>
-                    <h1 className="text-4xl md:text-6xl font-header font-bold text-white uppercase mb-6">
-                        Indoor Sports Near Frisco, Texas
-                    </h1>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                        Frisco is booming—but for serious indoor sports, DFW Indoor Sports is worth the <strong className="text-dfw-red">40-minute drive</strong>.
-                        Professional cricket, Olympic badminton, indoor soccer, and an active community await you.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="/rentals" className="bg-dfw-red text-white px-8 py-3 rounded font-bold uppercase text-sm hover:bg-red-700 transition-colors flex items-center gap-2">
-                            Book a Court <ArrowRight size={16} />
-                        </Link>
-                        <Link href="/contact" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded font-bold uppercase text-sm hover:bg-white/10 transition-colors">
-                            Get Directions
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <CityHero
+                city="Frisco"
+                distance="40-50 Min"
+                tagline="Worth the drive for Frisco athletes seeking professional-grade facilities."
+            />
 
-            {/* Stats */}
-            <section className="py-12 bg-gray-50 dark:bg-[#0a111f]">
-                <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                        <div className="bg-white dark:bg-white/5 p-6 rounded-lg text-center">
-                            <Car className="text-dfw-red mx-auto mb-3" size={32} />
-                            <p className="font-bold text-dfw-navy dark:text-white text-lg">40-50 Min</p>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">from Frisco</p>
-                        </div>
-                        <div className="bg-white dark:bg-white/5 p-6 rounded-lg text-center">
-                            <Clock className="text-dfw-red mx-auto mb-3" size={32} />
-                            <p className="font-bold text-dfw-navy dark:text-white text-lg">5 AM - 11 PM</p>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">Open 7 Days</p>
-                        </div>
-                        <div className="bg-white dark:bg-white/5 p-6 rounded-lg text-center">
-                            <DollarSign className="text-dfw-red mx-auto mb-3" size={32} />
-                            <p className="font-bold text-dfw-navy dark:text-white text-lg">From $25/hr</p>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">Court Rental</p>
-                        </div>
-                        <div className="bg-white dark:bg-white/5 p-6 rounded-lg text-center">
-                            <Phone className="text-dfw-red mx-auto mb-3" size={32} />
-                            <p className="font-bold text-dfw-navy dark:text-white text-lg">(817) 938-0808</p>
-                            <p className="text-gray-500 dark:text-gray-400 text-sm">Call Us</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <CityStats
+                stats={[
+                    { icon: Car, value: "40 Min", label: "Worth the Drive", sublabel: "Via TX-121" },
+                    { icon: Target, value: "Youth", label: "Programs", sublabel: "Build Champions" },
+                    { icon: Users, value: "Community", label: "North DFW", sublabel: "Find Players" },
+                    { icon: Heart, value: "Family", label: "Focused", sublabel: "Safe & clean" }
+                ]}
+            />
 
-            {/* Why Frisco Families Choose Us */}
-            <section className="py-24">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-5xl mx-auto">
-                        <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 text-center">
-                            Why Frisco Families Make Us a Weekend Destination
-                        </h2>
-                        <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-                            Frisco is one of the fastest-growing cities in Texas, with young families seeking quality activities. Many have discovered that DFW Indoor Sports offers something special worth the drive.
-                        </p>
+            <CityFeatures
+                title="Why Frisco Families Make the Trip"
+                description="Frisco is growing fast, but for specialized indoor sports training, DFW Indoor Sports remains the destination of choice."
+                features={[
+                    {
+                        title: "Professional Youth Training",
+                        description: "Our structured academy programs are worth the weekly commute. We provide the disciplined, high-level coaching that aspiring athletes need to truly improve.",
+                        icon: Target
+                    },
+                    {
+                        title: "Olympic-Standard Courts",
+                        description: "Don't compromise with multi-purpose gym floors. Our badminton courts have proper BWF-approved synthetic flooring that protects knees and improves game play.",
+                        icon: Trophy
+                    },
+                    {
+                        title: "North DFW Hub",
+                        description: "We've become a central gathering point for the cricket and badminton communities of Frisco, Plano, and McKinney. You'll likely see neighbors here!",
+                        icon: Users
+                    },
+                    {
+                        title: "Weekend Destination",
+                        description: "Make a day of it. Saturday morning training followed by lunch in nearby Southlake Town Square makes for a perfect family weekend routine.",
+                        icon: Heart
+                    }
+                ]}
+            />
 
-                        <div className="grid md:grid-cols-2 gap-8 mb-12">
-                            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-dfw-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Target className="text-dfw-red" size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-2">Youth Development</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            Our Youth Academy provides structured training in cricket and badminton. Many Frisco parents bring their kids on Saturday mornings for professional coaching that develops real skills—not just casual play.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <CitySportsGrid
+                sports={[
+                    {
+                        name: "Cricket",
+                        icon: "🏏",
+                        price: "$25/hr",
+                        priceNote: "lane rental",
+                        features: ["Private lanes", "Bowling machines", "Kit storage available"],
+                        link: "/cricket-lanes"
+                    },
+                    {
+                        name: "Badminton",
+                        icon: "🏸",
+                        price: "$10/person",
+                        priceNote: "drop-in",
+                        features: ["6 Courts", "High ceiling", "Yonex shuttles"],
+                        link: "/badminton-courts"
+                    },
+                    {
+                        name: "Birthday Parties",
+                        icon: "🎂",
+                        price: "$250+",
+                        priceNote: "package",
+                        features: ["2 hours event", "Dodgeball/Soccer", "Party room"],
+                        link: "/contact"
+                    },
+                    {
+                        name: "Academy",
+                        icon: "🎓",
+                        price: "Enroll",
+                        priceNote: "now",
+                        features: ["Ages 6-16", "Expert coaches", "Skill progression"],
+                        link: "/academy"
+                    }
+                ]}
+            />
 
-                            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-dfw-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Users className="text-dfw-red" size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-2">North DFW Community</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            Our player community includes families from Frisco, Plano, Allen, McKinney, and surrounding areas. Weekend sessions often feel like community gatherings, with families connecting over shared sports interests.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <CityDirections
+                city="Frisco"
+                address="16230 Three Wide Drive, Fort Worth, TX 76177"
+                googleMapsLink="https://maps.google.com/?q=16230+Three+Wide+Drive+Fort+Worth+TX+76177"
+                directions={[
+                    {
+                        area: "From Frisco / Boyd High Area",
+                        distance: "~38 miles",
+                        time: "40-45 min",
+                        steps: [
+                            "Take TX-121 S (Sam Rayburn Tollway)",
+                            "Merge onto TX-114 W toward Roanoke/Fort Worth",
+                            "Continue straight past Trophy Club",
+                            "Exit toward Three Wide Drive",
+                            "Turn left onto Three Wide Drive"
+                        ]
+                    },
+                    {
+                        area: "From West Frisco / FM 423",
+                        distance: "~35 miles",
+                        time: "35-40 min",
+                        steps: [
+                            "Take FM 423 South",
+                            "Turn right onto TX-121 S",
+                            "Merge onto TX-114 W",
+                            "Continue to Roanoke area",
+                            "Turn left onto Three Wide Drive"
+                        ]
+                    }
+                ]}
+            />
 
-                            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-dfw-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Trophy className="text-dfw-red" size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-2">Professional Facilities</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            50,000 sq ft purpose-built for indoor sports. Programmable bowling machines (40-90 mph) for cricket, Olympic-specification badminton courts with proper ceiling height, and premium turf for soccer.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+            <CityTestimonial
+                quote="We moved to Frisco from India and really missed having proper cricket facilities. DFW Indoor Sports is the closest thing to what we had back home. Yes, it's a 45-minute drive, but we go every Saturday morning. Our son has improved so much."
+                author="Venkat S."
+                location="Frisco Resident"
+            />
 
-                            <div className="bg-gray-50 dark:bg-white/5 p-8 rounded-xl">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-12 h-12 bg-dfw-red/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <Heart className="text-dfw-red" size={24} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-2">Birthday Parties & Events</h3>
-                                        <p className="text-gray-600 dark:text-gray-400 text-sm">
-                                            Looking for a unique birthday party venue? Our dodgeball and multi-sport party packages are hits with Frisco families. Private party rooms, equipment included, and unforgettable fun.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Testimonial */}
-                        <div className="bg-dfw-navy text-white p-8 rounded-xl">
-                            <div className="flex items-start gap-4">
-                                <div className="flex gap-1 text-yellow-400 flex-shrink-0">
-                                    {[1, 2, 3, 4, 5].map((i) => <Star key={i} size={16} fill="currentColor" />)}
-                                </div>
-                                <div>
-                                    <p className="italic mb-4">
-                                        "We moved to Frisco from India and really missed having proper cricket facilities. DFW Indoor Sports is the closest thing to what we had back home. Yes, it's a 45-minute drive, but we go every Saturday morning. Our son has improved so much with the coaching, and we've made great friends in the community."
-                                    </p>
-                                    <p className="text-gray-400 text-sm">— Venkat S., Frisco</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Directions */}
-            <section className="py-24 bg-gray-50 dark:bg-[#0a111f]">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-5xl mx-auto">
-                        <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-6 text-center">
-                            Getting Here from Frisco
-                        </h2>
-                        <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-                            Address: <strong>16230 Three Wide Drive, Fort Worth, TX 76177</strong>
-                        </p>
-
-                        <div className="grid md:grid-cols-2 gap-8 mb-8">
-                            <div className="bg-white dark:bg-white/5 p-6 rounded-xl">
-                                <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-4 flex items-center gap-2">
-                                    <MapPin size={18} className="text-dfw-red" /> Via TX-121 (Sam Rayburn Tollway)
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3"><strong>Distance:</strong> ~38 miles | <strong>Time:</strong> 40-50 min</p>
-                                <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <li>Take TX-121 (Sam Rayburn Tollway) west</li>
-                                    <li>Continue onto TX-114 W at the interchange</li>
-                                    <li>Stay on TX-114 W through Southlake, Trophy Club, and Roanoke</li>
-                                    <li>Take the Three Wide Drive exit (past Roanoke)</li>
-                                    <li>Turn left onto Three Wide Drive</li>
-                                    <li>DFW Indoor Sports is on your left (Suite 200)</li>
-                                </ol>
-                            </div>
-
-                            <div className="bg-white dark:bg-white/5 p-6 rounded-xl">
-                                <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-4 flex items-center gap-2">
-                                    <MapPin size={18} className="text-dfw-red" /> Alternative: Via I-35W
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3"><strong>Distance:</strong> ~42 miles | <strong>Time:</strong> 45-55 min</p>
-                                <ol className="list-decimal list-inside space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    <li>Head west on Main St / FM 423</li>
-                                    <li>Merge onto US-380 W</li>
-                                    <li>Take I-35W S toward Fort Worth</li>
-                                    <li>Take exit 67 toward TX-114 W</li>
-                                    <li>Turn right onto Three Wide Drive</li>
-                                </ol>
-                                <p className="text-gray-500 dark:text-gray-400 text-xs mt-4 italic">
-                                    Note: TX-121/114 route is usually faster and more direct.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Tips */}
-                        <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
-                            <h4 className="font-bold text-dfw-navy dark:text-white mb-3">🚗 Tips for Frisco Drivers</h4>
-                            <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <li><CheckCircle className="inline text-blue-500 mr-2" size={16} /><strong>Best time:</strong> Saturday/Sunday mornings—35-40 min with light traffic</li>
-                                <li><CheckCircle className="inline text-blue-500 mr-2" size={16} /><strong>Make it a day:</strong> Many Frisco families combine the trip with lunch in Southlake or Roanoke</li>
-                                <li><CheckCircle className="inline text-blue-500 mr-2" size={16} /><strong>Tolls:</strong> TX-121 has tolls; budget ~$5-7 each way with TollTag</li>
-                            </ul>
-                        </div>
-
-                        <div className="text-center">
-                            <Link href="https://maps.google.com/?q=16230+Three+Wide+Drive+Fort+Worth+TX+76177" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-dfw-navy dark:bg-white text-white dark:text-dfw-navy px-8 py-4 rounded font-bold uppercase text-sm hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors">
-                                <MapPin size={18} /> Open in Google Maps
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Sports & Pricing */}
-            <section className="py-24">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-5xl mx-auto">
-                        <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-12 text-center">
-                            Sports Available
-                        </h2>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
-                                { icon: '🏏', name: 'Cricket', price: '$25/hr', link: '/cricket-lanes' },
-                                { icon: '🏸', name: 'Badminton', price: '$10/person', link: '/badminton-courts' },
-                                { icon: '⚽', name: 'Soccer', price: '$100/hr', link: '/soccer-fields' },
-                                { icon: '🔴', name: 'Dodgeball', price: '$150+', link: '/dodgeball-courts' },
-                            ].map((sport) => (
-                                <Link key={sport.name} href={sport.link} className="bg-gray-50 dark:bg-white/5 p-6 rounded-xl text-center hover:shadow-lg transition-all group">
-                                    <span className="text-4xl mb-4 block">{sport.icon}</span>
-                                    <h3 className="font-bold text-dfw-navy dark:text-white uppercase mb-2 group-hover:text-dfw-red transition-colors">{sport.name}</h3>
-                                    <p className="text-dfw-red font-bold">{sport.price}</p>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ */}
-            <section className="py-24 bg-gray-50 dark:bg-[#0a111f]">
+            {/* FAQ Section */}
+            <section className="py-24 bg-gray-900 border-t border-white/10">
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-header font-bold text-dfw-navy dark:text-white uppercase mb-12 text-center">
-                            Questions from Frisco Families
+                        <h2 className="text-3xl font-header font-bold text-white uppercase mb-12 text-center">
+                            Frisco Family FAQs
                         </h2>
-
                         <div className="space-y-4">
                             {friscoFaqs.map((faq, index) => (
-                                <details key={index} className="bg-white dark:bg-white/5 p-6 rounded-xl group">
-                                    <summary className="font-bold text-dfw-navy dark:text-white cursor-pointer flex items-center justify-between">
+                                <details key={index} className="bg-white/5 border border-white/10 p-6 rounded-xl group cursor-pointer hover:bg-white/10 transition-colors">
+                                    <summary className="font-bold text-white flex items-center justify-between list-none">
                                         {faq.question}
                                         <span className="text-dfw-red group-open:rotate-45 transition-transform">+</span>
                                     </summary>
-                                    <p className="text-gray-600 dark:text-gray-400 mt-4 text-sm leading-relaxed">{faq.answer}</p>
+                                    <p className="text-gray-400 mt-4 text-sm leading-relaxed">
+                                        {faq.answer}
+                                    </p>
                                 </details>
                             ))}
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-20 bg-dfw-red">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-header font-bold text-white uppercase mb-4">
-                        Worth the Drive from Frisco
-                    </h2>
-                    <p className="text-white/80 mb-8 max-w-2xl mx-auto text-lg">
-                        Join families from Frisco, Plano, and beyond who make DFW Indoor Sports their weekend destination.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="/rentals" className="bg-white text-dfw-red px-8 py-4 rounded font-bold uppercase text-sm hover:bg-gray-100 transition-colors flex items-center gap-2">
-                            Book Online <ArrowRight size={16} />
-                        </Link>
-                        <Link href="/memberships" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold uppercase text-sm hover:bg-white/10 transition-colors">
-                            Family Memberships $150/mo
-                        </Link>
-                        <Link href="tel:8179380808" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded font-bold uppercase text-sm hover:bg-white/10 transition-colors flex items-center gap-2">
-                            <Phone size={16} /> (817) 938-0808
-                        </Link>
                     </div>
                 </div>
             </section>
