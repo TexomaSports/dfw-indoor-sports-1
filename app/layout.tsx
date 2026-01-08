@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import ClientLayout from './client-layout'
-import { defaultMetadata, generateLocalBusinessSchema, generateOrganizationSchema } from '@/lib/metadata'
+import { defaultMetadata, generateLocalBusinessSchema, generateOrganizationSchema, generateAggregateRatingSchema } from '@/lib/metadata'
 
 export const metadata: Metadata = defaultMetadata
 
@@ -9,7 +9,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-// ...
+// ..
 export default function RootLayout({
   children,
 }: {
@@ -17,6 +17,10 @@ export default function RootLayout({
 }) {
   const localBusinessSchema = generateLocalBusinessSchema()
   const organizationSchema = generateOrganizationSchema()
+  const aggregateRatingSchema = generateAggregateRatingSchema({
+    ratingValue: 5.0,
+    reviewCount: 47,
+  })
 
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
@@ -33,6 +37,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
           }}
         />
       </head>

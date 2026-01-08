@@ -1,60 +1,94 @@
 'use client'
 
+/**
+ * HomeMarquee - Premium Typography-Focused Marquee
+ * 
+ * Design Philosophy (Inspired by luxury brand websites):
+ * - Clean, sophisticated typography as the hero element
+ * - Subtle glow effects instead of cartoon icons
+ * - Premium diamond separators with refined animations
+ * - Elegant hover states with smooth transitions
+ */
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
 
+// Sports items - now focused purely on elegant typography
 const SPORTS_ITEMS = [
-  '🏏 CRICKET', '🏸 BADMINTON', '⚽ SOCCER', '🎯 DODGEBALL'
+  { name: 'CRICKET' },
+  { name: 'BADMINTON' },
+  { name: 'SOCCER' },
+  { name: 'DODGEBALL' },
 ];
 
 const HomeMarquee: React.FC = () => {
   const { theme } = useTheme();
   const isDarkMode = theme === 'dark';
-  const strokeColor = isDarkMode ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.5)';
+
+  // Premium separator - elegant diamond shape
+  const DiamondSeparator = () => (
+    <div className="mx-8 md:mx-12 flex items-center justify-center">
+      <div className="relative">
+        {/* Outer glow */}
+        <div className="absolute inset-0 w-3 h-3 bg-dfw-red/50 blur-md rounded-full transform rotate-45" />
+        {/* Diamond shape */}
+        <div className="w-2 h-2 bg-gradient-to-br from-dfw-red to-red-700 transform rotate-45 shadow-lg" />
+      </div>
+    </div>
+  );
+
+  // Render a single marquee item with premium typography
+  const renderMarqueeItem = (item: typeof SPORTS_ITEMS[0], index: number, keyPrefix: string = '') => (
+    <div key={`${keyPrefix}${index}`} className="flex items-center">
+      <span
+        className={`
+          text-4xl md:text-6xl lg:text-7xl 
+          font-header font-bold uppercase tracking-tight
+          transition-all duration-700 ease-out
+          cursor-default select-none
+          ${isDarkMode
+            ? 'text-white/10 hover:text-white/30'
+            : 'text-white/20 hover:text-white/50'
+          }
+          hover:tracking-wide
+        `}
+        style={{
+          textShadow: isDarkMode
+            ? '0 0 60px rgba(255,255,255,0.05)'
+            : '0 0 60px rgba(255,255,255,0.1)',
+        }}
+      >
+        {item.name}
+      </span>
+      <DiamondSeparator />
+    </div>
+  );
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className="bg-dfw-navy dark:bg-white/5 overflow-hidden py-6 border-y border-white/5 relative z-20"
+      className="bg-dfw-navy dark:bg-[#050a14] overflow-hidden py-8 md:py-10 border-y border-white/5 relative z-20"
     >
+      {/* Subtle gradient overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent pointer-events-none" />
 
-      {/* Background Texture */}
-      <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-10 mix-blend-overlay"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-dfw-navy dark:from-black via-transparent to-dfw-navy dark:to-black z-20 pointer-events-none"></div>
+      {/* Edge fade masks */}
+      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-dfw-navy dark:from-[#050a14] to-transparent z-20 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-dfw-navy dark:from-[#050a14] to-transparent z-20 pointer-events-none" />
 
-      <div className="flex relative z-10 mask-linear-fade">
+      <div className="flex relative z-10">
         {/* First Loop Set */}
         <div className="animate-marquee flex whitespace-nowrap min-w-full shrink-0 items-center">
-          {SPORTS_ITEMS.map((item, index) => (
-            <div key={index} className="flex items-center group">
-              <span
-                className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 dark:group-hover:text-black/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4"
-                style={{ WebkitTextStroke: `2px ${strokeColor}` }}
-              >
-                {item}
-              </span>
-              <div className="mx-4 flex items-center justify-center w-2 h-2 rounded-full bg-dfw-red/70 relative shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
-            </div>
-          ))}
+          {SPORTS_ITEMS.map((item, index) => renderMarqueeItem(item, index, 'first-'))}
         </div>
 
-        {/* Second Loop Set */}
+        {/* Second Loop Set (duplicate for seamless scroll) */}
         <div className="animate-marquee flex whitespace-nowrap min-w-full shrink-0 items-center">
-          {SPORTS_ITEMS.map((item, index) => (
-            <div key={`dup-${index}`} className="flex items-center group">
-              <span
-                className="mx-8 text-3xl md:text-5xl font-header font-bold uppercase italic tracking-tighter text-transparent transition-all duration-500 group-hover:text-white/40 dark:group-hover:text-black/40 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.5)] cursor-default select-none flex items-center gap-4"
-                style={{ WebkitTextStroke: `2px ${strokeColor}` }}
-              >
-                {item}
-              </span>
-              <div className="mx-4 flex items-center justify-center w-2 h-2 rounded-full bg-dfw-red/70 relative shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
-            </div>
-          ))}
+          {SPORTS_ITEMS.map((item, index) => renderMarqueeItem(item, index, 'second-'))}
         </div>
       </div>
     </motion.div>

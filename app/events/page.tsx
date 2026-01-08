@@ -10,7 +10,7 @@ import EventsFAQ from '@/components/events/EventsFAQ'
 import EventsCTA from '@/components/events/EventsCTA'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Special Events | Birthday Parties, Tournaments & Corporate Events',
+  title: 'Sports Events Fort Worth | Birthday Parties & Corporate Team Building Dallas',
   description: 'Host your special event at DFW Indoor Sports. Perfect venue for birthday parties, corporate events, tournaments, and team building activities in Fort Worth, TX.',
   keywords: [
     'sports events Fort Worth',

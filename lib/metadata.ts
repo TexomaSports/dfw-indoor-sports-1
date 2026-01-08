@@ -302,3 +302,109 @@ export function generateServiceSchema(service: {
     ...(service.image && { image: service.image }),
   }
 }
+
+// Generate AggregateRating Schema for Reviews
+export function generateAggregateRatingSchema(ratings: {
+  ratingValue: number
+  reviewCount: number
+  bestRating?: number
+  worstRating?: number
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': BUSINESS_INFO.url,
+    name: BUSINESS_INFO.name,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: ratings.ratingValue,
+      reviewCount: ratings.reviewCount,
+      bestRating: ratings.bestRating || 5,
+      worstRating: ratings.worstRating || 1,
+    },
+  }
+}
+
+// Generate Event Schema for Events Page
+export function generateEventSchema(event: {
+  name: string
+  startDate: string
+  endDate?: string
+  description: string
+  offers?: { price: string; availability: string }
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: event.name,
+    startDate: event.startDate,
+    endDate: event.endDate || event.startDate,
+    description: event.description,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    eventStatus: 'https://schema.org/EventScheduled',
+    location: {
+      '@type': 'Place',
+      name: BUSINESS_INFO.name,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: BUSINESS_INFO.address.street,
+        addressLocality: BUSINESS_INFO.address.city,
+        addressRegion: BUSINESS_INFO.address.state,
+        postalCode: BUSINESS_INFO.address.zip,
+        addressCountry: BUSINESS_INFO.address.country,
+      },
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: BUSINESS_INFO.name,
+      url: BUSINESS_INFO.url,
+    },
+    ...(event.offers && {
+      offers: {
+        '@type': 'Offer',
+        price: event.offers.price,
+        priceCurrency: 'USD',
+        availability: `https://schema.org/${event.offers.availability}`,
+        url: `${BUSINESS_INFO.url}/events`,
+      },
+    }),
+  }
+}
+
+// Generate Article Schema for Blog Posts
+export function generateArticleSchema(article: {
+  title: string
+  description: string
+  publishedDate: string
+  modifiedDate?: string
+  author?: string
+  image?: string
+  url: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    datePublished: article.publishedDate,
+    dateModified: article.modifiedDate || article.publishedDate,
+    author: {
+      '@type': 'Organization',
+      name: article.author || BUSINESS_INFO.name,
+      url: BUSINESS_INFO.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: BUSINESS_INFO.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BUSINESS_INFO.url}/logo.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': article.url,
+    },
+    image: article.image || `${BUSINESS_INFO.url}/og-image.jpg`,
+  }
+}

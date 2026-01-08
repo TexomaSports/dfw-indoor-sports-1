@@ -1,9 +1,11 @@
 'use client'
 
 import React from 'react';
+import Link from 'next/link';
 import { Sun, Heart, Users, MapPin, Clock, DollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { OptimizedImage } from '@/components/ui/OptimizedImage';
+import SportsParallaxLayer from '@/components/animations/SportsParallaxLayer';
 
 const HomeIntro: React.FC = () => {
    const containerVariants = {
@@ -23,6 +25,20 @@ const HomeIntro: React.FC = () => {
 
    return (
       <section className="relative py-24 md:py-32 bg-white dark:bg-[#020408] transition-colors duration-300 overflow-hidden">
+         {/* 🏏 GSAP-Powered Sports Parallax Layer */}
+         <SportsParallaxLayer
+            elementCount={5}
+            sports={['cricket', 'shuttlecock', 'soccer']}
+            zIndex={1}
+            className="opacity-30 dark:opacity-40"
+         />
+
+         {/* Premium Ambient Depth - Sophisticated gradient orbs */}
+         <div className="absolute inset-0 pointer-events-none overflow-hidden z-[2]" aria-hidden="true">
+            <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-gradient-radial from-dfw-red/8 via-dfw-red/2 to-transparent blur-3xl dark:from-dfw-red/15 dark:via-dfw-red/5" />
+            <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-gradient-radial from-blue-500/5 via-blue-500/1 to-transparent blur-3xl dark:from-blue-500/10" />
+         </div>
+
          <div className="container mx-auto px-4 md:px-6 relative z-10">
 
             {/* Facility Overview Image */}
@@ -35,7 +51,7 @@ const HomeIntro: React.FC = () => {
                <div className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
                   <OptimizedImage
                      src="/images/home/home-intro-facility-overview.webp"
-                     alt="DFW Indoor Sports facility overview showing cricket lanes, badminton courts, and soccer fields"
+                     alt="50,000 sq ft indoor cricket lanes and badminton courts at DFW Indoor Sports Fort Worth Texas"
                      fill
                      className="object-cover"
                      priority
@@ -121,7 +137,12 @@ const HomeIntro: React.FC = () => {
                            <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center"><Users size={14} className="text-white" /></div>
                            <div>
                               <span className="block text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-0.5">Core Sports</span>
-                              <p className="text-sm font-medium leading-snug">Cricket, Badminton, Soccer, Dodgeball</p>
+                              <p className="text-sm font-medium leading-snug">
+                                 <Link href="/cricket-lanes" className="hover:text-dfw-red transition-colors">Cricket</Link>,{' '}
+                                 <Link href="/badminton-courts" className="hover:text-dfw-red transition-colors">Badminton</Link>,{' '}
+                                 <Link href="/soccer-fields" className="hover:text-dfw-red transition-colors">Soccer</Link>,{' '}
+                                 <Link href="/dodgeball-courts" className="hover:text-dfw-red transition-colors">Dodgeball</Link>
+                              </p>
                            </div>
                         </li>
                         <li className="flex gap-4 items-center">

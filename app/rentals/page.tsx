@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createPageMetadata, generateBreadcrumbSchema } from '@/lib/metadata'
+import { createPageMetadata, generateBreadcrumbSchema, generateServiceSchema } from '@/lib/metadata'
 import RentalsHero from '@/components/rentals/RentalsHero'
 import RentalsIntro from '@/components/rentals/RentalsIntro'
 import RentalsFacilities from '@/components/rentals/RentalsFacilities'
@@ -27,11 +27,21 @@ export default function RentalsPage() {
     { name: 'Rentals', url: '/rentals' },
   ])
 
+  const serviceSchema = generateServiceSchema({
+    name: 'Indoor Sports Court Rentals',
+    description: 'Hourly rental of professional indoor cricket lanes, badminton courts, soccer fields, and dodgeball courts in Fort Worth, TX. Open 5AM-11PM daily.',
+    price: '25',
+  })
+
   return (
     <div className="bg-[#FAFAFA] dark:bg-[#020408] min-h-screen font-sans selection:bg-dfw-red selection:text-white transition-colors duration-300">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <RentalsHero />
       <RentalsIntro />

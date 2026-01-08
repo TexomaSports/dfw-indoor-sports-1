@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { createPageMetadata, generateBreadcrumbSchema } from '@/lib/metadata'
+import { createPageMetadata, generateBreadcrumbSchema, generateServiceSchema } from '@/lib/metadata'
 import AcademyHero from '@/components/academy/AcademyHero'
 import AcademyNarrative from '@/components/academy/AcademyNarrative'
 import AcademyPrograms from '@/components/academy/AcademyPrograms'
@@ -11,7 +11,7 @@ import AcademyFAQ from '@/components/academy/AcademyFAQ'
 import AcademyCTA from '@/components/academy/AcademyCTA'
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Sports Academy | Professional Cricket & Badminton Training in DFW',
+  title: 'Cricket Academy Fort Worth | Badminton Training Dallas | Youth Sports Programs',
   description: 'Join the DFW Indoor Sports Academy for professional cricket and badminton training. Expert coaches, structured programs for all ages and skill levels in Fort Worth, Texas.',
   keywords: [
     'cricket academy Dallas',
@@ -29,11 +29,21 @@ export default function AcademyPage() {
     { name: 'Academy', url: '/academy' },
   ])
 
+  const serviceSchema = generateServiceSchema({
+    name: 'Sports Training Academy',
+    description: 'Professional cricket and badminton coaching programs for all ages and skill levels. Expert coaches, structured curriculum at DFW Indoor Sports in Fort Worth, Texas.',
+    price: '150',
+  })
+
   return (
     <div className="bg-[#FAFAFA] min-h-screen font-sans selection:bg-dfw-red selection:text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <AcademyHero />
       <AcademyNarrative />

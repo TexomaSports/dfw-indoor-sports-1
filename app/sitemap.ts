@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/dodgeball-courts', priority: 0.8, changeFrequency: 'weekly' as const },
     { path: '/partners', priority: 0.6, changeFrequency: 'monthly' as const },
     { path: '/contact', priority: 0.8, changeFrequency: 'monthly' as const },
+    // Content Marketing: Blog
+    { path: '/blog', priority: 0.8, changeFrequency: 'weekly' as const },
+    { path: '/blog/indoor-cricket-guide-dfw', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/blog/badminton-fitness-benefits', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Local SEO: City Landing Pages
+    { path: '/areas-we-serve', priority: 0.8, changeFrequency: 'monthly' as const },
+    { path: '/areas-we-serve/dallas', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/areas-we-serve/arlington', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/areas-we-serve/plano', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/areas-we-serve/irving', priority: 0.7, changeFrequency: 'monthly' as const },
+    { path: '/areas-we-serve/frisco', priority: 0.7, changeFrequency: 'monthly' as const },
+    // Legal Pages
     { path: '/waiver', priority: 0.5, changeFrequency: 'yearly' as const },
     { path: '/refund-policy', priority: 0.4, changeFrequency: 'yearly' as const },
     { path: '/privacy', priority: 0.3, changeFrequency: 'yearly' as const },
