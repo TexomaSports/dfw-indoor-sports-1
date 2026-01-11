@@ -3,62 +3,86 @@
 import React from 'react';
 import { Users, Briefcase, Heart, Zap, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 const EventsCorporate: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+   const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+         opacity: 1,
+         transition: {
+            staggerChildren: 0.1
+         }
       }
-    }
-  };
+   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+   const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 }
+   };
 
-  return (
-    <section className="py-24 bg-[#0A111F] text-white relative overflow-hidden">
+   return (
+      <section className="py-24 bg-[#0A111F] text-white relative overflow-hidden">
          <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.05]"></div>
          <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-blue-900/10 to-transparent pointer-events-none"></div>
 
          <div className="container mx-auto px-4 md:px-6 relative z-10">
+
+            {/* Corporate Events Image Banner */}
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="mb-12"
+            >
+               <div className="relative h-[220px] md:h-[300px] rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto border border-white/10">
+                  <OptimizedImage
+                     src="/images/events/events-corporate-setup.webp"
+                     alt="Corporate team building event setup at DFW Indoor Sports"
+                     fill
+                     className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A111F]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                     <p className="text-white font-header font-bold text-xl md:text-2xl uppercase">Team Building That Actually Works</p>
+                     <p className="text-white/70 text-xs font-mono uppercase tracking-widest mt-1">Sales Kickoffs • Executive Retreats • Department Socials</p>
+                  </div>
+               </div>
+            </motion.div>
+
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-               <motion.div 
-                 initial={{ opacity: 0, x: -20 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className="max-w-2xl"
+               <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="max-w-2xl"
                >
                   <span className="text-blue-500 font-mono text-xs font-bold uppercase tracking-widest mb-4 block">Corporate Solutions</span>
                   <h2 className="text-4xl md:text-5xl font-header font-bold text-white uppercase leading-none">
-                     Team Building <br/> That Actually <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Works</span>
+                     Team Building <br /> That Actually <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">Works</span>
                   </h2>
                </motion.div>
-               <motion.div 
-                 initial={{ opacity: 0, x: 20 }}
-                 whileInView={{ opacity: 1, x: 0 }}
-                 viewport={{ once: true }}
-                 className="hidden md:block"
+               <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="hidden md:block"
                >
                   <p className="text-gray-400 text-sm max-w-md text-right">
-                     Forget trust falls. Authentic competition builds real bonds. 
+                     Forget trust falls. Authentic competition builds real bonds.
                      From sales kickoffs to executive retreats, we host it all.
                   </p>
                </motion.div>
             </div>
 
-            <motion.div 
+            <motion.div
                variants={containerVariants}
                initial="hidden"
                whileInView="visible"
                viewport={{ once: true }}
                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
             >
-               
+
                {/* Team Building */}
                <motion.div variants={itemVariants} className="group relative bg-white/5 border border-white/10 rounded-sm p-6 hover:bg-white/10 transition-colors duration-300">
                   <div className="absolute top-0 left-0 w-1 h-full bg-blue-500 transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
@@ -131,7 +155,7 @@ const EventsCorporate: React.FC = () => {
                <div className="grid grid-cols-1 md:grid-cols-5 gap-8 text-center relative">
                   {/* Connector Line (Desktop) */}
                   <div className="hidden md:block absolute top-4 left-0 w-full h-[1px] bg-white/10 -z-0"></div>
-                  
+
                   {[
                      { step: "01", title: "Consultation", desc: "Goal setting & budget" },
                      { step: "02", title: "Proposal", desc: "Custom format & agenda" },
@@ -151,7 +175,7 @@ const EventsCorporate: React.FC = () => {
             </div>
          </div>
       </section>
-  );
+   );
 };
 
 export default EventsCorporate;

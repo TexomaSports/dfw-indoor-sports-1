@@ -3,27 +3,51 @@
 import React from 'react';
 import { Clock, Trophy, Users, PartyPopper, Utensils, Star, Camera } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 const EventsPackages: React.FC = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
+   const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+         opacity: 1,
+         transition: {
+            staggerChildren: 0.1
+         }
       }
-    }
-  };
+   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
+   const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 }
+   };
 
-  return (
-    <section className="py-24 bg-gray-50 dark:bg-[#0A111F] border-y border-gray-200 dark:border-white/5 transition-colors duration-300" id="packages">
+   return (
+      <section className="py-24 bg-gray-50 dark:bg-[#0A111F] border-y border-gray-200 dark:border-white/5 transition-colors duration-300" id="packages">
          <div className="container mx-auto px-4 md:px-6">
-            <motion.div 
+
+            {/* Kids Party Image Banner */}
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="mb-12"
+            >
+               <div className="relative h-[220px] md:h-[300px] rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto">
+                  <OptimizedImage
+                     src="/images/events/events-packages-kids-party.webp"
+                     alt="Kids celebrating a birthday party with sports activities at DFW Indoor Sports"
+                     fill
+                     className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6">
+                     <p className="text-white font-header font-bold text-xl md:text-2xl uppercase">Unforgettable Birthday Celebrations</p>
+                     <p className="text-white/70 text-xs font-mono uppercase tracking-widest mt-1">Cricket • Dodgeball • Soccer • Multi-Sport</p>
+                  </div>
+               </div>
+            </motion.div>
+
+            <motion.div
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
@@ -34,14 +58,14 @@ const EventsPackages: React.FC = () => {
                <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">The best gift is an experience. Choose from Cricket, Dodgeball, Soccer, and more.</p>
             </motion.div>
 
-            <motion.div 
+            <motion.div
                variants={containerVariants}
                initial="hidden"
                whileInView="visible"
                viewport={{ once: true }}
                className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start mb-16"
             >
-               
+
                {/* Basic Package */}
                <motion.div variants={itemVariants} className="bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/10 p-8 hover:shadow-xl transition-all duration-300 relative group overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-1 bg-gray-200 dark:bg-white/20 group-hover:bg-blue-500 transition-colors"></div>
@@ -50,7 +74,7 @@ const EventsPackages: React.FC = () => {
                      <span className="text-4xl font-header font-bold text-dfw-navy dark:text-white">$299</span>
                      <span className="text-xs text-gray-400 font-bold uppercase">/ 12 Kids</span>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
                         <Clock size={16} className="text-blue-500" /> 2 Hours Total
@@ -75,13 +99,13 @@ const EventsPackages: React.FC = () => {
                <motion.div variants={itemVariants} className="bg-dfw-navy dark:bg-black rounded-lg border border-dfw-navy dark:border-white/20 p-8 shadow-2xl relative group overflow-hidden transform md:-translate-y-4 z-10">
                   <div className="absolute top-0 right-0 bg-dfw-red text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg">Most Popular</div>
                   <div className="absolute inset-0 bg-[url('/textures/carbon-fibre.png')] opacity-20 mix-blend-overlay"></div>
-                  
+
                   <h3 className="text-xl font-header font-bold text-white uppercase mb-2 relative z-10">Deluxe Multi-Sport</h3>
                   <div className="flex items-baseline gap-1 mb-6 relative z-10">
                      <span className="text-4xl font-header font-bold text-white">$449</span>
                      <span className="text-xs text-gray-400 font-bold uppercase">/ 15 Kids</span>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8 relative z-10">
                      <div className="flex items-center gap-3 text-sm text-gray-300">
                         <Clock size={16} className="text-dfw-red" /> 2.5 Hours Total
@@ -110,7 +134,7 @@ const EventsPackages: React.FC = () => {
                      <span className="text-4xl font-header font-bold text-dfw-navy dark:text-white">$649</span>
                      <span className="text-xs text-gray-400 font-bold uppercase">/ 20 Kids</span>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300">
                         <Clock size={16} className="text-green-500" /> 3 Hours Total
@@ -153,7 +177,7 @@ const EventsPackages: React.FC = () => {
             </div>
          </div>
       </section>
-  );
+   );
 };
 
 export default EventsPackages;
