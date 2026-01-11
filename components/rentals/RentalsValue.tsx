@@ -4,13 +4,37 @@ import React from 'react';
 import { Target, Wind, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { OptimizedImage } from '@/components/ui/OptimizedImage';
 
 const RentalsValue: React.FC = () => {
-  return (
-    <section className="py-24 bg-[#0A111F] text-white relative overflow-hidden">
+   return (
+      <section className="py-24 bg-[#0A111F] text-white relative overflow-hidden">
          <div className="absolute inset-0 bg-[url('/textures/cubes.png')] opacity-[0.05]"></div>
          <div className="container mx-auto px-4 md:px-6 relative z-10">
-            <motion.div 
+
+            {/* Happy Renters Image Banner */}
+            <motion.div
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="mb-12"
+            >
+               <div className="relative h-[200px] md:h-[280px] rounded-2xl overflow-hidden shadow-xl max-w-4xl mx-auto border border-white/10">
+                  <OptimizedImage
+                     src="/images/rentals/rentals-value-happy-renters.webp"
+                     alt="Happy members enjoying facility rentals at DFW Indoor Sports"
+                     fill
+                     className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A111F]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 text-center">
+                     <p className="text-white font-header font-bold text-xl md:text-2xl uppercase">Smart Savings for Regular Players</p>
+                     <p className="text-white/70 text-xs font-mono uppercase tracking-widest mt-1">Membership Pays for Itself</p>
+                  </div>
+               </div>
+            </motion.div>
+
+            <motion.div
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
@@ -22,9 +46,9 @@ const RentalsValue: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-               
+
                {/* Scenario 1: Cricket */}
-               <motion.div 
+               <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -46,7 +70,7 @@ const RentalsValue: React.FC = () => {
                         </div>
                      </div>
                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <motion.div 
+                        <motion.div
                            initial={{ width: 0 }}
                            whileInView={{ width: "83%" }}
                            transition={{ duration: 1, delay: 0.5 }}
@@ -60,7 +84,7 @@ const RentalsValue: React.FC = () => {
                </motion.div>
 
                {/* Scenario 2: Badminton */}
-               <motion.div 
+               <motion.div
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -83,7 +107,7 @@ const RentalsValue: React.FC = () => {
                         </div>
                      </div>
                      <div className="h-2 bg-gray-700 rounded-full overflow-hidden">
-                        <motion.div 
+                        <motion.div
                            initial={{ width: 0 }}
                            whileInView={{ width: "10%" }}
                            transition={{ duration: 1, delay: 0.5 }}
@@ -97,7 +121,7 @@ const RentalsValue: React.FC = () => {
                </motion.div>
 
             </div>
-            
+
             <div className="mt-12 text-center">
                <Link href="/memberships" className="inline-flex items-center gap-2 text-white border-b border-dfw-red pb-1 hover:text-dfw-red transition-colors text-sm font-bold uppercase tracking-widest">
                   View All Membership Options <ArrowRight size={14} />
@@ -105,7 +129,7 @@ const RentalsValue: React.FC = () => {
             </div>
          </div>
       </section>
-  );
+   );
 };
 
 export default RentalsValue;
