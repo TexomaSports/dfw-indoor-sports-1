@@ -36,8 +36,9 @@ export function OptimizedImage({
     showShimmer = true,
     fallbackSrc = '/images/placeholder.svg',
     priority = false,
+    fill,
     ...props
-}: OptimizedImageProps) {
+}: OptimizedImageProps & { fill?: boolean }) {
     const [isLoaded, setIsLoaded] = useState(false)
     const [hasError, setHasError] = useState(false)
 
@@ -53,8 +54,11 @@ export function OptimizedImage({
     // Determine the actual source to use
     const imageSrc = hasError && fallbackSrc ? fallbackSrc : src
 
+    // When using fill mode, the wrapper needs to fill its parent container
+    const fillStyles = fill ? 'absolute inset-0 h-full w-full' : ''
+
     return (
-        <div className={`relative overflow-hidden ${wrapperClassName}`}>
+        <div className={`relative overflow-hidden ${fillStyles} ${wrapperClassName}`}>
             {/* Shimmer Loading Effect */}
             {showShimmer && !isLoaded && (
                 <div
@@ -98,6 +102,7 @@ export function OptimizedImage({
             <Image
                 src={imageSrc}
                 alt={alt}
+                fill={fill}
                 className={`
           transition-opacity duration-500 ease-out
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
