@@ -20,10 +20,10 @@ const IMAGES_DIR = path.join(ROOT_DIR, 'public', 'images');
 // Configuration
 const CONFIG = {
     maxWidth: 1920,           // Max width for hero/large images
-    maxWidthSmall: 800,       // Max width for card/thumbnail images
-    quality: 82,              // WebP quality (80-85 is optimal for web)
-    targetMaxBytes: 200 * 1024, // Target max file size: 200KB
-    skipIfBelow: 50 * 1024,   // Skip if already under 50KB
+    maxWidthSmall: 1200,      // Max width for card/thumbnail images (increased)
+    quality: 92,              // WebP quality (90-95 for high quality)
+    targetMaxBytes: 300 * 1024, // Target max file size: 300KB
+    skipIfBelow: 30 * 1024,   // Skip if already under 30KB
 };
 
 // Track statistics
