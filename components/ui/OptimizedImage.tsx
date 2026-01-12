@@ -16,6 +16,10 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
      * Additional wrapper className
      */
     wrapperClassName?: string
+    /**
+     * Image quality (1-100), higher = better quality but larger file
+     */
+    quality?: number
 }
 
 /**
@@ -37,6 +41,7 @@ export function OptimizedImage({
     fallbackSrc = '/images/placeholder.svg',
     priority = false,
     fill,
+    quality = 90,
     ...props
 }: OptimizedImageProps & { fill?: boolean }) {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -103,6 +108,7 @@ export function OptimizedImage({
                 src={imageSrc}
                 alt={alt}
                 fill={fill}
+                quality={quality}
                 className={`
           transition-opacity duration-500 ease-out
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
