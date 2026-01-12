@@ -5,11 +5,23 @@ import { defaultMetadata, generateLocalBusinessSchema, generateOrganizationSchem
 
 export const metadata: Metadata = defaultMetadata
 
-import { Inter } from 'next/font/google'
+import { Inter, Oswald } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+// Optimized fonts with automatic preloading and font-display: swap
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
-// ..
+const oswald = Oswald({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oswald',
+  weight: ['400', '500', '600', '700'],
+})
+
+//
 export default function RootLayout({
   children,
 }: {
@@ -57,7 +69,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} min-h-screen bg-[#FAFAFA] dark:bg-[#020408] text-gray-900 dark:text-gray-100 antialiased`}>
+      <body className={`${inter.variable} ${oswald.variable} font-sans min-h-screen bg-[#FAFAFA] dark:bg-[#020408] text-gray-900 dark:text-gray-100 antialiased`}>
         <div aria-live="polite" aria-atomic="true" className="sr-only" id="announcements"></div>
         <ClientLayout>{children}</ClientLayout>
       </body>
