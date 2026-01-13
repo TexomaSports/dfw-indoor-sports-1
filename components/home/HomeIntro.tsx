@@ -53,6 +53,7 @@ const HomeIntro: React.FC = () => {
                      src="/images/home/home-intro-facility-overview.webp"
                      alt="50,000 sq ft indoor cricket lanes and badminton courts at DFW Indoor Sports Fort Worth Texas"
                      fill
+                     sizes="100vw"
                      className="object-cover"
                      priority
                   />

@@ -38,6 +38,7 @@ const HomePrograms: React.FC = () => {
                      src="/images/home/home-programs-dodgeball-action.webp"
                      alt="Athletes in action at DFW Indoor Sports programs"
                      fill
+                     sizes="(max-width: 1200px) 100vw, 1200px"
                      className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dfw-navy/80 via-dfw-navy/40 to-transparent" />

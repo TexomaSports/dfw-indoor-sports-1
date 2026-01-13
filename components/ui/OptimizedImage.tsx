@@ -20,6 +20,11 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
      * Image quality (1-100), higher = better quality but larger file
      */
     quality?: number
+    /**
+     * Responsive sizes hint for Next.js image optimization
+     * Defaults to full viewport width for best quality
+     */
+    sizes?: string
 }
 
 /**
@@ -31,6 +36,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onLoad' | 'onError'> {
  * - Error fallback handling
  * - Lazy loading by default
  * - Smooth fade-in transition
+ * - Responsive sizes for optimal quality
  */
 export function OptimizedImage({
     src,
@@ -41,7 +47,8 @@ export function OptimizedImage({
     fallbackSrc = '/images/placeholder.svg',
     priority = false,
     fill,
-    quality = 90,
+    quality = 85,
+    sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
     ...props
 }: OptimizedImageProps & { fill?: boolean }) {
     const [isLoaded, setIsLoaded] = useState(false)
@@ -109,6 +116,7 @@ export function OptimizedImage({
                 alt={alt}
                 fill={fill}
                 quality={quality}
+                sizes={sizes}
                 className={`
           transition-opacity duration-500 ease-out
           ${isLoaded ? 'opacity-100' : 'opacity-0'}
